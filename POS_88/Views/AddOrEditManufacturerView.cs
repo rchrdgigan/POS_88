@@ -1,0 +1,118 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace POS_88.Views
+{
+    public partial class AddOrEditManufacturerView : Form, IAddOrEditManufacturerView
+    {
+        private bool isAdd { get; set; }
+        public AddOrEditManufacturerView()
+        {
+            InitializeComponent();
+
+            btnClose.Click += (sender, args) => Close();
+            btnMinimize.Click += (sender, args) =>
+            {
+                WindowState = FormWindowState.Minimized;
+            };
+            btnSave.Click += (sender, args) =>
+            {
+                if (!this.ValidateEntries())
+                    return;
+
+                SaveEvent?.Invoke(this, EventArgs.Empty);
+            };
+            btnClear.Click += (sender, args) => ClearEvent?.Invoke(this, EventArgs.Empty);
+        }
+
+        public string ManufacturerId
+        {
+            get
+            {
+                return bunifuTxtManufacturerID.Text;
+            }
+
+            set
+            {
+                bunifuTxtManufacturerID.Text = value;
+            }
+        }
+
+        public string ManufacturerName
+        {
+            get
+            {
+                return bunifuTxtName.Text;
+            }
+
+            set
+            {
+                bunifuTxtName.Text = value;
+            }
+        }
+
+        public event EventHandler ClearEvent;
+        public event EventHandler SaveEvent;
+
+        public void ClearFields()
+        {
+            if (isAdd)
+                ManufacturerId = string.Empty;
+            ManufacturerName = string.Empty;
+
+            this.lblManufacturerReq.Visible = false;
+            this.lblNameReq.Visible = false;
+            this.errorProvider.SetError((Control)this.bunifuTxtManufacturerID, "");
+            this.errorProvider.SetError((Control)this.bunifuTxtName, "");
+        }
+
+        public void SetEditMode(bool isEditMode)
+        {
+            lblModalTitle.Text = isEditMode ? "Edit Manufacturer" : "Add New Manufacturer";
+            btnSave.Text = isEditMode ? "Update" : "Save";
+            if (isEditMode)
+            {
+                this.bunifuTxtManufacturerID.Enabled = false;
+                this.bunifuTxtName.Focus();
+                isAdd = false;
+            }
+            else
+            {
+                isAdd = true;
+            }
+        }
+
+        private bool ValidateEntries()
+        {
+            bool flag = true;
+            this.errorProvider.SetError((Control)this.bunifuTxtManufacturerID, "");
+            this.errorProvider.SetError((Control)this.bunifuTxtName, "");
+            if (this.bunifuTxtManufacturerID.Text == "")
+            {
+                flag = false;
+                this.errorProvider.SetError((Control)this.bunifuTxtManufacturerID, "This field is required");
+                this.lblManufacturerReq.Visible = true;
+            }
+            else
+                this.lblManufacturerReq.Visible = false;
+
+            if (this.bunifuTxtName.Text == "")
+            {
+                flag = false;
+                this.errorProvider.SetError((Control)this.bunifuTxtName, "This field is required");
+                this.lblNameReq.Visible = true;
+            }
+            else
+                this.lblNameReq.Visible = false;
+
+            return flag;
+        }
+    }
+}

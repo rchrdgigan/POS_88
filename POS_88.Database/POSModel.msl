@@ -1,0 +1,814 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="POSDBModelStoreContainer" CdmEntityContainer="POSDBEntities">
+    <EntitySetMapping Name="manufacturers">
+      <EntityTypeMapping TypeName="POSDBModel.manufacturer">
+        <MappingFragment StoreEntitySet="manufacturer">
+          <ScalarProperty Name="manufacturername" ColumnName="manufacturername" />
+          <ScalarProperty Name="manufacturerid" ColumnName="manufacturerid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spGetCategory" FunctionName="POSDBModel.Store.spGetCategory">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spGetCategory_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetManufacturer" FunctionName="POSDBModel.Store.spGetManufacturer">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spGetManufacturer_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetSupplier" FunctionName="POSDBModel.Store.spGetSupplier">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spGetSupplier_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="CONTACT_NO" ColumnName="CONTACT NO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="vats">
+      <EntityTypeMapping TypeName="POSDBModel.vat">
+        <MappingFragment StoreEntitySet="vat">
+          <ScalarProperty Name="vatname" ColumnName="vatname" />
+          <ScalarProperty Name="percentage" ColumnName="percentage" />
+          <ScalarProperty Name="vatid" ColumnName="vatid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spGetrReceiptNo" FunctionName="POSDBModel.Store.spGetrReceiptNo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spGetrReceiptNo_Result">
+          <ScalarProperty Name="receiptno" ColumnName="receiptno" />
+          <ScalarProperty Name="solddate" ColumnName="solddate" />
+          <ScalarProperty Name="customerid" ColumnName="customerid" />
+          <ScalarProperty Name="tableno" ColumnName="tableno" />
+          <ScalarProperty Name="paymenttype" ColumnName="paymenttype" />
+          <ScalarProperty Name="subtotal" ColumnName="subtotal" />
+          <ScalarProperty Name="subdiscount" ColumnName="subdiscount" />
+          <ScalarProperty Name="amountdue" ColumnName="amountdue" />
+          <ScalarProperty Name="vatsales" ColumnName="vatsales" />
+          <ScalarProperty Name="vatamount" ColumnName="vatamount" />
+          <ScalarProperty Name="nonvatsales" ColumnName="nonvatsales" />
+          <ScalarProperty Name="vatexemptsales" ColumnName="vatexemptsales" />
+          <ScalarProperty Name="zeroratedsales" ColumnName="zeroratedsales" />
+          <ScalarProperty Name="noofitems" ColumnName="noofitems" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="cashtender" ColumnName="cashtender" />
+          <ScalarProperty Name="changeamt" ColumnName="changeamt" />
+          <ScalarProperty Name="crtdby" ColumnName="crtdby" />
+          <ScalarProperty Name="crtddt" ColumnName="crtddt" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="POSDBModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="usertype" ColumnName="usertype" />
+          <ScalarProperty Name="nameuser" ColumnName="nameuser" />
+          <ScalarProperty Name="usernm" ColumnName="usernm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spGetMonthlySales1" FunctionName="POSDBModel.Store.spGetMonthlySales">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spGetMonthlySales1_Result">
+          <ScalarProperty Name="MONTHNO" ColumnName="MONTHNO" />
+          <ScalarProperty Name="MONTHNM" ColumnName="MONTHNM" />
+          <ScalarProperty Name="TOTALSALES" ColumnName="TOTALSALES" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetMonthlySalesByYear" FunctionName="POSDBModel.Store.spGetMonthlySalesByYear">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spGetMonthlySalesByYear_Result">
+          <ScalarProperty Name="MONTHNO" ColumnName="MONTHNO" />
+          <ScalarProperty Name="MONTHNM" ColumnName="MONTHNM" />
+          <ScalarProperty Name="TOTALSALES" ColumnName="TOTALSALES" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetSalesToday" FunctionName="POSDBModel.Store.spGetSalesToday">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spGetSalesToday_Result">
+          <ScalarProperty Name="SALES" ColumnName="SALES" />
+          <ScalarProperty Name="COST" ColumnName="COST" />
+          <ScalarProperty Name="DISCOUNT" ColumnName="DISCOUNT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetTopCustomers" FunctionName="POSDBModel.Store.spGetTopCustomers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spGetTopCustomers_Result">
+          <ScalarProperty Name="CUSTOMER_ID" ColumnName="CUSTOMER ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="TOTAL_SALES" ColumnName="TOTAL SALES" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetUsers" FunctionName="POSDBModel.Store.spGetUsers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spGetUsers_Result">
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="NAME_OF_STAFF" ColumnName="NAME OF STAFF" />
+          <ScalarProperty Name="USER_TYPE" ColumnName="USER TYPE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetExpenses" FunctionName="POSDBModel.Store.spGetExpenses">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spGetExpenses_Result">
+          <ScalarProperty Name="EXPENSES_ID" ColumnName="EXPENSES ID" />
+          <ScalarProperty Name="EXPENSES_DATE" ColumnName="EXPENSES DATE" />
+          <ScalarProperty Name="PAYEE" ColumnName="PAYEE" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="CATEGORY" ColumnName="CATEGORY" />
+          <ScalarProperty Name="VAT" ColumnName="VAT" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="REMARKS" ColumnName="REMARKS" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetTotalExpenses" FunctionName="POSDBModel.Store.spGetTotalExpenses" />
+    <EntitySetMapping Name="stockshistories">
+      <EntityTypeMapping TypeName="POSDBModel.stockshistory">
+        <MappingFragment StoreEntitySet="stockshistory">
+          <ScalarProperty Name="sqno" ColumnName="sqno" />
+          <ScalarProperty Name="createdby" ColumnName="createdby" />
+          <ScalarProperty Name="instock" ColumnName="instock" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="stockdate" ColumnName="stockdate" />
+          <ScalarProperty Name="customerid" ColumnName="customerid" />
+          <ScalarProperty Name="receiptno" ColumnName="receiptno" />
+          <ScalarProperty Name="documenttype" ColumnName="documenttype" />
+          <ScalarProperty Name="itemcode" ColumnName="itemcode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spUpdateQty" FunctionName="POSDBModel.Store.spUpdateQty" />
+    <FunctionImportMapping FunctionImportName="spUpdateStocks" FunctionName="POSDBModel.Store.spUpdateStocks" />
+    <FunctionImportMapping FunctionImportName="spVoidItemQty" FunctionName="POSDBModel.Store.spVoidItemQty" />
+    <FunctionImportMapping FunctionImportName="spGetTotalCriticalStocks" FunctionName="POSDBModel.Store.spGetTotalCriticalStocks" />
+    <FunctionImportMapping FunctionImportName="spGetTotalStocks" FunctionName="POSDBModel.Store.spGetTotalStocks" />
+    <FunctionImportMapping FunctionImportName="spGetTopItems" FunctionName="POSDBModel.Store.spGetTopItems">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spGetTopItems_Result">
+          <ScalarProperty Name="ITEMCODE" ColumnName="ITEMCODE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="QTY" ColumnName="QTY" />
+          <ScalarProperty Name="TOTAL_SALES" ColumnName="TOTAL SALES" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetPurchasedItems" FunctionName="POSDBModel.Store.spGetPurchasedItems">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spGetPurchasedItems_Result">
+          <ScalarProperty Name="ITEM_CODE" ColumnName="ITEM CODE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="COST" ColumnName="COST" />
+          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+          <ScalarProperty Name="QTY" ColumnName="QTY" />
+          <ScalarProperty Name="DISCOUNT" ColumnName="DISCOUNT" />
+          <ScalarProperty Name="SUBTOTAL" ColumnName="SUBTOTAL" />
+          <ScalarProperty Name="AMOUNT_DUE" ColumnName="AMOUNT DUE" />
+          <ScalarProperty Name="VAT_STATUS" ColumnName="VAT STATUS" />
+          <ScalarProperty Name="PRICE_TYPE" ColumnName="PRICE TYPE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetSalesByItemwithParam" FunctionName="POSDBModel.Store.spGetSalesByItemwithParam">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spGetSalesByItemwithParam_Result">
+          <ScalarProperty Name="ITEMCODE" ColumnName="ITEMCODE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="COST" ColumnName="COST" />
+          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+          <ScalarProperty Name="TOTAL_QTY" ColumnName="TOTAL QTY" />
+          <ScalarProperty Name="SUB_TOTAL" ColumnName="SUB TOTAL" />
+          <ScalarProperty Name="DISCOUNT" ColumnName="DISCOUNT" />
+          <ScalarProperty Name="TOTAL_DUE" ColumnName="TOTAL DUE" />
+          <ScalarProperty Name="TOTAL_COST" ColumnName="TOTAL_COST" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetCriticalStocks" FunctionName="POSDBModel.Store.spGetCriticalStocks">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spGetCriticalStocks_Result">
+          <ScalarProperty Name="ITEM_CODE" ColumnName="ITEM CODE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="CATEGORY" ColumnName="CATEGORY" />
+          <ScalarProperty Name="COST" ColumnName="COST" />
+          <ScalarProperty Name="RETAIL_PRICE" ColumnName="RETAIL PRICE" />
+          <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+          <ScalarProperty Name="ALERT_QTY" ColumnName="ALERT QTY" />
+          <ScalarProperty Name="SUPPLIER" ColumnName="SUPPLIER" />
+          <ScalarProperty Name="MANUFACTURER" ColumnName="MANUFACTURER" />
+          <ScalarProperty Name="VAT_STATUS" ColumnName="VAT STATUS" />
+          <ScalarProperty Name="AVAILABILITY" ColumnName="AVAILABILITY" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spLogStocksMovement" FunctionName="POSDBModel.Store.spLogStocksMovement" />
+    <FunctionImportMapping FunctionImportName="spGetStocksHistory" FunctionName="POSDBModel.Store.spGetStocksHistory">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spGetStocksHistory_Result">
+          <ScalarProperty Name="ITEM_CODE" ColumnName="ITEM CODE" />
+          <ScalarProperty Name="DOCUMENT_TYPE" ColumnName="DOCUMENT TYPE" />
+          <ScalarProperty Name="RECEIPT_NO" ColumnName="RECEIPT NO" />
+          <ScalarProperty Name="CUSTOMER" ColumnName="CUSTOMER" />
+          <ScalarProperty Name="STOCK_DATE" ColumnName="STOCK DATE" />
+          <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+          <ScalarProperty Name="IN_STOCK" ColumnName="IN STOCK" />
+          <ScalarProperty Name="USER" ColumnName="USER" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spUpdateInvoiceType" FunctionName="POSDBModel.Store.spUpdateInvoiceType" />
+    <FunctionImportMapping FunctionImportName="spGetZReading" FunctionName="POSDBModel.Store.spGetZReading">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spGetZReading_Result">
+          <ScalarProperty Name="GROSSSALES" ColumnName="GROSSSALES" />
+          <ScalarProperty Name="REGDISCOUNT" ColumnName="REGDISCOUNT" />
+          <ScalarProperty Name="SCDISCOUNT" ColumnName="SCDISCOUNT" />
+          <ScalarProperty Name="PWDDISCOUNT" ColumnName="PWDDISCOUNT" />
+          <ScalarProperty Name="NETSALES" ColumnName="NETSALES" />
+          <ScalarProperty Name="VATSALES" ColumnName="VATSALES" />
+          <ScalarProperty Name="VATAMT" ColumnName="VATAMT" />
+          <ScalarProperty Name="NONVATSALES" ColumnName="NONVATSALES" />
+          <ScalarProperty Name="VATEXEMSALES" ColumnName="VATEXEMSALES" />
+          <ScalarProperty Name="ZERORATEDSALES" ColumnName="ZERORATEDSALES" />
+          <ScalarProperty Name="NOOFITEMS" ColumnName="NOOFITEMS" />
+          <ScalarProperty Name="NOOFTRANSACTIONS" ColumnName="NOOFTRANSACTIONS" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="cashcounts">
+      <EntityTypeMapping TypeName="POSDBModel.cashcount">
+        <MappingFragment StoreEntitySet="cashcount">
+          <ScalarProperty Name="SqNo" ColumnName="SqNo" />
+          <ScalarProperty Name="IsClosed" ColumnName="IsClosed" />
+          <ScalarProperty Name="GrandTotal" ColumnName="GrandTotal" />
+          <ScalarProperty Name="CashCountAmt" ColumnName="CashCountAmt" />
+          <ScalarProperty Name="OpeningAmt" ColumnName="OpeningAmt" />
+          <ScalarProperty Name="TwentyFiveCentsAmt" ColumnName="TwentyFiveCentsAmt" />
+          <ScalarProperty Name="TwentyFiveCents" ColumnName="TwentyFiveCents" />
+          <ScalarProperty Name="TenCentsAmt" ColumnName="TenCentsAmt" />
+          <ScalarProperty Name="TenCents" ColumnName="TenCents" />
+          <ScalarProperty Name="FiveCentsAmt" ColumnName="FiveCentsAmt" />
+          <ScalarProperty Name="FiveCents" ColumnName="FiveCents" />
+          <ScalarProperty Name="OneCoinsAmt" ColumnName="OneCoinsAmt" />
+          <ScalarProperty Name="OneCoins" ColumnName="OneCoins" />
+          <ScalarProperty Name="FiveCoinsAmt" ColumnName="FiveCoinsAmt" />
+          <ScalarProperty Name="FiveCoins" ColumnName="FiveCoins" />
+          <ScalarProperty Name="TenCoinsAmt" ColumnName="TenCoinsAmt" />
+          <ScalarProperty Name="TenCoins" ColumnName="TenCoins" />
+          <ScalarProperty Name="TwentyCoinsAmt" ColumnName="TwentyCoinsAmt" />
+          <ScalarProperty Name="TwentyCoins" ColumnName="TwentyCoins" />
+          <ScalarProperty Name="TwentyAmt" ColumnName="TwentyAmt" />
+          <ScalarProperty Name="Twenty" ColumnName="Twenty" />
+          <ScalarProperty Name="FiftyAmt" ColumnName="FiftyAmt" />
+          <ScalarProperty Name="Fifty" ColumnName="Fifty" />
+          <ScalarProperty Name="OneHundredAmt" ColumnName="OneHundredAmt" />
+          <ScalarProperty Name="OneHundred" ColumnName="OneHundred" />
+          <ScalarProperty Name="TwoHundredAmt" ColumnName="TwoHundredAmt" />
+          <ScalarProperty Name="TwoHundred" ColumnName="TwoHundred" />
+          <ScalarProperty Name="FiveHundredAmt" ColumnName="FiveHundredAmt" />
+          <ScalarProperty Name="FiveHundred" ColumnName="FiveHundred" />
+          <ScalarProperty Name="OneThousandAmt" ColumnName="OneThousandAmt" />
+          <ScalarProperty Name="OneThousand" ColumnName="OneThousand" />
+          <ScalarProperty Name="TimeoOut" ColumnName="TimeoOut" />
+          <ScalarProperty Name="TimeIn" ColumnName="TimeIn" />
+          <ScalarProperty Name="UserNm" ColumnName="UserNm" />
+          <ScalarProperty Name="TerminalId" ColumnName="TerminalId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spGetCashCount" FunctionName="POSDBModel.Store.spGetCashCount">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spGetCashCount_Result">
+          <ScalarProperty Name="UserNm" ColumnName="UserNm" />
+          <ScalarProperty Name="TimeIn" ColumnName="TimeIn" />
+          <ScalarProperty Name="TimeoOut" ColumnName="TimeoOut" />
+          <ScalarProperty Name="OpeningAmt" ColumnName="OpeningAmt" />
+          <ScalarProperty Name="CashCountAmt" ColumnName="CashCountAmt" />
+          <ScalarProperty Name="GrandTotal" ColumnName="GrandTotal" />
+          <ScalarProperty Name="IsClosed" ColumnName="IsClosed" />
+          <ScalarProperty Name="OneThousand" ColumnName="OneThousand" />
+          <ScalarProperty Name="OneThousandAmt" ColumnName="OneThousandAmt" />
+          <ScalarProperty Name="FiveHundred" ColumnName="FiveHundred" />
+          <ScalarProperty Name="FiveHundredAmt" ColumnName="FiveHundredAmt" />
+          <ScalarProperty Name="TwoHundred" ColumnName="TwoHundred" />
+          <ScalarProperty Name="TwoHundredAmt" ColumnName="TwoHundredAmt" />
+          <ScalarProperty Name="OneHundred" ColumnName="OneHundred" />
+          <ScalarProperty Name="OneHundredAmt" ColumnName="OneHundredAmt" />
+          <ScalarProperty Name="Fifty" ColumnName="Fifty" />
+          <ScalarProperty Name="FiftyAmt" ColumnName="FiftyAmt" />
+          <ScalarProperty Name="Twenty" ColumnName="Twenty" />
+          <ScalarProperty Name="TwentyAmt" ColumnName="TwentyAmt" />
+          <ScalarProperty Name="TwentyCoins" ColumnName="TwentyCoins" />
+          <ScalarProperty Name="TwentyCoinsAmt" ColumnName="TwentyCoinsAmt" />
+          <ScalarProperty Name="TenCoins" ColumnName="TenCoins" />
+          <ScalarProperty Name="TenCoinsAmt" ColumnName="TenCoinsAmt" />
+          <ScalarProperty Name="FiveCoins" ColumnName="FiveCoins" />
+          <ScalarProperty Name="FiveCoinsAmt" ColumnName="FiveCoinsAmt" />
+          <ScalarProperty Name="OneCoins" ColumnName="OneCoins" />
+          <ScalarProperty Name="OneCoinsAmt" ColumnName="OneCoinsAmt" />
+          <ScalarProperty Name="FiveCents" ColumnName="FiveCents" />
+          <ScalarProperty Name="FiveCentsAmt" ColumnName="FiveCentsAmt" />
+          <ScalarProperty Name="TenCents" ColumnName="TenCents" />
+          <ScalarProperty Name="TenCentsAmt" ColumnName="TenCentsAmt" />
+          <ScalarProperty Name="TwentyFiveCents" ColumnName="TwentyFiveCents" />
+          <ScalarProperty Name="TwentyFiveCentsAmt" ColumnName="TwentyFiveCentsAmt" />
+          <ScalarProperty Name="SqNo" ColumnName="SqNo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="itemsales">
+      <EntityTypeMapping TypeName="POSDBModel.itemsale">
+        <MappingFragment StoreEntitySet="itemsales">
+          <ScalarProperty Name="SqNo" ColumnName="SqNo" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="pricetype" ColumnName="pricetype" />
+          <ScalarProperty Name="vatstatus" ColumnName="vatstatus" />
+          <ScalarProperty Name="totaldue" ColumnName="totaldue" />
+          <ScalarProperty Name="discountamt" ColumnName="discountamt" />
+          <ScalarProperty Name="discounttype" ColumnName="discounttype" />
+          <ScalarProperty Name="discountdesc" ColumnName="discountdesc" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="costprice" ColumnName="costprice" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="itemcode" ColumnName="itemcode" />
+          <ScalarProperty Name="receiptno" ColumnName="receiptno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spGetItemSalesbyID" FunctionName="POSDBModel.Store.spGetItemSalesbyID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spGetItemSalesbyID_Result">
+          <ScalarProperty Name="receiptno" ColumnName="receiptno" />
+          <ScalarProperty Name="itemcode" ColumnName="itemcode" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="unit" ColumnName="unit" />
+          <ScalarProperty Name="costprice" ColumnName="costprice" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="discountdesc" ColumnName="discountdesc" />
+          <ScalarProperty Name="discountamt" ColumnName="discountamt" />
+          <ScalarProperty Name="totaldue" ColumnName="totaldue" />
+          <ScalarProperty Name="vatstatus" ColumnName="vatstatus" />
+          <ScalarProperty Name="pricetype" ColumnName="pricetype" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="paymenthistories">
+      <EntityTypeMapping TypeName="POSDBModel.paymenthistory">
+        <MappingFragment StoreEntitySet="paymenthistory">
+          <ScalarProperty Name="SqNo" ColumnName="SqNo" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="readflag" ColumnName="readflag" />
+          <ScalarProperty Name="usernm" ColumnName="usernm" />
+          <ScalarProperty Name="paydate" ColumnName="paydate" />
+          <ScalarProperty Name="cashtender" ColumnName="cashtender" />
+          <ScalarProperty Name="balance" ColumnName="balance" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="paymode" ColumnName="paymode" />
+          <ScalarProperty Name="paytype" ColumnName="paytype" />
+          <ScalarProperty Name="receiptno" ColumnName="receiptno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spGetPaymentHistory" FunctionName="POSDBModel.Store.spGetPaymentHistory">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spGetPaymentHistory_Result">
+          <ScalarProperty Name="RECEIPT_NO" ColumnName="RECEIPT_NO" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="CUSTOMER" ColumnName="CUSTOMER" />
+          <ScalarProperty Name="SUBTOTAL" ColumnName="SUBTOTAL" />
+          <ScalarProperty Name="SUB_DISCOUNT" ColumnName="SUB DISCOUNT" />
+          <ScalarProperty Name="AMOUNT_DUE" ColumnName="AMOUNT DUE" />
+          <ScalarProperty Name="PAYMENT_TYPE" ColumnName="PAYMENT TYPE" />
+          <ScalarProperty Name="DATE_OF_PAYMENT" ColumnName="DATE OF PAYMENT" />
+          <ScalarProperty Name="AMOUNT_PAID" ColumnName="AMOUNT PAID" />
+          <ScalarProperty Name="BALANCE" ColumnName="BALANCE" />
+          <ScalarProperty Name="CASH_TENDER" ColumnName="CASH TENDER" />
+          <ScalarProperty Name="REMARKS" ColumnName="REMARKS" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="INVOICE_TYPE" ColumnName="INVOICE TYPE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="suppliers">
+      <EntityTypeMapping TypeName="POSDBModel.supplier">
+        <MappingFragment StoreEntitySet="supplier">
+          <ScalarProperty Name="contactno" ColumnName="contactno" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="suppliername" ColumnName="suppliername" />
+          <ScalarProperty Name="supplierid" ColumnName="supplierid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderDetails">
+      <EntityTypeMapping TypeName="POSDBModel.OrderDetail">
+        <MappingFragment StoreEntitySet="OrderDetails">
+          <ScalarProperty Name="SqNo" ColumnName="SqNo" />
+          <ScalarProperty Name="PriceType" ColumnName="PriceType" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spGetOrderID" FunctionName="POSDBModel.Store.spGetOrderID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spGetOrderID_Result">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="OrderReceived" ColumnName="OrderReceived" />
+          <ScalarProperty Name="TotalItems" ColumnName="TotalItems" />
+          <ScalarProperty Name="GrandTotal" ColumnName="GrandTotal" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="isProcessed" ColumnName="isProcessed" />
+          <ScalarProperty Name="ReceiptNo" ColumnName="ReceiptNo" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDt" ColumnName="createdDt" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetZReadingByZno" FunctionName="POSDBModel.Store.spGetZReadingByZno">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spGetZReadingByZno_Result">
+          <ScalarProperty Name="GROSSSALES" ColumnName="GROSSSALES" />
+          <ScalarProperty Name="REGDISCOUNT" ColumnName="REGDISCOUNT" />
+          <ScalarProperty Name="SCDISCOUNT" ColumnName="SCDISCOUNT" />
+          <ScalarProperty Name="PWDDISCOUNT" ColumnName="PWDDISCOUNT" />
+          <ScalarProperty Name="NETSALES" ColumnName="NETSALES" />
+          <ScalarProperty Name="VATSALES" ColumnName="VATSALES" />
+          <ScalarProperty Name="VATAMT" ColumnName="VATAMT" />
+          <ScalarProperty Name="NONVATSALES" ColumnName="NONVATSALES" />
+          <ScalarProperty Name="VATEXEMSALES" ColumnName="VATEXEMSALES" />
+          <ScalarProperty Name="ZERORATEDSALES" ColumnName="ZERORATEDSALES" />
+          <ScalarProperty Name="NOOFITEMS" ColumnName="NOOFITEMS" />
+          <ScalarProperty Name="NOOFTRANSACTIONS" ColumnName="NOOFTRANSACTIONS" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="cashinouts">
+      <EntityTypeMapping TypeName="POSDBModel.cashinout">
+        <MappingFragment StoreEntitySet="cashinout">
+          <ScalarProperty Name="SqNo" ColumnName="SqNo" />
+          <ScalarProperty Name="createdDt" ColumnName="createdDt" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="ZReadNo" ColumnName="ZReadNo" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="cashType" ColumnName="cashType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spGetCashInout" FunctionName="POSDBModel.Store.spGetCashInout">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spGetCashInout_Result">
+          <ScalarProperty Name="cashType" ColumnName="cashType" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetCashInoutHistory" FunctionName="POSDBModel.Store.spGetCashInoutHistory">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spGetCashInoutHistory_Result">
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+          <ScalarProperty Name="NOTE" ColumnName="NOTE" />
+          <ScalarProperty Name="ACTIONDATE" ColumnName="ACTIONDATE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="POSDBModel.Order">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="createdDt" ColumnName="createdDt" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="ReceiptNo" ColumnName="ReceiptNo" />
+          <ScalarProperty Name="isProcessed" ColumnName="isProcessed" />
+          <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="GrandTotal" ColumnName="GrandTotal" />
+          <ScalarProperty Name="TotalItems" ColumnName="TotalItems" />
+          <ScalarProperty Name="OrderReceived" ColumnName="OrderReceived" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spGetOrders" FunctionName="POSDBModel.Store.spGetOrders">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spGetOrders_Result">
+          <ScalarProperty Name="ORDER_ID" ColumnName="ORDER ID" />
+          <ScalarProperty Name="ORDER_NO" ColumnName="ORDER NO" />
+          <ScalarProperty Name="SUPPLIER_NAME" ColumnName="SUPPLIER NAME" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="CONTACT_NO" ColumnName="CONTACT NO" />
+          <ScalarProperty Name="ORDER_DATE" ColumnName="ORDER DATE" />
+          <ScalarProperty Name="DATE_RECEIVED" ColumnName="DATE RECEIVED" />
+          <ScalarProperty Name="TOTAL_QTY" ColumnName="TOTAL QTY" />
+          <ScalarProperty Name="GRAND_TOTAL" ColumnName="GRAND TOTAL" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="IS_RECEIVED" ColumnName="IS RECEIVED" />
+          <ScalarProperty Name="REMARKS" ColumnName="REMARKS" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSearchByItem" FunctionName="POSDBModel.Store.spSearchByItem">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spSearchByItem_Result">
+          <ScalarProperty Name="ITEM_CODE" ColumnName="ITEM CODE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="CATEGORY" ColumnName="CATEGORY" />
+          <ScalarProperty Name="COST" ColumnName="COST" />
+          <ScalarProperty Name="WHOLESALE_PRICE" ColumnName="WHOLESALE PRICE" />
+          <ScalarProperty Name="RETAIL_PRICE" ColumnName="RETAIL PRICE" />
+          <ScalarProperty Name="PROMO_PRICE" ColumnName="PROMO PRICE" />
+          <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+          <ScalarProperty Name="ALERT_QTY" ColumnName="ALERT QTY" />
+          <ScalarProperty Name="SUPPLIER" ColumnName="SUPPLIER" />
+          <ScalarProperty Name="MANUFACTURER" ColumnName="MANUFACTURER" />
+          <ScalarProperty Name="VAT_STATUS" ColumnName="VAT STATUS" />
+          <ScalarProperty Name="AVAILABILITY" ColumnName="AVAILABILITY" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="customers">
+      <EntityTypeMapping TypeName="POSDBModel.customer">
+        <MappingFragment StoreEntitySet="customers">
+          <ScalarProperty Name="credit_limit" ColumnName="credit_limit" />
+          <ScalarProperty Name="loyaltypoints" ColumnName="loyaltypoints" />
+          <ScalarProperty Name="idno" ColumnName="idno" />
+          <ScalarProperty Name="contactno" ColumnName="contactno" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="customername" ColumnName="customername" />
+          <ScalarProperty Name="customerid" ColumnName="customerid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spCustomers" FunctionName="POSDBModel.Store.spCustomers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spCustomers_Result">
+          <ScalarProperty Name="CUSTOMER_ID" ColumnName="CUSTOMER ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="CONTACT_NO" ColumnName="CONTACT NO" />
+          <ScalarProperty Name="ID_NO" ColumnName="ID NO" />
+          <ScalarProperty Name="LOYALTY_POINTS" ColumnName="LOYALTY POINTS" />
+          <ScalarProperty Name="CREDIT_LIMIT" ColumnName="CREDIT_LIMIT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="inventories">
+      <EntityTypeMapping TypeName="POSDBModel.inventory">
+        <MappingFragment StoreEntitySet="inventory">
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="availability" ColumnName="availability" />
+          <ScalarProperty Name="vatstatus" ColumnName="vatstatus" />
+          <ScalarProperty Name="alertquantity" ColumnName="alertquantity" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="promoprice" ColumnName="promoprice" />
+          <ScalarProperty Name="wholesaleprice" ColumnName="wholesaleprice" />
+          <ScalarProperty Name="cost" ColumnName="cost" />
+          <ScalarProperty Name="supplierid" ColumnName="supplierid" />
+          <ScalarProperty Name="manufacturerid" ColumnName="manufacturerid" />
+          <ScalarProperty Name="categoryid" ColumnName="categoryid" />
+          <ScalarProperty Name="unit" ColumnName="unit" />
+          <ScalarProperty Name="itemname" ColumnName="itemname" />
+          <ScalarProperty Name="itemcode" ColumnName="itemcode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spGetInventory" FunctionName="POSDBModel.Store.spGetInventory">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spGetInventory_Result">
+          <ScalarProperty Name="ITEM_CODE" ColumnName="ITEM CODE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+          <ScalarProperty Name="CATEGORY" ColumnName="CATEGORY" />
+          <ScalarProperty Name="COST" ColumnName="COST" />
+          <ScalarProperty Name="WHOLESALE_PRICE" ColumnName="WHOLESALE PRICE" />
+          <ScalarProperty Name="RETAIL_PRICE" ColumnName="RETAIL PRICE" />
+          <ScalarProperty Name="PROMO_PRICE" ColumnName="PROMO PRICE" />
+          <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+          <ScalarProperty Name="ALERT_QTY" ColumnName="ALERT QTY" />
+          <ScalarProperty Name="SUPPLIER" ColumnName="SUPPLIER" />
+          <ScalarProperty Name="MANUFACTURER" ColumnName="MANUFACTURER" />
+          <ScalarProperty Name="VAT_STATUS" ColumnName="VAT STATUS" />
+          <ScalarProperty Name="AVAILABILITY" ColumnName="AVAILABILITY" />
+          <ScalarProperty Name="REMARKS" ColumnName="REMARKS" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="settings">
+      <EntityTypeMapping TypeName="POSDBModel.setting">
+        <MappingFragment StoreEntitySet="settings">
+          <ScalarProperty Name="enablecreditlimit" ColumnName="enablecreditlimit" />
+          <ScalarProperty Name="enablepointspayment" ColumnName="enablepointspayment" />
+          <ScalarProperty Name="imagePath" ColumnName="imagePath" />
+          <ScalarProperty Name="pointspesos" ColumnName="pointspesos" />
+          <ScalarProperty Name="conversionrate" ColumnName="conversionrate" />
+          <ScalarProperty Name="pointsearned" ColumnName="pointsearned" />
+          <ScalarProperty Name="amountspent" ColumnName="amountspent" />
+          <ScalarProperty Name="enablepoledisplay" ColumnName="enablepoledisplay" />
+          <ScalarProperty Name="defaultBottomDisplay" ColumnName="defaultBottomDisplay" />
+          <ScalarProperty Name="defaultTopDisplay" ColumnName="defaultTopDisplay" />
+          <ScalarProperty Name="poleport" ColumnName="poleport" />
+          <ScalarProperty Name="wholesalemarkup" ColumnName="wholesalemarkup" />
+          <ScalarProperty Name="retailmarkup" ColumnName="retailmarkup" />
+          <ScalarProperty Name="nodecimal" ColumnName="nodecimal" />
+          <ScalarProperty Name="weightto" ColumnName="weightto" />
+          <ScalarProperty Name="weightfrom" ColumnName="weightfrom" />
+          <ScalarProperty Name="itemcodeto" ColumnName="itemcodeto" />
+          <ScalarProperty Name="itemcodefrom" ColumnName="itemcodefrom" />
+          <ScalarProperty Name="DbPw" ColumnName="DbPw" />
+          <ScalarProperty Name="DbUser" ColumnName="DbUser" />
+          <ScalarProperty Name="DatabaseNm" ColumnName="DatabaseNm" />
+          <ScalarProperty Name="ServerNm" ColumnName="ServerNm" />
+          <ScalarProperty Name="touscreenmode" ColumnName="touscreenmode" />
+          <ScalarProperty Name="downpayment" ColumnName="downpayment" />
+          <ScalarProperty Name="withLogo" ColumnName="withLogo" />
+          <ScalarProperty Name="withAR" ColumnName="withAR" />
+          <ScalarProperty Name="footer" ColumnName="footer" />
+          <ScalarProperty Name="printername" ColumnName="printername" />
+          <ScalarProperty Name="contactno" ColumnName="contactno" />
+          <ScalarProperty Name="tinno" ColumnName="tinno" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="storename" ColumnName="storename" />
+          <ScalarProperty Name="settingsid" ColumnName="settingsid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spGetSalesByItem" FunctionName="POSDBModel.Store.spGetSalesByItem">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spGetSalesByItem_Result">
+          <ScalarProperty Name="ITEMCODE" ColumnName="ITEMCODE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="CATEGORY" ColumnName="CATEGORY" />
+          <ScalarProperty Name="SUPPLIER" ColumnName="SUPPLIER" />
+          <ScalarProperty Name="COST" ColumnName="COST" />
+          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+          <ScalarProperty Name="TOTAL_QTY" ColumnName="TOTAL QTY" />
+          <ScalarProperty Name="SUB_TOTAL" ColumnName="SUB TOTAL" />
+          <ScalarProperty Name="DISCOUNT" ColumnName="DISCOUNT" />
+          <ScalarProperty Name="TOTAL_DUE" ColumnName="TOTAL DUE" />
+          <ScalarProperty Name="TOTAL_COST" ColumnName="TOTAL_COST" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="POSDBModel.category">
+        <MappingFragment StoreEntitySet="category">
+          <ScalarProperty Name="categoryname" ColumnName="categoryname" />
+          <ScalarProperty Name="categoryid" ColumnName="categoryid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="expenses">
+      <EntityTypeMapping TypeName="POSDBModel.expens">
+        <MappingFragment StoreEntitySet="expenses">
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="tinno" ColumnName="tinno" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="vat" ColumnName="vat" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="payee" ColumnName="payee" />
+          <ScalarProperty Name="dtexpenses" ColumnName="dtexpenses" />
+          <ScalarProperty Name="expensesid" ColumnName="expensesid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="invoices">
+      <EntityTypeMapping TypeName="POSDBModel.invoice">
+        <MappingFragment StoreEntitySet="invoice">
+          <ScalarProperty Name="drivername" ColumnName="drivername" />
+          <ScalarProperty Name="ZReadNo" ColumnName="ZReadNo" />
+          <ScalarProperty Name="pointsRedeem" ColumnName="pointsRedeem" />
+          <ScalarProperty Name="currentpoints" ColumnName="currentpoints" />
+          <ScalarProperty Name="previouspoints" ColumnName="previouspoints" />
+          <ScalarProperty Name="earned" ColumnName="earned" />
+          <ScalarProperty Name="loyaltyamt" ColumnName="loyaltyamt" />
+          <ScalarProperty Name="crtddt" ColumnName="crtddt" />
+          <ScalarProperty Name="crtdby" ColumnName="crtdby" />
+          <ScalarProperty Name="balance" ColumnName="balance" />
+          <ScalarProperty Name="invoicetype" ColumnName="invoicetype" />
+          <ScalarProperty Name="paymentstatus" ColumnName="paymentstatus" />
+          <ScalarProperty Name="changeamt" ColumnName="changeamt" />
+          <ScalarProperty Name="amountpaid" ColumnName="amountpaid" />
+          <ScalarProperty Name="cashtender" ColumnName="cashtender" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="noofitems" ColumnName="noofitems" />
+          <ScalarProperty Name="cost" ColumnName="cost" />
+          <ScalarProperty Name="zeroratedsales" ColumnName="zeroratedsales" />
+          <ScalarProperty Name="vatexemptsales" ColumnName="vatexemptsales" />
+          <ScalarProperty Name="nonvatsales" ColumnName="nonvatsales" />
+          <ScalarProperty Name="vatamount" ColumnName="vatamount" />
+          <ScalarProperty Name="vatsales" ColumnName="vatsales" />
+          <ScalarProperty Name="amountdue" ColumnName="amountdue" />
+          <ScalarProperty Name="subdiscount" ColumnName="subdiscount" />
+          <ScalarProperty Name="subtotal" ColumnName="subtotal" />
+          <ScalarProperty Name="paymenttype" ColumnName="paymenttype" />
+          <ScalarProperty Name="tableno" ColumnName="tableno" />
+          <ScalarProperty Name="customerid" ColumnName="customerid" />
+          <ScalarProperty Name="solddate" ColumnName="solddate" />
+          <ScalarProperty Name="receiptno" ColumnName="receiptno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spalkytest" FunctionName="POSDBModel.Store.spalkytest">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spalkytest_Result">
+          <ScalarProperty Name="receiptno" ColumnName="receiptno" />
+          <ScalarProperty Name="solddate" ColumnName="solddate" />
+          <ScalarProperty Name="customerid" ColumnName="customerid" />
+          <ScalarProperty Name="tableno" ColumnName="tableno" />
+          <ScalarProperty Name="paymenttype" ColumnName="paymenttype" />
+          <ScalarProperty Name="subtotal" ColumnName="subtotal" />
+          <ScalarProperty Name="subdiscount" ColumnName="subdiscount" />
+          <ScalarProperty Name="amountdue" ColumnName="amountdue" />
+          <ScalarProperty Name="vatsales" ColumnName="vatsales" />
+          <ScalarProperty Name="vatamount" ColumnName="vatamount" />
+          <ScalarProperty Name="nonvatsales" ColumnName="nonvatsales" />
+          <ScalarProperty Name="vatexemptsales" ColumnName="vatexemptsales" />
+          <ScalarProperty Name="zeroratedsales" ColumnName="zeroratedsales" />
+          <ScalarProperty Name="cost" ColumnName="cost" />
+          <ScalarProperty Name="noofitems" ColumnName="noofitems" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="cashtender" ColumnName="cashtender" />
+          <ScalarProperty Name="amountpaid" ColumnName="amountpaid" />
+          <ScalarProperty Name="changeamt" ColumnName="changeamt" />
+          <ScalarProperty Name="paymentstatus" ColumnName="paymentstatus" />
+          <ScalarProperty Name="invoicetype" ColumnName="invoicetype" />
+          <ScalarProperty Name="balance" ColumnName="balance" />
+          <ScalarProperty Name="crtdby" ColumnName="crtdby" />
+          <ScalarProperty Name="crtddt" ColumnName="crtddt" />
+          <ScalarProperty Name="loyaltyamt" ColumnName="loyaltyamt" />
+          <ScalarProperty Name="earned" ColumnName="earned" />
+          <ScalarProperty Name="previouspoints" ColumnName="previouspoints" />
+          <ScalarProperty Name="currentpoints" ColumnName="currentpoints" />
+          <ScalarProperty Name="pointsRedeem" ColumnName="pointsRedeem" />
+          <ScalarProperty Name="ZReadNo" ColumnName="ZReadNo" />
+          <ScalarProperty Name="drivername" ColumnName="drivername" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetSalesByTransaction" FunctionName="POSDBModel.Store.spGetSalesByTransaction">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSDBModel.spGetSalesByTransaction_Result">
+          <ScalarProperty Name="RECEIPT_NO" ColumnName="RECEIPT_NO" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="CUSTOMER" ColumnName="CUSTOMER" />
+          <ScalarProperty Name="PAYMENT_TYPE" ColumnName="PAYMENT TYPE" />
+          <ScalarProperty Name="STAFF" ColumnName="STAFF" />
+          <ScalarProperty Name="COST" ColumnName="COST" />
+          <ScalarProperty Name="SUBTOTAL" ColumnName="SUBTOTAL" />
+          <ScalarProperty Name="SUB_DISCOUNT" ColumnName="SUB DISCOUNT" />
+          <ScalarProperty Name="AMOUNT_DUE" ColumnName="AMOUNT DUE" />
+          <ScalarProperty Name="CASH_TENDER" ColumnName="CASH TENDER" />
+          <ScalarProperty Name="CHANGE" ColumnName="CHANGE" />
+          <ScalarProperty Name="AMOUNT_PAID" ColumnName="AMOUNT_PAID" />
+          <ScalarProperty Name="BALANCE" ColumnName="BALANCE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="VAT_SALES" ColumnName="VAT SALES" />
+          <ScalarProperty Name="VAT_AMOUNT" ColumnName="VAT AMOUNT" />
+          <ScalarProperty Name="NON_VAT_SALES" ColumnName="NON VAT SALES" />
+          <ScalarProperty Name="VAT_EXEMPT_SALES" ColumnName="VAT EXEMPT SALES" />
+          <ScalarProperty Name="ZERO_RATED_SALES" ColumnName="ZERO RATED SALES" />
+          <ScalarProperty Name="NO_OF_ITEMS" ColumnName="NO OF ITEMS" />
+          <ScalarProperty Name="DRIVER_NAME" ColumnName="DRIVER NAME" />
+          <ScalarProperty Name="NOTE" ColumnName="NOTE" />
+          <ScalarProperty Name="INVOICE_TYPE" ColumnName="INVOICE TYPE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

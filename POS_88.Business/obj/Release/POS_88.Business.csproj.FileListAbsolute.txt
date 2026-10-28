@@ -1,0 +1,9 @@
+C:\Users\Admin-PC\Documents\Visual Studio 2015\Projects\POS_88\POS_88.Business\bin\Release\POS_88.Business.dll
+C:\Users\Admin-PC\Documents\Visual Studio 2015\Projects\POS_88\POS_88.Business\bin\Release\POS_88.Business.pdb
+C:\Users\Admin-PC\Documents\Visual Studio 2015\Projects\POS_88\POS_88.Business\bin\Release\POS_88.Database.dll
+C:\Users\Admin-PC\Documents\Visual Studio 2015\Projects\POS_88\POS_88.Business\bin\Release\EntityFramework.dll
+C:\Users\Admin-PC\Documents\Visual Studio 2015\Projects\POS_88\POS_88.Business\bin\Release\POS_88.Database.pdb
+C:\Users\Admin-PC\Documents\Visual Studio 2015\Projects\POS_88\POS_88.Business\bin\Release\EntityFramework.xml
+C:\Users\Admin-PC\Documents\Visual Studio 2015\Projects\POS_88\POS_88.Business\obj\Release\POS_88.Business.csprojResolveAssemblyReference.cache
+C:\Users\Admin-PC\Documents\Visual Studio 2015\Projects\POS_88\POS_88.Business\obj\Release\POS_88.Business.dll
+C:\Users\Admin-PC\Documents\Visual Studio 2015\Projects\POS_88\POS_88.Business\obj\Release\POS_88.Business.pdb

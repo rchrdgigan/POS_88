@@ -1,0 +1,17 @@
+C:\Users\Admin-PC\documents\visual studio 2015\Projects\POS_88\POS_88.Database\bin\Debug\POS_88.Database.dll.config
+C:\Users\Admin-PC\documents\visual studio 2015\Projects\POS_88\POS_88.Database\bin\Debug\POS_88.Database.dll
+C:\Users\Admin-PC\documents\visual studio 2015\Projects\POS_88\POS_88.Database\bin\Debug\POS_88.Database.pdb
+C:\Users\Admin-PC\documents\visual studio 2015\Projects\POS_88\POS_88.Database\obj\Debug\POS_88.Database.dll
+C:\Users\Admin-PC\documents\visual studio 2015\Projects\POS_88\POS_88.Database\obj\Debug\POS_88.Database.pdb
+C:\Users\Admin-PC\Documents\Visual Studio 2015\Projects\POS_88\POS_88.Database\bin\Debug\EntityFramework.dll
+C:\Users\Admin-PC\Documents\Visual Studio 2015\Projects\POS_88\POS_88.Database\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin-PC\Documents\Visual Studio 2015\Projects\POS_88\POS_88.Database\bin\Debug\EntityFramework.xml
+C:\Users\Admin-PC\Documents\Visual Studio 2015\Projects\POS_88\POS_88.Database\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin-PC\Documents\Visual Studio 2015\Projects\POS_88\POS_88.Database\obj\Debug\POS_88.Database.csprojResolveAssemblyReference.cache
+C:\Users\Admin-PC\Documents\Visual Studio 2015\Projects\POS_88\POS_88.Database\bin\PasswordHintCheck\POS_88.Database.dll.config
+C:\Users\Admin-PC\Documents\Visual Studio 2015\Projects\POS_88\POS_88.Database\bin\PasswordHintCheck\POS_88.Database.dll
+C:\Users\Admin-PC\Documents\Visual Studio 2015\Projects\POS_88\POS_88.Database\bin\PasswordHintCheck\POS_88.Database.pdb
+C:\Users\Admin-PC\Documents\Visual Studio 2015\Projects\POS_88\POS_88.Database\bin\PasswordHintCheck\EntityFramework.dll
+C:\Users\Admin-PC\Documents\Visual Studio 2015\Projects\POS_88\POS_88.Database\bin\PasswordHintCheck\EntityFramework.SqlServer.dll
+C:\Users\Admin-PC\Documents\Visual Studio 2015\Projects\POS_88\POS_88.Database\bin\PasswordHintCheck\EntityFramework.xml
+C:\Users\Admin-PC\Documents\Visual Studio 2015\Projects\POS_88\POS_88.Database\bin\PasswordHintCheck\EntityFramework.SqlServer.xml

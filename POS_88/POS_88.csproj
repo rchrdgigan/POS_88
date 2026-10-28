@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D894B38-C0D4-4701-BCA9-CD380BFF1ECB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>POS_88</RootNamespace>
+    <AssemblyName>POS_88</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>E:\POS san 88 Conventient Store\Systemfinity POS\Admin\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML">
+      <HintPath>E:\POS san 88 Conventient Store\Systemfinity POS\Admin\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2">
+      <HintPath>E:\POS san 88 Conventient Store\Systemfinity POS\Admin\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\POS san 88 Conventient Store\Systemfinity POS\Admin\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\POS san 88 Conventient Store\Systemfinity POS\Admin\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts">
+      <HintPath>E:\POS san 88 Conventient Store\Systemfinity POS\Admin\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms">
+      <HintPath>E:\POS san 88 Conventient Store\Systemfinity POS\Admin\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf">
+      <HintPath>E:\POS san 88 Conventient Store\Systemfinity POS\Admin\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="1SearchInventory.cs" />
+    <Compile Include="2SearchInventory.cs" />
+    <Compile Include="3SearchInventory.cs" />
+    <Compile Include="4SearchInventory.cs" />
+    <Compile Include="5SearchInventory.cs" />
+    <Compile Include="Persistence\POSImplementation.cs" />
+    <Compile Include="Persistence\UnitOfWorkPOS.cs" />
+    <Compile Include="Presenters\AddOrEditCustomersPresenter.cs" />
+    <Compile Include="Presenters\AddOrEditSupplierPresenter.cs" />
+    <Compile Include="Presenters\AddOrEditCategoryPresenter.cs" />
+    <Compile Include="Presenters\AddOrEditExpensesPresenter.cs" />
+    <Compile Include="Presenters\AddOrEditManufacturerPresenter.cs" />
+    <Compile Include="Presenters\AddOrEditPurchaseOrderPresenter.cs" />
+    <Compile Include="Presenters\AddOrEditUserPresenter.cs" />
+    <Compile Include="Presenters\CashCountListPresenter.cs" />
+    <Compile Include="Presenters\CustomersPresenter.cs" />
+    <Compile Include="Presenters\DashboardPresenter.cs" />
+    <Compile Include="Presenters\AddOrEditItemPresenter.cs" />
+    <Compile Include="Presenters\ExpensesPresenter.cs" />
+    <Compile Include="Presenters\ImportStocksPresenter.cs" />
+    <Compile Include="Presenters\InventoryPresenter.cs" />
+    <Compile Include="Presenters\MainPresenter.cs" />
+    <Compile Include="Presenters\PrintConfirmPresenter.cs" />
+    <Compile Include="Presenters\PurchaseItemsPresenter.cs" />
+    <Compile Include="Presenters\PurchaseOrderPresenter.cs" />
+    <Compile Include="Presenters\ReportViewerPresenter.cs" />
+    <Compile Include="Presenters\SalesHistoryPresenter.cs" />
+    <Compile Include="Presenters\SalesPresenter.cs" />
+    <Compile Include="Presenters\SetupPresenter.cs" />
+    <Compile Include="Presenters\StockHistoryPresenter.cs" />
+    <Compile Include="Presenters\UsersPresenter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\BARCODE2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BARCODE2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\BARCODE22.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BARCODE22.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\BARCODE2_noprice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BARCODE2_noprice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\BARCODE3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BARCODE3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CustomInvoice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomInvoice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\expenses.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>expenses.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Inventory.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventory.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Invoice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Invoice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Orders.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Orders.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\SalesbyItems.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesbyItems.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\SalesbyTransaction.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesbyTransaction.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\SalesbyTransactionCashier.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesbyTransactionCashier.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\SalesbyTransaction_backup20201207.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesbyTransaction_backup20201207.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\StockHistory.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockHistory.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SearchInventory.cs" />
+    <Compile Include="SummarySales.cs" />
+    <Compile Include="Views\AddOrEditCustomersView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddOrEditCustomersView.Designer.cs">
+      <DependentUpon>AddOrEditCustomersView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddOrEditExpensesView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddOrEditExpensesView.Designer.cs">
+      <DependentUpon>AddOrEditExpensesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddOrEditItemView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddOrEditItemView.Designer.cs">
+      <DependentUpon>AddOrEditItemView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddOrEditManufacturerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddOrEditManufacturerView.Designer.cs">
+      <DependentUpon>AddOrEditManufacturerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddOrEditPurchaseOrderView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddOrEditPurchaseOrderView.Designer.cs">
+      <DependentUpon>AddOrEditPurchaseOrderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddOrEditCategoryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddOrEditCategoryView.Designer.cs">
+      <DependentUpon>AddOrEditCategoryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddOrEditSupplierView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddOrEditSupplierView.Designer.cs">
+      <DependentUpon>AddOrEditSupplierView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddOrEditUserView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddOrEditUserView.Designer.cs">
+      <DependentUpon>AddOrEditUserView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddStocksView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddStocksView.Designer.cs">
+      <DependentUpon>AddStocksView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CashCountListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CashCountListView.Designer.cs">
+      <DependentUpon>CashCountListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CashierReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CashierReportView.Designer.cs">
+      <DependentUpon>CashierReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CashierView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CashierView.Designer.cs">
+      <DependentUpon>CashierView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CashInOutHistoryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CashInOutHistoryView.Designer.cs">
+      <DependentUpon>CashInOutHistoryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomersView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CustomersView.Designer.cs">
+      <DependentUpon>CustomersView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DashboardView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DashboardView.Designer.cs">
+      <DependentUpon>DashboardView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExpensesView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ExpensesView.Designer.cs">
+      <DependentUpon>ExpensesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IAddOrEditCategoryView.cs" />
+    <Compile Include="Views\IAddOrEditCustomersView.cs" />
+    <Compile Include="Views\IAddOrEditExpensesView.cs" />
+    <Compile Include="Views\IAddOrEditManufacturerView.cs" />
+    <Compile Include="Views\IAddOrEditPurchaseOrderView.cs" />
+    <Compile Include="Views\IAddOrEditSupplierView.cs" />
+    <Compile Include="Views\IAddOrEditUserView.cs" />
+    <Compile Include="Views\IAddStocksView.cs" />
+    <Compile Include="Presenters\AddStocksPresenter.cs" />
+    <Compile Include="Views\ICashCountListView.cs" />
+    <Compile Include="Views\ICustomersView.cs" />
+    <Compile Include="Views\IDashboardView.cs" />
+    <Compile Include="Views\IAddOrEditItemView.cs" />
+    <Compile Include="Views\IExpensesView.cs" />
+    <Compile Include="Views\IInventoryView.cs" />
+    <Compile Include="Views\IMainView.cs" />
+    <Compile Include="Views\ImportStocksView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ImportStocksView.Designer.cs">
+      <DependentUpon>ImportStocksView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InventoryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\InventoryView.Designer.cs">
+      <DependentUpon>InventoryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IPrintConfirmView.cs" />
+    <Compile Include="Views\IPurchaseItemView.cs" />
+    <Compile Include="Views\IPurchaseOrderView.cs" />
+    <Compile Include="Views\IReportViewerView.cs" />
+    <Compile Include="Views\ISalesHistoryView.cs" />
+    <Compile Include="Views\ISalesView.cs" />
+    <Compile Include="Views\ISetupView.cs" />
+    <Compile Include="Views\IStockHistoryView.cs" />
+    <Compile Include="Views\IUsersView.cs" />
+    <Compile Include="Views\LoginView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LoginView.Designer.cs">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MainView.Designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PaymentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PaymentView.Designer.cs">
+      <DependentUpon>PaymentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PrintCashCountView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PrintCashCountView.Designer.cs">
+      <DependentUpon>PrintCashCountView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PrintConfirmView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PrintConfirmView.Designer.cs">
+      <DependentUpon>PrintConfirmView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PurchaseItemView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PurchaseItemView.Designer.cs">
+      <DependentUpon>PurchaseItemView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PurchaseOrderView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PurchaseOrderView.Designer.cs">
+      <DependentUpon>PurchaseOrderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReportViewerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ReportViewerView.Designer.cs">
+      <DependentUpon>ReportViewerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SalesHistoryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SalesHistoryView.Designer.cs">
+      <DependentUpon>SalesHistoryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SalesView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SalesView.Designer.cs">
+      <DependentUpon>SalesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SetupView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SetupView.Designer.cs">
+      <DependentUpon>SetupView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POSTheme.cs" />
+    <Compile Include="Views\SkeletonLoader.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\StockHistoryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\StockHistoryView.Designer.cs">
+      <DependentUpon>StockHistoryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StoreSettingsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\StoreSettingsView.Designer.cs">
+      <DependentUpon>StoreSettingsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UsersView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UsersView.Designer.cs">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Report\BARCODE2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BARCODE2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\BARCODE22.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BARCODE22.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\BARCODE2_noprice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BARCODE2_noprice.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\BARCODE3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BARCODE3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CustomInvoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CustomInvoice.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\expenses.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>expenses.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Inventory.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Inventory.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Invoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Invoice.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Orders.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Orders.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\SalesbyItems.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesbyItems.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\SalesbyTransaction.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesbyTransaction.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\SalesbyTransactionCashier.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesbyTransactionCashier.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\SalesbyTransaction_backup20201207.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesbyTransaction_backup20201207.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\StockHistory.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StockHistory.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddOrEditCustomersView.resx">
+      <DependentUpon>AddOrEditCustomersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddOrEditExpensesView.resx">
+      <DependentUpon>AddOrEditExpensesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddOrEditItemView.resx">
+      <DependentUpon>AddOrEditItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddOrEditManufacturerView.resx">
+      <DependentUpon>AddOrEditManufacturerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddOrEditPurchaseOrderView.resx">
+      <DependentUpon>AddOrEditPurchaseOrderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddOrEditCategoryView.resx">
+      <DependentUpon>AddOrEditCategoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddOrEditSupplierView.resx">
+      <DependentUpon>AddOrEditSupplierView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddOrEditUserView.resx">
+      <DependentUpon>AddOrEditUserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddStocksView.resx">
+      <DependentUpon>AddStocksView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CashCountListView.resx">
+      <DependentUpon>CashCountListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CashierReportView.resx">
+      <DependentUpon>CashierReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CashierView.resx">
+      <DependentUpon>CashierView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CashInOutHistoryView.resx">
+      <DependentUpon>CashInOutHistoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomersView.resx">
+      <DependentUpon>CustomersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DashboardView.resx">
+      <DependentUpon>DashboardView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExpensesView.resx">
+      <DependentUpon>ExpensesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ImportStocksView.resx">
+      <DependentUpon>ImportStocksView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InventoryView.resx">
+      <DependentUpon>InventoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoginView.resx">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PaymentView.resx">
+      <DependentUpon>PaymentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PrintCashCountView.resx">
+      <DependentUpon>PrintCashCountView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PrintConfirmView.resx">
+      <DependentUpon>PrintConfirmView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PurchaseItemView.resx">
+      <DependentUpon>PurchaseItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PurchaseOrderView.resx">
+      <DependentUpon>PurchaseOrderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportViewerView.resx">
+      <DependentUpon>ReportViewerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SalesHistoryView.resx">
+      <DependentUpon>SalesHistoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SalesView.resx">
+      <DependentUpon>SalesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SetupView.resx">
+      <DependentUpon>SetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StockHistoryView.resx">
+      <DependentUpon>StockHistoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreSettingsView.resx">
+      <DependentUpon>StoreSettingsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersView.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\POS_88.Business\POS_88.Business.csproj">
+      <Project>{c0856d27-dfa3-4e4f-a40a-ad8ee0f743d0}</Project>
+      <Name>POS_88.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\POS_88.Database\POS_88.Database.csproj">
+      <Project>{ab570eb8-9047-4b44-8ffc-63b5855e643f}</Project>
+      <Name>POS_88.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\POS_88.Repository\POS_88.Repository.csproj">
+      <Project>{78df1e23-e6e4-4dc5-b92d-c41bbe240f20}</Project>
+      <Name>POS_88.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
