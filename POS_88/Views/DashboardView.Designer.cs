@@ -81,16 +81,11 @@ namespace POS_88.Views
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridViewX2 = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panelNoItems.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelTotalStocks.SuspendLayout();
@@ -114,17 +109,18 @@ namespace POS_88.Views
             this.panel7.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(59, 13);
+            this.label1.Location = new System.Drawing.Point(59, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 36);
             this.label1.TabIndex = 0;
@@ -134,7 +130,7 @@ namespace POS_88.Views
             // 
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(62, 49);
+            this.lblWelcome.Location = new System.Drawing.Point(62, 46);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(343, 17);
             this.lblWelcome.TabIndex = 1;
@@ -142,13 +138,17 @@ namespace POS_88.Views
             // 
             // panelNoItems
             // 
+            this.panelNoItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelNoItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panelNoItems.Controls.Add(this.pictureBox2);
             this.panelNoItems.Controls.Add(this.lblNoOfItems);
             this.panelNoItems.Controls.Add(this.label3);
-            this.panelNoItems.Location = new System.Drawing.Point(12, 76);
+            this.panelNoItems.Location = new System.Drawing.Point(9, 6);
+            this.panelNoItems.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
             this.panelNoItems.Name = "panelNoItems";
-            this.panelNoItems.Size = new System.Drawing.Size(250, 103);
+            this.panelNoItems.Size = new System.Drawing.Size(220, 100);
             this.panelNoItems.TabIndex = 2;
             // 
             // pictureBox2
@@ -165,10 +165,10 @@ namespace POS_88.Views
             // 
             this.lblNoOfItems.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblNoOfItems.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoOfItems.Location = new System.Drawing.Point(0, 66);
+            this.lblNoOfItems.Location = new System.Drawing.Point(0, 63);
             this.lblNoOfItems.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.lblNoOfItems.Name = "lblNoOfItems";
-            this.lblNoOfItems.Size = new System.Drawing.Size(250, 37);
+            this.lblNoOfItems.Size = new System.Drawing.Size(220, 37);
             this.lblNoOfItems.TabIndex = 1;
             this.lblNoOfItems.Text = "0";
             this.lblNoOfItems.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -178,7 +178,7 @@ namespace POS_88.Views
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(160, 47);
+            this.label3.Location = new System.Drawing.Point(130, 44);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 16);
             this.label3.TabIndex = 0;
@@ -186,13 +186,17 @@ namespace POS_88.Views
             // 
             // panelTotalStocks
             // 
+            this.panelTotalStocks.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTotalStocks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(255)))), ((int)(((byte)(220)))));
             this.panelTotalStocks.Controls.Add(this.pictureBox3);
             this.panelTotalStocks.Controls.Add(this.lblNoofStocks);
             this.panelTotalStocks.Controls.Add(this.label6);
-            this.panelTotalStocks.Location = new System.Drawing.Point(268, 76);
+            this.panelTotalStocks.Location = new System.Drawing.Point(241, 6);
+            this.panelTotalStocks.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.panelTotalStocks.Name = "panelTotalStocks";
-            this.panelTotalStocks.Size = new System.Drawing.Size(250, 103);
+            this.panelTotalStocks.Size = new System.Drawing.Size(217, 100);
             this.panelTotalStocks.TabIndex = 3;
             // 
             // pictureBox3
@@ -209,9 +213,9 @@ namespace POS_88.Views
             // 
             this.lblNoofStocks.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblNoofStocks.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoofStocks.Location = new System.Drawing.Point(0, 63);
+            this.lblNoofStocks.Location = new System.Drawing.Point(0, 60);
             this.lblNoofStocks.Name = "lblNoofStocks";
-            this.lblNoofStocks.Size = new System.Drawing.Size(250, 40);
+            this.lblNoofStocks.Size = new System.Drawing.Size(217, 40);
             this.lblNoofStocks.TabIndex = 3;
             this.lblNoofStocks.Text = "0";
             this.lblNoofStocks.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -221,7 +225,7 @@ namespace POS_88.Views
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(163, 47);
+            this.label6.Location = new System.Drawing.Point(130, 44);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 16);
             this.label6.TabIndex = 2;
@@ -229,13 +233,17 @@ namespace POS_88.Views
             // 
             // panelCriticalItems
             // 
+            this.panelCriticalItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelCriticalItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(220)))));
             this.panelCriticalItems.Controls.Add(this.pictureBox4);
             this.panelCriticalItems.Controls.Add(this.lblCriticalStocks);
             this.panelCriticalItems.Controls.Add(this.label8);
-            this.panelCriticalItems.Location = new System.Drawing.Point(524, 76);
+            this.panelCriticalItems.Location = new System.Drawing.Point(470, 6);
+            this.panelCriticalItems.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.panelCriticalItems.Name = "panelCriticalItems";
-            this.panelCriticalItems.Size = new System.Drawing.Size(250, 103);
+            this.panelCriticalItems.Size = new System.Drawing.Size(217, 100);
             this.panelCriticalItems.TabIndex = 3;
             // 
             // pictureBox4
@@ -252,9 +260,9 @@ namespace POS_88.Views
             // 
             this.lblCriticalStocks.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblCriticalStocks.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCriticalStocks.Location = new System.Drawing.Point(0, 66);
+            this.lblCriticalStocks.Location = new System.Drawing.Point(0, 63);
             this.lblCriticalStocks.Name = "lblCriticalStocks";
-            this.lblCriticalStocks.Size = new System.Drawing.Size(250, 37);
+            this.lblCriticalStocks.Size = new System.Drawing.Size(217, 37);
             this.lblCriticalStocks.TabIndex = 3;
             this.lblCriticalStocks.Text = "0";
             this.lblCriticalStocks.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -271,13 +279,17 @@ namespace POS_88.Views
             // 
             // panelExpenses
             // 
+            this.panelExpenses.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelExpenses.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.panelExpenses.Controls.Add(this.pictureBox5);
             this.panelExpenses.Controls.Add(this.lblExpenses);
             this.panelExpenses.Controls.Add(this.label10);
-            this.panelExpenses.Location = new System.Drawing.Point(780, 76);
+            this.panelExpenses.Location = new System.Drawing.Point(699, 6);
+            this.panelExpenses.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.panelExpenses.Name = "panelExpenses";
-            this.panelExpenses.Size = new System.Drawing.Size(250, 103);
+            this.panelExpenses.Size = new System.Drawing.Size(221, 100);
             this.panelExpenses.TabIndex = 3;
             // 
             // pictureBox5
@@ -294,9 +306,9 @@ namespace POS_88.Views
             // 
             this.lblExpenses.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblExpenses.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExpenses.Location = new System.Drawing.Point(0, 66);
+            this.lblExpenses.Location = new System.Drawing.Point(0, 63);
             this.lblExpenses.Name = "lblExpenses";
-            this.lblExpenses.Size = new System.Drawing.Size(250, 37);
+            this.lblExpenses.Size = new System.Drawing.Size(221, 37);
             this.lblExpenses.TabIndex = 5;
             this.lblExpenses.Text = "0";
             this.lblExpenses.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -315,6 +327,8 @@ namespace POS_88.Views
             // 
             this.dataGridViewX1.AllowUserToAddRows = false;
             this.dataGridViewX1.AllowUserToDeleteRows = false;
+            this.dataGridViewX1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewX1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridViewX1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewX1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -334,24 +348,30 @@ namespace POS_88.Views
             this.dataGridViewX1.ReadOnly = true;
             this.dataGridViewX1.RowHeadersVisible = false;
             this.dataGridViewX1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewX1.Size = new System.Drawing.Size(480, 364);
+            this.dataGridViewX1.Size = new System.Drawing.Size(422, 364);
             this.dataGridViewX1.TabIndex = 4;
             // 
             // panel5
             // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.cartesianChart1);
             this.panel5.Controls.Add(this.label11);
-            this.panel5.Location = new System.Drawing.Point(12, 185);
+            this.panel5.Location = new System.Drawing.Point(9, 6);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(716, 393);
+            this.panel5.Size = new System.Drawing.Size(631, 384);
             this.panel5.TabIndex = 6;
             // 
             // cartesianChart1
             // 
+            this.cartesianChart1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cartesianChart1.Location = new System.Drawing.Point(12, 49);
             this.cartesianChart1.Name = "cartesianChart1";
-            this.cartesianChart1.Size = new System.Drawing.Size(688, 325);
+            this.cartesianChart1.Size = new System.Drawing.Size(592, 325);
             this.cartesianChart1.TabIndex = 7;
             this.cartesianChart1.Text = "cartesianChart1";
             // 
@@ -369,26 +389,32 @@ namespace POS_88.Views
             // 
             // panel6
             // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(227)))), ((int)(((byte)(230)))));
             this.panel6.Controls.Add(this.panel4);
             this.panel6.Controls.Add(this.panel8);
             this.panel6.Controls.Add(this.panel9);
             this.panel6.Controls.Add(this.panel10);
             this.panel6.Controls.Add(this.panel11);
-            this.panel6.Location = new System.Drawing.Point(734, 186);
+            this.panel6.Location = new System.Drawing.Point(652, 6);
+            this.panel6.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(296, 392);
+            this.panel6.Size = new System.Drawing.Size(268, 384);
             this.panel6.TabIndex = 7;
             // 
             // panel4
             // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.label14);
             this.panel4.Controls.Add(this.lblTodaySales);
             this.panel4.Controls.Add(this.pictureBox6);
-            this.panel4.Location = new System.Drawing.Point(0, 41);
+            this.panel4.Location = new System.Drawing.Point(0, 47);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(297, 85);
+            this.panel4.Size = new System.Drawing.Size(268, 79);
             this.panel4.TabIndex = 20;
             // 
             // label14
@@ -424,13 +450,15 @@ namespace POS_88.Views
             // 
             // panel8
             // 
+            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel8.BackColor = System.Drawing.Color.White;
             this.panel8.Controls.Add(this.label18);
             this.panel8.Controls.Add(this.lblTodayDiscounts);
             this.panel8.Controls.Add(this.pictureBox8);
-            this.panel8.Location = new System.Drawing.Point(0, 129);
+            this.panel8.Location = new System.Drawing.Point(0, 132);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(297, 85);
+            this.panel8.Size = new System.Drawing.Size(268, 82);
             this.panel8.TabIndex = 21;
             // 
             // label18
@@ -468,13 +496,15 @@ namespace POS_88.Views
             // 
             // panel9
             // 
+            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel9.BackColor = System.Drawing.Color.White;
             this.panel9.Controls.Add(this.label16);
             this.panel9.Controls.Add(this.lblTodayCosts);
             this.panel9.Controls.Add(this.pictureBox7);
-            this.panel9.Location = new System.Drawing.Point(0, 217);
+            this.panel9.Location = new System.Drawing.Point(0, 220);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(296, 85);
+            this.panel9.Size = new System.Drawing.Size(268, 82);
             this.panel9.TabIndex = 22;
             // 
             // label16
@@ -512,13 +542,15 @@ namespace POS_88.Views
             // 
             // panel10
             // 
+            this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel10.BackColor = System.Drawing.Color.White;
             this.panel10.Controls.Add(this.lblTodayGross);
             this.panel10.Controls.Add(this.label20);
             this.panel10.Controls.Add(this.pictureBox9);
-            this.panel10.Location = new System.Drawing.Point(0, 305);
+            this.panel10.Location = new System.Drawing.Point(0, 308);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(296, 85);
+            this.panel10.Size = new System.Drawing.Size(268, 82);
             this.panel10.TabIndex = 23;
             // 
             // lblTodayGross
@@ -559,7 +591,7 @@ namespace POS_88.Views
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(0, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(296, 41);
+            this.panel11.Size = new System.Drawing.Size(268, 41);
             this.panel11.TabIndex = 24;
             // 
             // label12
@@ -576,12 +608,16 @@ namespace POS_88.Views
             // 
             // panel7
             // 
+            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.Controls.Add(this.label13);
             this.panel7.Controls.Add(this.dataGridViewX1);
-            this.panel7.Location = new System.Drawing.Point(12, 584);
+            this.panel7.Location = new System.Drawing.Point(9, 6);
+            this.panel7.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(506, 414);
+            this.panel7.Size = new System.Drawing.Size(449, 420);
             this.panel7.TabIndex = 8;
             // 
             // label13
@@ -598,12 +634,16 @@ namespace POS_88.Views
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.dataGridViewX2);
-            this.panel1.Location = new System.Drawing.Point(524, 584);
+            this.panel1.Location = new System.Drawing.Point(470, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(506, 414);
+            this.panel1.Size = new System.Drawing.Size(450, 420);
             this.panel1.TabIndex = 9;
             // 
             // label4
@@ -622,8 +662,11 @@ namespace POS_88.Views
             // 
             this.dataGridViewX2.AllowUserToAddRows = false;
             this.dataGridViewX2.AllowUserToDeleteRows = false;
+            this.dataGridViewX2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewX2.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridViewX2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewX2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridViewX2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -640,176 +683,93 @@ namespace POS_88.Views
             this.dataGridViewX2.ReadOnly = true;
             this.dataGridViewX2.RowHeadersVisible = false;
             this.dataGridViewX2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewX2.Size = new System.Drawing.Size(480, 364);
+            this.dataGridViewX2.Size = new System.Drawing.Size(427, 364);
             this.dataGridViewX2.TabIndex = 4;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.tableLayoutPanel1);
-            this.panel2.Location = new System.Drawing.Point(1036, 17);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(304, 366);
-            this.panel2.TabIndex = 8;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(9, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(115, 19);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Quick Actions";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.5988F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.4012F));
-            this.tableLayoutPanel1.Controls.Add(this.button2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button4, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button3, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(17, 42);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(272, 308);
-            this.tableLayoutPanel1.TabIndex = 12;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(255)))), ((int)(((byte)(220)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(140, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(129, 146);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Add Item";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(255)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(140, 157);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(129, 146);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "View Report";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(220)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(3, 157);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(131, 146);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Adjust Stock";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 146);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "New Sale";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Location = new System.Drawing.Point(1036, 389);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(304, 609);
-            this.panel3.TabIndex = 10;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(21, 16);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(122, 19);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Recent Activity";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(15, 17);
+            this.pictureBox1.Location = new System.Drawing.Point(15, 14);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(40, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lblWelcome);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(929, 70);
+            this.panel2.TabIndex = 12;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Controls.Add(this.panelNoItems, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panelTotalStocks, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panelExpenses, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panelCriticalItems, 2, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 70);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(929, 112);
+            this.tableLayoutPanel1.TabIndex = 13;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.84586F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.15414F));
+            this.tableLayoutPanel2.Controls.Add(this.panel5, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel6, 1, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 182);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.Padding = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(929, 396);
+            this.tableLayoutPanel2.TabIndex = 14;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.panel7, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.panel1, 1, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 578);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.Padding = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(929, 432);
+            this.tableLayoutPanel3.TabIndex = 15;
+            // 
             // DashboardView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.AutoScrollMinSize = new System.Drawing.Size(1300, 760);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(1352, 1010);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel3);
+            this.ClientSize = new System.Drawing.Size(929, 1010);
+            this.Controls.Add(this.tableLayoutPanel3);
+            this.Controls.Add(this.tableLayoutPanel2);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panelExpenses);
-            this.Controls.Add(this.panelCriticalItems);
-            this.Controls.Add(this.panelTotalStocks);
-            this.Controls.Add(this.panelNoItems);
-            this.Controls.Add(this.lblWelcome);
-            this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -850,14 +810,13 @@ namespace POS_88.Views
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -887,10 +846,6 @@ namespace POS_88.Views
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewX2;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -909,15 +864,14 @@ namespace POS_88.Views
         private System.Windows.Forms.Label lblTodaySales;
         private System.Windows.Forms.Label label14;
         private CartesianChart cartesianChart1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
     }
 }

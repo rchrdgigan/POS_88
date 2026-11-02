@@ -16,11 +16,13 @@ namespace POS_88.Views
         private bool sidebarCollapsed = false;
         private string authenticatedName;
         private string authenticatedUsertype;
+        public string _userName;
 
         public MainView()
         {
             InitializeComponent();
 
+            _userName = AuthenticatedUserName;
             AuthenticatedName = null;
             AuthenticatedUsertype = null;
             ApplyTheme();
@@ -259,7 +261,7 @@ namespace POS_88.Views
             {
                 foreach (Form child in MdiChildren.ToArray())
                     child.Hide();
-                new CashierView().ShowDialog();
+                new CashierView(AuthenticatedUserName).ShowDialog();
             }
         }
 

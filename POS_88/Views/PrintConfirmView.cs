@@ -592,7 +592,7 @@ namespace POS_88.Views
 
             if (!HasPhysicalPrinter(recordDoc))
             {
-                MessageBox.Show("No receipt printer found. Please set a printer in Settings.", "Print Receipt", // Why it always shows this error? can you fix?
+                MessageBox.Show("No receipt printer found. Please set a printer in Settings.", "Print Receipt",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 //MessageBox.Show("Warning: Printing is currently suspended due to a backlog; please contact IT or the system administrator for assistance.", "Print Receipt",
                 //    MessageBoxButtons.OK, MessageBoxIcon.Warning);

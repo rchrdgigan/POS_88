@@ -93,7 +93,7 @@
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimize.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnMinimize.Location = new System.Drawing.Point(976, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(636, 0);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(51, 50);
             this.btnMinimize.TabIndex = 4;
@@ -108,7 +108,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(1027, 0);
+            this.btnClose.Location = new System.Drawing.Point(687, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(51, 50);
             this.btnClose.TabIndex = 3;
@@ -124,7 +124,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1078, 50);
+            this.panel1.Size = new System.Drawing.Size(738, 50);
             this.panel1.TabIndex = 34;
             // 
             // bunifuCards1
@@ -153,20 +153,20 @@
             this.bunifuCards1.Controls.Add(this.txtOrderNo);
             this.bunifuCards1.Controls.Add(this.pictureBox1);
             this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(0, 244);
+            this.bunifuCards1.Location = new System.Drawing.Point(0, 214);
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(1083, 637);
+            this.bunifuCards1.Size = new System.Drawing.Size(741, 664);
             this.bunifuCards1.TabIndex = 35;
             // 
             // listViewItems
             // 
             this.listViewItems.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listViewItems.HideSelection = false;
-            this.listViewItems.Location = new System.Drawing.Point(730, 71);
+            this.listViewItems.Location = new System.Drawing.Point(456, 75);
             this.listViewItems.Name = "listViewItems";
-            this.listViewItems.Size = new System.Drawing.Size(323, 373);
+            this.listViewItems.Size = new System.Drawing.Size(270, 236);
             this.listViewItems.TabIndex = 49;
             this.listViewItems.UseCompatibleStateImageBehavior = false;
             // 
@@ -174,7 +174,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(718, 547);
+            this.label10.Location = new System.Drawing.Point(541, 479);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(76, 16);
             this.label10.TabIndex = 48;
@@ -184,7 +184,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(735, 516);
+            this.label9.Location = new System.Drawing.Point(541, 448);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(59, 16);
             this.label9.TabIndex = 47;
@@ -192,22 +192,18 @@
             // 
             // txtGrandTotal
             // 
-            this.txtGrandTotal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtGrandTotal.Location = new System.Drawing.Point(800, 544);
+            this.txtGrandTotal.Location = new System.Drawing.Point(623, 476);
             this.txtGrandTotal.Multiline = true;
             this.txtGrandTotal.Name = "txtGrandTotal";
-            this.txtGrandTotal.Size = new System.Drawing.Size(253, 25);
+            this.txtGrandTotal.Size = new System.Drawing.Size(103, 25);
             this.txtGrandTotal.TabIndex = 46;
             // 
             // txtTotalQty
             // 
-            this.txtTotalQty.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTotalQty.Location = new System.Drawing.Point(800, 513);
+            this.txtTotalQty.Location = new System.Drawing.Point(606, 445);
             this.txtTotalQty.Multiline = true;
             this.txtTotalQty.Name = "txtTotalQty";
-            this.txtTotalQty.Size = new System.Drawing.Size(253, 25);
+            this.txtTotalQty.Size = new System.Drawing.Size(120, 25);
             this.txtTotalQty.TabIndex = 45;
             // 
             // btnCancel
@@ -220,9 +216,9 @@
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancel.Location = new System.Drawing.Point(586, 516);
+            this.btnCancel.Location = new System.Drawing.Point(444, 445);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(115, 53);
+            this.btnCancel.Size = new System.Drawing.Size(91, 53);
             this.btnCancel.TabIndex = 44;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -238,9 +234,9 @@
             this.btnRemove.ForeColor = System.Drawing.Color.White;
             this.btnRemove.Image = ((System.Drawing.Image)(resources.GetObject("btnRemove.Image")));
             this.btnRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRemove.Location = new System.Drawing.Point(429, 516);
+            this.btnRemove.Location = new System.Drawing.Point(322, 445);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(138, 53);
+            this.btnRemove.Size = new System.Drawing.Size(116, 53);
             this.btnRemove.TabIndex = 43;
             this.btnRemove.Text = "Remove Item";
             this.btnRemove.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -255,9 +251,9 @@
             this.btnReceived.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReceived.ForeColor = System.Drawing.Color.White;
             this.btnReceived.Image = ((System.Drawing.Image)(resources.GetObject("btnReceived.Image")));
-            this.btnReceived.Location = new System.Drawing.Point(274, 516);
+            this.btnReceived.Location = new System.Drawing.Point(200, 445);
             this.btnReceived.Name = "btnReceived";
-            this.btnReceived.Size = new System.Drawing.Size(136, 53);
+            this.btnReceived.Size = new System.Drawing.Size(116, 53);
             this.btnReceived.TabIndex = 42;
             this.btnReceived.Text = "Received Order";
             this.btnReceived.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -274,9 +270,9 @@
             this.btnPrint.ForeColor = System.Drawing.Color.White;
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
             this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPrint.Location = new System.Drawing.Point(140, 516);
+            this.btnPrint.Location = new System.Drawing.Point(97, 445);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(116, 53);
+            this.btnPrint.Size = new System.Drawing.Size(97, 53);
             this.btnPrint.TabIndex = 41;
             this.btnPrint.Text = "Prin Slip";
             this.btnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -292,9 +288,9 @@
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.Location = new System.Drawing.Point(31, 516);
+            this.btnSave.Location = new System.Drawing.Point(12, 445);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(93, 53);
+            this.btnSave.Size = new System.Drawing.Size(79, 53);
             this.btnSave.TabIndex = 40;
             this.btnSave.Text = "Save";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -320,35 +316,35 @@
             this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dataGridViewX1.HighlightSelectedColumnHeaders = false;
-            this.dataGridViewX1.Location = new System.Drawing.Point(31, 120);
+            this.dataGridViewX1.Location = new System.Drawing.Point(12, 120);
             this.dataGridViewX1.MultiSelect = false;
             this.dataGridViewX1.Name = "dataGridViewX1";
             this.dataGridViewX1.ReadOnly = true;
             this.dataGridViewX1.RowHeadersVisible = false;
             this.dataGridViewX1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewX1.Size = new System.Drawing.Size(1022, 391);
+            this.dataGridViewX1.Size = new System.Drawing.Size(714, 316);
             this.dataGridViewX1.TabIndex = 39;
             // 
             // txtSearchItems
             // 
-            this.txtSearchItems.Location = new System.Drawing.Point(730, 83);
+            this.txtSearchItems.Location = new System.Drawing.Point(456, 83);
             this.txtSearchItems.Name = "txtSearchItems";
-            this.txtSearchItems.Size = new System.Drawing.Size(323, 22);
+            this.txtSearchItems.Size = new System.Drawing.Size(270, 22);
             this.txtSearchItems.TabIndex = 38;
             // 
             // cBoxSearchType
             // 
             this.cBoxSearchType.FormattingEnabled = true;
-            this.cBoxSearchType.Location = new System.Drawing.Point(730, 45);
+            this.cBoxSearchType.Location = new System.Drawing.Point(456, 49);
             this.cBoxSearchType.Name = "cBoxSearchType";
-            this.cBoxSearchType.Size = new System.Drawing.Size(323, 25);
+            this.cBoxSearchType.Size = new System.Drawing.Size(270, 25);
             this.cBoxSearchType.TabIndex = 37;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(341, 86);
+            this.label8.Location = new System.Drawing.Point(230, 86);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(58, 16);
             this.label8.TabIndex = 36;
@@ -356,16 +352,16 @@
             // 
             // txtRemarks
             // 
-            this.txtRemarks.Location = new System.Drawing.Point(405, 83);
+            this.txtRemarks.Location = new System.Drawing.Point(294, 83);
             this.txtRemarks.Name = "txtRemarks";
-            this.txtRemarks.Size = new System.Drawing.Size(309, 22);
+            this.txtRemarks.Size = new System.Drawing.Size(151, 22);
             this.txtRemarks.TabIndex = 35;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(28, 86);
+            this.label5.Location = new System.Drawing.Point(15, 86);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 16);
             this.label5.TabIndex = 34;
@@ -383,9 +379,9 @@
             // 
             // txtOrderNo
             // 
-            this.txtOrderNo.Location = new System.Drawing.Point(99, 83);
+            this.txtOrderNo.Location = new System.Drawing.Point(86, 83);
             this.txtOrderNo.Name = "txtOrderNo";
-            this.txtOrderNo.Size = new System.Drawing.Size(227, 22);
+            this.txtOrderNo.Size = new System.Drawing.Size(138, 22);
             this.txtOrderNo.TabIndex = 33;
             // 
             // pictureBox1
@@ -413,7 +409,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 58);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1055, 266);
+            this.groupBox1.Size = new System.Drawing.Size(714, 266);
             this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Supplier Details";
@@ -421,24 +417,24 @@
             // cBoxSupplier
             // 
             this.cBoxSupplier.FormattingEnabled = true;
-            this.cBoxSupplier.Location = new System.Drawing.Point(149, 31);
+            this.cBoxSupplier.Location = new System.Drawing.Point(118, 21);
             this.cBoxSupplier.Name = "cBoxSupplier";
-            this.cBoxSupplier.Size = new System.Drawing.Size(499, 25);
+            this.cBoxSupplier.Size = new System.Drawing.Size(437, 25);
             this.cBoxSupplier.TabIndex = 32;
             // 
             // dtpOrderDate
             // 
             this.dtpOrderDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpOrderDate.Location = new System.Drawing.Point(745, 108);
+            this.dtpOrderDate.Location = new System.Drawing.Point(510, 80);
             this.dtpOrderDate.Name = "dtpOrderDate";
-            this.dtpOrderDate.Size = new System.Drawing.Size(210, 22);
+            this.dtpOrderDate.Size = new System.Drawing.Size(143, 22);
             this.dtpOrderDate.TabIndex = 31;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(667, 111);
+            this.label4.Location = new System.Drawing.Point(432, 83);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 16);
             this.label4.TabIndex = 30;
@@ -447,7 +443,7 @@
             // cbBoxMovementType
             // 
             this.cbBoxMovementType.FormattingEnabled = true;
-            this.cbBoxMovementType.Location = new System.Drawing.Point(149, 147);
+            this.cbBoxMovementType.Location = new System.Drawing.Point(118, 111);
             this.cbBoxMovementType.Name = "cbBoxMovementType";
             this.cbBoxMovementType.Size = new System.Drawing.Size(249, 25);
             this.cbBoxMovementType.TabIndex = 12;
@@ -456,7 +452,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(40, 153);
+            this.label7.Location = new System.Drawing.Point(9, 117);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(103, 16);
             this.label7.TabIndex = 13;
@@ -466,7 +462,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(39, 114);
+            this.label3.Location = new System.Drawing.Point(8, 86);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 16);
             this.label3.TabIndex = 9;
@@ -475,17 +471,17 @@
             // txtContactNumber
             // 
             this.txtContactNumber.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtContactNumber.Location = new System.Drawing.Point(149, 108);
+            this.txtContactNumber.Location = new System.Drawing.Point(118, 80);
             this.txtContactNumber.Name = "txtContactNumber";
             this.txtContactNumber.ReadOnly = true;
-            this.txtContactNumber.Size = new System.Drawing.Size(499, 22);
+            this.txtContactNumber.Size = new System.Drawing.Size(308, 22);
             this.txtContactNumber.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(88, 72);
+            this.label1.Location = new System.Drawing.Point(57, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 16);
             this.label1.TabIndex = 7;
@@ -494,17 +490,17 @@
             // txtAddress
             // 
             this.txtAddress.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtAddress.Location = new System.Drawing.Point(149, 69);
+            this.txtAddress.Location = new System.Drawing.Point(118, 52);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.ReadOnly = true;
-            this.txtAddress.Size = new System.Drawing.Size(806, 22);
+            this.txtAddress.Size = new System.Drawing.Size(535, 22);
             this.txtAddress.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(88, 34);
+            this.label2.Location = new System.Drawing.Point(57, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 16);
             this.label2.TabIndex = 5;
@@ -519,7 +515,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(227)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(1078, 830);
+            this.ClientSize = new System.Drawing.Size(738, 724);
             this.Controls.Add(this.bunifuCards1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);

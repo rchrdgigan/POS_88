@@ -70,6 +70,27 @@ namespace POS_88
             panel.Invalidate();
         }
 
+        public static void ApplyCardBunifu(Bunifu.Framework.UI.BunifuCards card)
+        {
+            ApplyBunifuCardGradient(card, LinearGradientMode.Horizontal);
+        }
+        public static void ApplyBunifuCardGradient(
+            Bunifu.Framework.UI.BunifuCards card,
+            LinearGradientMode direction)
+        {
+            if (card == null)
+                return;
+
+            // Avoid registering the same Paint handler twice.
+            card.Paint -= PanelGradient_Paint;
+
+            card.Tag = direction;
+            card.Paint += PanelGradient_Paint;
+
+            card.BackColor = Navy;
+            card.Invalidate();
+        }
+
         private static void PanelGradient_Paint(
             object sender,
             PaintEventArgs e)

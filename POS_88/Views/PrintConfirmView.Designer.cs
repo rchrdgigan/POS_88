@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrintConfirmView));
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.btnEscOrCancel = new System.Windows.Forms.Button();
-            this.btnEnterOrPrint = new System.Windows.Forms.Button();
             this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnEscOrCancel = new System.Windows.Forms.Button();
+            this.btnEnterOrPrint = new System.Windows.Forms.Button();
             this.bunifuCards1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +55,26 @@
             this.bunifuCards1.Size = new System.Drawing.Size(349, 594);
             this.bunifuCards1.TabIndex = 0;
             // 
+            // printPreviewControl1
+            // 
+            this.printPreviewControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.printPreviewControl1.Location = new System.Drawing.Point(3, 58);
+            this.printPreviewControl1.Name = "printPreviewControl1";
+            this.printPreviewControl1.Size = new System.Drawing.Size(343, 427);
+            this.printPreviewControl1.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(10, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 19);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Print Receipt?";
+            // 
             // btnEscOrCancel
             // 
             this.btnEscOrCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -64,9 +84,9 @@
             this.btnEscOrCancel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEscOrCancel.ForeColor = System.Drawing.Color.White;
             this.btnEscOrCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnEscOrCancel.Image")));
-            this.btnEscOrCancel.Location = new System.Drawing.Point(24, 492);
+            this.btnEscOrCancel.Location = new System.Drawing.Point(10, 491);
             this.btnEscOrCancel.Name = "btnEscOrCancel";
-            this.btnEscOrCancel.Size = new System.Drawing.Size(91, 74);
+            this.btnEscOrCancel.Size = new System.Drawing.Size(160, 74);
             this.btnEscOrCancel.TabIndex = 8;
             this.btnEscOrCancel.Text = "Cancel [ESC]";
             this.btnEscOrCancel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -82,34 +102,14 @@
             this.btnEnterOrPrint.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnterOrPrint.ForeColor = System.Drawing.Color.White;
             this.btnEnterOrPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnEnterOrPrint.Image")));
-            this.btnEnterOrPrint.Location = new System.Drawing.Point(234, 492);
+            this.btnEnterOrPrint.Location = new System.Drawing.Point(176, 491);
             this.btnEnterOrPrint.Name = "btnEnterOrPrint";
-            this.btnEnterOrPrint.Size = new System.Drawing.Size(87, 74);
+            this.btnEnterOrPrint.Size = new System.Drawing.Size(160, 74);
             this.btnEnterOrPrint.TabIndex = 4;
             this.btnEnterOrPrint.Text = "Print [Enter]";
             this.btnEnterOrPrint.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEnterOrPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnEnterOrPrint.UseVisualStyleBackColor = false;
-            // 
-            // printPreviewControl1
-            // 
-            this.printPreviewControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.printPreviewControl1.Location = new System.Drawing.Point(8, 58);
-            this.printPreviewControl1.Name = "printPreviewControl1";
-            this.printPreviewControl1.Size = new System.Drawing.Size(333, 417);
-            this.printPreviewControl1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(10, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 19);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Print Receipt?";
             // 
             // PrintConfirmView
             // 

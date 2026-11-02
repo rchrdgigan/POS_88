@@ -125,3 +125,9 @@ C:\Users\Admin-PC\documents\visual studio 2015\Projects\POS_88\POS_88\obj\Debug\
 C:\Users\Admin-PC\documents\visual studio 2015\Projects\POS_88\POS_88\obj\Debug\POS_88.Views.CustomersView.resources
 C:\Users\Admin-PC\documents\visual studio 2015\Projects\POS_88\POS_88\obj\Debug\POS_88.Views.AddOrEditCustomersView.resources
 C:\Users\Admin-PC\documents\visual studio 2015\Projects\POS_88\POS_88\obj\Debug\POS_88.Views.SalesHistoryView.resources
+C:\Users\Admin-PC\documents\visual studio 2015\Projects\POS_88\POS_88\obj\Debug\POS_88.Views.ItemNotFoundView.resources
+C:\Users\Admin-PC\documents\visual studio 2015\Projects\POS_88\POS_88\obj\Debug\POS_88.Views.CashierCashCountView.resources
+C:\Users\Admin-PC\documents\visual studio 2015\Projects\POS_88\POS_88\obj\Debug\POS_88.Views.CashInOutView.resources
+C:\Users\Admin-PC\documents\visual studio 2015\Projects\POS_88\POS_88\obj\Debug\POS_88.Views.CustomerDisplayView.resources
+C:\Users\Admin-PC\documents\visual studio 2015\Projects\POS_88\POS_88\obj\Debug\POS_88.Views.DiscountView.resources
+C:\Users\Admin-PC\documents\visual studio 2015\Projects\POS_88\POS_88\obj\Debug\POS_88.Views.AdjustQtyView.resources

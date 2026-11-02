@@ -91,7 +91,7 @@
             this.panelSideBar.Location = new System.Drawing.Point(0, 0);
             this.panelSideBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelSideBar.Name = "panelSideBar";
-            this.panelSideBar.Size = new System.Drawing.Size(201, 868);
+            this.panelSideBar.Size = new System.Drawing.Size(201, 780);
             this.panelSideBar.TabIndex = 0;
             // 
             // btnCustomers
@@ -105,7 +105,7 @@
             this.btnCustomers.ForeColor = System.Drawing.Color.White;
             this.btnCustomers.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomers.Image")));
             this.btnCustomers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomers.Location = new System.Drawing.Point(13, 374);
+            this.btnCustomers.Location = new System.Drawing.Point(13, 348);
             this.btnCustomers.Name = "btnCustomers";
             this.btnCustomers.Size = new System.Drawing.Size(188, 41);
             this.btnCustomers.TabIndex = 12;
@@ -125,7 +125,7 @@
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(201, 90);
+            this.panelLogo.Size = new System.Drawing.Size(201, 77);
             this.panelLogo.TabIndex = 0;
             // 
             // pictureBox1
@@ -174,7 +174,7 @@
             // panelMark
             // 
             this.panelMark.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panelMark.Location = new System.Drawing.Point(0, 108);
+            this.panelMark.Location = new System.Drawing.Point(0, 82);
             this.panelMark.Name = "panelMark";
             this.panelMark.Size = new System.Drawing.Size(10, 51);
             this.panelMark.TabIndex = 11;
@@ -190,7 +190,7 @@
             this.panelUserNav.Controls.Add(this.label5);
             this.panelUserNav.Controls.Add(this.lblStatus);
             this.panelUserNav.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelUserNav.Location = new System.Drawing.Point(0, 681);
+            this.panelUserNav.Location = new System.Drawing.Point(0, 593);
             this.panelUserNav.Name = "panelUserNav";
             this.panelUserNav.Size = new System.Drawing.Size(201, 187);
             this.panelUserNav.TabIndex = 10;
@@ -284,7 +284,7 @@
             this.btnMyStore.ForeColor = System.Drawing.Color.White;
             this.btnMyStore.Image = ((System.Drawing.Image)(resources.GetObject("btnMyStore.Image")));
             this.btnMyStore.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMyStore.Location = new System.Drawing.Point(13, 578);
+            this.btnMyStore.Location = new System.Drawing.Point(13, 597);
             this.btnMyStore.Name = "btnMyStore";
             this.btnMyStore.Size = new System.Drawing.Size(188, 41);
             this.btnMyStore.TabIndex = 9;
@@ -304,7 +304,7 @@
             this.btnSettings.ForeColor = System.Drawing.Color.White;
             this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
             this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSettings.Location = new System.Drawing.Point(13, 527);
+            this.btnSettings.Location = new System.Drawing.Point(13, 501);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(188, 41);
             this.btnSettings.TabIndex = 8;
@@ -323,7 +323,7 @@
             this.btnUsers.ForeColor = System.Drawing.Color.White;
             this.btnUsers.Image = ((System.Drawing.Image)(resources.GetObject("btnUsers.Image")));
             this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsers.Location = new System.Drawing.Point(13, 476);
+            this.btnUsers.Location = new System.Drawing.Point(13, 450);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Size = new System.Drawing.Size(188, 41);
             this.btnUsers.TabIndex = 7;
@@ -342,7 +342,7 @@
             this.btnExpenses.ForeColor = System.Drawing.Color.White;
             this.btnExpenses.Image = ((System.Drawing.Image)(resources.GetObject("btnExpenses.Image")));
             this.btnExpenses.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExpenses.Location = new System.Drawing.Point(13, 425);
+            this.btnExpenses.Location = new System.Drawing.Point(13, 399);
             this.btnExpenses.Name = "btnExpenses";
             this.btnExpenses.Size = new System.Drawing.Size(188, 41);
             this.btnExpenses.TabIndex = 6;
@@ -361,7 +361,7 @@
             this.btnCashier.ForeColor = System.Drawing.Color.White;
             this.btnCashier.Image = ((System.Drawing.Image)(resources.GetObject("btnCashier.Image")));
             this.btnCashier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCashier.Location = new System.Drawing.Point(13, 323);
+            this.btnCashier.Location = new System.Drawing.Point(13, 297);
             this.btnCashier.Name = "btnCashier";
             this.btnCashier.Size = new System.Drawing.Size(188, 41);
             this.btnCashier.TabIndex = 5;
@@ -380,7 +380,7 @@
             this.btnPurchasing.ForeColor = System.Drawing.Color.White;
             this.btnPurchasing.Image = ((System.Drawing.Image)(resources.GetObject("btnPurchasing.Image")));
             this.btnPurchasing.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPurchasing.Location = new System.Drawing.Point(13, 272);
+            this.btnPurchasing.Location = new System.Drawing.Point(13, 246);
             this.btnPurchasing.Name = "btnPurchasing";
             this.btnPurchasing.Size = new System.Drawing.Size(188, 41);
             this.btnPurchasing.TabIndex = 4;
@@ -399,7 +399,7 @@
             this.btnSales.ForeColor = System.Drawing.Color.White;
             this.btnSales.Image = ((System.Drawing.Image)(resources.GetObject("btnSales.Image")));
             this.btnSales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSales.Location = new System.Drawing.Point(13, 220);
+            this.btnSales.Location = new System.Drawing.Point(13, 194);
             this.btnSales.Name = "btnSales";
             this.btnSales.Size = new System.Drawing.Size(188, 41);
             this.btnSales.TabIndex = 3;
@@ -418,7 +418,7 @@
             this.btnInventory.ForeColor = System.Drawing.Color.White;
             this.btnInventory.Image = ((System.Drawing.Image)(resources.GetObject("btnInventory.Image")));
             this.btnInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventory.Location = new System.Drawing.Point(13, 169);
+            this.btnInventory.Location = new System.Drawing.Point(13, 143);
             this.btnInventory.Name = "btnInventory";
             this.btnInventory.Size = new System.Drawing.Size(188, 41);
             this.btnInventory.TabIndex = 2;
@@ -437,7 +437,7 @@
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
             this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(13, 108);
+            this.btnDashboard.Location = new System.Drawing.Point(13, 82);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(188, 51);
             this.btnDashboard.TabIndex = 1;
@@ -527,7 +527,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1151, 868);
+            this.ClientSize = new System.Drawing.Size(1151, 780);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelSideBar);
             this.DoubleBuffered = true;

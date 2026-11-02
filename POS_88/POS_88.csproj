@@ -67,6 +67,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Speech" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
@@ -90,6 +91,8 @@
     <Compile Include="3SearchInventory.cs" />
     <Compile Include="4SearchInventory.cs" />
     <Compile Include="5SearchInventory.cs" />
+    <Compile Include="CashierModels.cs" />
+    <Compile Include="PaymentModel.cs" />
     <Compile Include="Persistence\POSImplementation.cs" />
     <Compile Include="Persistence\UnitOfWorkPOS.cs" />
     <Compile Include="Presenters\AddOrEditCustomersPresenter.cs" />
@@ -100,6 +103,7 @@
     <Compile Include="Presenters\AddOrEditPurchaseOrderPresenter.cs" />
     <Compile Include="Presenters\AddOrEditUserPresenter.cs" />
     <Compile Include="Presenters\CashCountListPresenter.cs" />
+    <Compile Include="Presenters\CashierPresenter.cs" />
     <Compile Include="Presenters\CustomersPresenter.cs" />
     <Compile Include="Presenters\DashboardPresenter.cs" />
     <Compile Include="Presenters\AddOrEditItemPresenter.cs" />
@@ -258,11 +262,23 @@
     <Compile Include="Views\AddStocksView.Designer.cs">
       <DependentUpon>AddStocksView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\AdjustQtyView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AdjustQtyView.Designer.cs">
+      <DependentUpon>AdjustQtyView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\CashCountListView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\CashCountListView.Designer.cs">
       <DependentUpon>CashCountListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CashierCashCountView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CashierCashCountView.Designer.cs">
+      <DependentUpon>CashierCashCountView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\CashierReportView.cs">
       <SubType>Form</SubType>
@@ -282,6 +298,18 @@
     <Compile Include="Views\CashInOutHistoryView.Designer.cs">
       <DependentUpon>CashInOutHistoryView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\CashInOutView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CashInOutView.Designer.cs">
+      <DependentUpon>CashInOutView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerDisplayView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerDisplayView.Designer.cs">
+      <DependentUpon>CustomerDisplayView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\CustomersView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -293,6 +321,12 @@
     </Compile>
     <Compile Include="Views\DashboardView.Designer.cs">
       <DependentUpon>DashboardView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DiscountView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DiscountView.Designer.cs">
+      <DependentUpon>DiscountView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ExpensesView.cs">
       <SubType>Form</SubType>
@@ -310,6 +344,7 @@
     <Compile Include="Views\IAddStocksView.cs" />
     <Compile Include="Presenters\AddStocksPresenter.cs" />
     <Compile Include="Views\ICashCountListView.cs" />
+    <Compile Include="Views\ICashierView.cs" />
     <Compile Include="Views\ICustomersView.cs" />
     <Compile Include="Views\IDashboardView.cs" />
     <Compile Include="Views\IAddOrEditItemView.cs" />
@@ -336,6 +371,12 @@
     <Compile Include="Views\ISalesView.cs" />
     <Compile Include="Views\ISetupView.cs" />
     <Compile Include="Views\IStockHistoryView.cs" />
+    <Compile Include="Views\ItemNotFoundView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ItemNotFoundView.Designer.cs">
+      <DependentUpon>ItemNotFoundView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\IUsersView.cs" />
     <Compile Include="Views\LoginView.cs">
       <SubType>Form</SubType>
@@ -433,6 +474,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Report\BARCODE2.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -517,8 +559,14 @@
     <EmbeddedResource Include="Views\AddStocksView.resx">
       <DependentUpon>AddStocksView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdjustQtyView.resx">
+      <DependentUpon>AdjustQtyView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\CashCountListView.resx">
       <DependentUpon>CashCountListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CashierCashCountView.resx">
+      <DependentUpon>CashierCashCountView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CashierReportView.resx">
       <DependentUpon>CashierReportView.cs</DependentUpon>
@@ -529,11 +577,20 @@
     <EmbeddedResource Include="Views\CashInOutHistoryView.resx">
       <DependentUpon>CashInOutHistoryView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\CashInOutView.resx">
+      <DependentUpon>CashInOutView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerDisplayView.resx">
+      <DependentUpon>CustomerDisplayView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\CustomersView.resx">
       <DependentUpon>CustomersView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\DashboardView.resx">
       <DependentUpon>DashboardView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DiscountView.resx">
+      <DependentUpon>DiscountView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ExpensesView.resx">
       <DependentUpon>ExpensesView.cs</DependentUpon>
@@ -543,6 +600,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\InventoryView.resx">
       <DependentUpon>InventoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemNotFoundView.resx">
+      <DependentUpon>ItemNotFoundView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
@@ -620,6 +680,69 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fifty bill.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fivehundred bill.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\onehundred bill.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\onethousand bill.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tenpeso 55x55.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\twenty bill.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\twenty bill1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\twentypeso coin 55x55.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\twohundred bill.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\twohundred bill1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1peso 55x55.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5cents 55x55.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5cents.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5peso 55x55.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10cents 55x55.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\25cents 55x55.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CustomerLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner-background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picture-side.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
