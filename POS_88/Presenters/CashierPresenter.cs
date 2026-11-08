@@ -19,6 +19,7 @@ namespace POS_88.Presenters
         private readonly List<CartLine> _cart = new List<CartLine>();
 
         private UnitOfWorkPOS _uow = NewUow();
+        private PoleDisplayService _pole;
         private setting _settings;
         private decimal _vatPct;
         private string _priceType = "RETAIL";
@@ -60,16 +61,32 @@ namespace POS_88.Presenters
         private void Initialize()
         {
             _settings = _uow.Setting.Find(x => x.settingsid == 1).FirstOrDefault();
-            _display.ConfigurePole(_settings.enablepoledisplay.GetValueOrDefault(), _settings.poleport,
-              _settings.defaultTopDisplay, _settings.defaultBottomDisplay);
+            if (_settings == null)
+                throw new InvalidOperationException("Settings row (settingsid = 1) not found.");
 
-            var vat = _uow.VATStatus.Find(x => x.vatid == "YES").FirstOrDefault(); // Optional
-            _vatPct = Convert.ToDecimal((object)vat.percentage);
+            _pole = new PoleDisplayService(
+                _settings.enablepoledisplay.GetValueOrDefault(), _settings.poleport);
+            InitializePoleDisplay();
+
+            var vat = _uow.VATStatus.Find(x => x.vatid == "YES").FirstOrDefault();
+            _vatPct = vat != null ? Convert.ToDecimal((object)vat.percentage) : 0m;
 
             _view.SearchMode = SearchMode.ItemCodeAndDescription;
             SetPriceType("RETAIL");
             Refresh(false);
         }
+
+        // ------------------------------------------------------------ pole display
+        public void InitializePoleDisplay()
+        {
+            _pole?.Show(_settings?.defaultTopDisplay, _settings?.defaultBottomDisplay);
+        }
+
+        public void PoleDisplay(string top, string bottom) => _pole?.Show(top, bottom);
+
+        public void WriteTopDisplay(string text, decimal qty) => _pole?.WriteTop(text, qty);
+
+        public void WriteBottomDisplay(string text) => _pole?.WriteBottom(text);
 
         // ------------------------------------------------------------ search
 
@@ -186,6 +203,7 @@ namespace POS_88.Presenters
                 {
                     line.Quantity += qty;
                     line.Reprice();
+                    WriteTopDisplay(line.Description, line.Quantity);
                     _display.LineUpdated(line);
                 }
                 else
@@ -203,6 +221,7 @@ namespace POS_88.Presenters
                     };
                     line.Reprice();
                     _cart.Add(line);
+                    WriteTopDisplay(line.Description, line.Quantity);
                     _display.LineAdded(line);
                 }
                 Refresh(true, _cart.IndexOf(line));
@@ -225,6 +244,7 @@ namespace POS_88.Presenters
                 l.DiscountValue = value;
                 l.DiscountType = discountName;
                 l.Rediscount();
+                WriteTopDisplay(l.Description, l.Quantity);
                 _display.LineUpdated(l);
             }
             Refresh(true, _view.SelectedLineIndex);
@@ -340,6 +360,7 @@ namespace POS_88.Presenters
             _view.BindCart(_cart, selectIndex);
             _view.ShowTotals(_totals);
             _display.ShowTotals(_totals, writePole);
+            if (writePole) WriteBottomDisplay("Total: " + _totals.AmountDue.ToString("N"));
         }
 
         // ------------------------------------------------------------ payment
@@ -357,6 +378,7 @@ namespace POS_88.Presenters
             }
             _zno = shift.SqNo;
             _view.ShowPaymentDialog(_totals.AmountDue);
+
         }
 
         /// <summary>Called by the payment dialog when the cashier confirms.</summary>
@@ -365,6 +387,11 @@ namespace POS_88.Presenters
             _payment = payment;
             _redeemAmt = payment.pointsAmt;
             _pointsRedeem = payment.pointsRedeem;
+
+            PoleDisplay(
+                "Paid: " + payment.paymentAmt.ToString("N").PadLeft(12),
+                "Change: " + payment.changeAmt.ToString("N").PadLeft(10));
+
             _view.ShowPaymentSummary(payment.paymentAmt, payment.changeAmt, payment.pointsAmt);
             _totals = ComputeTotals();
             _view.ShowTotals(_totals);
@@ -522,6 +549,7 @@ namespace POS_88.Presenters
             ReceiptNo = 0;
             _entryEnabled = true;
             _display.Reset();
+            InitializePoleDisplay();
             _view.SetEntryEnabled(true);
             _view.ShowPaymentSummary(0m, 0m, 0m);
             _view.ClearSearch();

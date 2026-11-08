@@ -400,16 +400,29 @@ namespace POS_88.Views
                         backdrop.Show(modalOwner);
                         backdrop.BringToFront();
 
-                        using (LoginView loginView = new LoginView(_userName, this, "Z-READING"))
+                        using (LoginView view = new LoginView(_userName, this, "Z-READING"))
                         {
-                            loginView.StartPosition = FormStartPosition.CenterParent;
-                            POSTheme.ShowSmoothFadeDialog(loginView, modalOwner);
+                            view.StartPosition = FormStartPosition.CenterParent;
+                            POSTheme.ShowSmoothFadeDialog(view, modalOwner);
                         }
                     }
                     break;
-                
-                //case CashierDialog.RecentSales: new frmCashierReport(_userName).ShowDialog(); break;
 
+                case CashierDialog.RecentSales:
+                    using (Form backdrop = new Form())
+                    {
+                        backdrop.FormBorderStyle = FormBorderStyle.None;
+                        backdrop.StartPosition = FormStartPosition.Manual;
+                        backdrop.ShowInTaskbar = false;
+                        backdrop.BackColor = Color.Black;
+                        backdrop.Opacity = 0.45;
+                        backdrop.Bounds = modalOwner.Bounds;
+                        backdrop.Show(modalOwner);
+                        backdrop.BringToFront();
+
+                        new CashierReportView(_userName).ShowDialog();
+                    }
+                    break;
 
                 case CashierDialog.Reprint:
                     using (Form backdrop = new Form())
@@ -423,10 +436,10 @@ namespace POS_88.Views
                         backdrop.Show(modalOwner);
                         backdrop.BringToFront();
 
-                        using (PrintConfirmView loginView = new PrintConfirmView(receiptNo, "PURCHASED", 1))
+                        using (PrintConfirmView view = new PrintConfirmView(receiptNo, "PURCHASED", 1))
                         {
-                            loginView.StartPosition = FormStartPosition.CenterParent;
-                            POSTheme.ShowSmoothFadeDialog(loginView, modalOwner);
+                            view.StartPosition = FormStartPosition.CenterParent;
+                            POSTheme.ShowSmoothFadeDialog(view, modalOwner);
                         }
                     }
                     break;
@@ -443,15 +456,52 @@ namespace POS_88.Views
                         backdrop.Show(modalOwner);
                         backdrop.BringToFront();
 
-                        using (CashierCashCountView loginView = new CashierCashCountView(_userName))
+                        using (CashierCashCountView view = new CashierCashCountView(_userName))
                         {
-                            loginView.StartPosition = FormStartPosition.CenterParent;
-                            POSTheme.ShowSmoothFadeDialog(loginView, modalOwner);
+                            view.StartPosition = FormStartPosition.CenterParent;
+                            POSTheme.ShowSmoothFadeDialog(view, modalOwner);
                         }
                     }
                     break;
-                //case CashierDialog.Stocks: new frmInventory(_userName, "").ShowDialog(); break;
-                //case CashierDialog.PickItem: new frmPickItem(this).ShowDialog(); break;
+                case CashierDialog.Stocks:
+                    using (Form backdrop = new Form())
+                    {
+                        backdrop.FormBorderStyle = FormBorderStyle.None;
+                        backdrop.StartPosition = FormStartPosition.Manual;
+                        backdrop.ShowInTaskbar = false;
+                        backdrop.BackColor = Color.Black;
+                        backdrop.Opacity = 0.45;
+                        backdrop.Bounds = modalOwner.Bounds;
+                        backdrop.Show(modalOwner);
+                        backdrop.BringToFront();
+
+                        using (var stocksView = new InventoryView(_userName, ""))
+                        {
+                            new InventoryPresenter(stocksView, false);
+                            stocksView.ShowDialog();
+                        }
+                    }
+                    break;
+                case CashierDialog.PickItem:
+                    using (Form backdrop = new Form())
+                    {
+                        backdrop.FormBorderStyle = FormBorderStyle.None;
+                        backdrop.StartPosition = FormStartPosition.Manual;
+                        backdrop.ShowInTaskbar = false;
+                        backdrop.BackColor = Color.Black;
+                        backdrop.Opacity = 0.45;
+                        backdrop.Bounds = modalOwner.Bounds;
+                        backdrop.Show(modalOwner);
+                        backdrop.BringToFront();
+
+
+                        using (PickItemView view = new PickItemView(this))
+                        {
+                            view.StartPosition = FormStartPosition.CenterParent;
+                            POSTheme.ShowSmoothFadeDialog(view, modalOwner);
+                        }
+                    }
+                    break;
                 //case CashierDialog.VoidSales: new frmVoidSales(this).ShowDialog(); break;
                 case CashierDialog.CustomerDisplay:
                     _frmCustDisplay = new CustomerDisplayView();
@@ -482,7 +532,27 @@ namespace POS_88.Views
             }
         }
 
-        public void ShowQuantityDialog(CartLine l) => new AdjustQtyView(l.ItemCode, l.Quantity, l.Total, this, l.PriceType, l.Width, l.Height, l.Note).ShowDialog();
+        public void ShowQuantityDialog(CartLine l)
+        {
+            Form modalOwner = this.MdiParent ?? this;
+
+            using (Form backdrop = new Form())
+            {
+                backdrop.FormBorderStyle = FormBorderStyle.None;
+                backdrop.StartPosition = FormStartPosition.Manual;
+                backdrop.ShowInTaskbar = false;
+                backdrop.BackColor = Color.Black;
+                backdrop.Opacity = 0.45;
+                backdrop.Bounds = modalOwner.Bounds;
+                backdrop.Show(modalOwner);
+                backdrop.BringToFront();
+                using (AdjustQtyView adjustQtyView = new AdjustQtyView(l.ItemCode, l.Quantity, l.Total, this, l.PriceType, l.Width, l.Height, l.Note))
+                {
+                    adjustQtyView.StartPosition = FormStartPosition.CenterParent;
+                    POSTheme.ShowSmoothFadeDialog(adjustQtyView, modalOwner);
+                }
+            }
+        }
 
         public void ShowVoidItemDialog(CartLine l) { throw new NotImplementedException(); }
         //=> new frmVoidItem(l.ItemCode, l.Description, l.Quantity, l.PriceType, this).ShowDialog();
@@ -518,11 +588,58 @@ namespace POS_88.Views
             else new LoginView(_userName, itemCode, this, "CASHIER EDIT ITEM").ShowDialog();
         }
 
-        public void ShowPaymentDialog(decimal amountDue) { throw new NotImplementedException(); }
-        //=> new frmPayment(this, amountDue).Show();
+        public void ShowPaymentDialog(decimal amountDue)
+        {
+            //Form modalOwner = this.MdiParent ?? this;
 
-        public void ShowReceiptDialog(PaymentModel payment) { throw new NotImplementedException(); }
-        //=> new frmMessage(this, payment).Show();
+            //using (Form backdrop = new Form())
+            //{
+            //    backdrop.FormBorderStyle = FormBorderStyle.None;
+            //    backdrop.StartPosition = FormStartPosition.Manual;
+            //    backdrop.ShowInTaskbar = false;
+            //    backdrop.BackColor = Color.Black;
+            //    backdrop.Opacity = 0.45;
+            //    backdrop.Bounds = modalOwner.Bounds;
+            //    backdrop.Show(modalOwner);
+            //    backdrop.BringToFront();
+            //    using (CashierPaymentView adjustQtyView = new CashierPaymentView(this, amountDue))
+            //    {
+            //        adjustQtyView.StartPosition = FormStartPosition.CenterParent;
+            //        POSTheme.ShowSmoothFadeDialog(adjustQtyView, modalOwner);
+            //    }
+            //}
+            using (var pay = new CashierPaymentView(this, amountDue))
+                pay.ShowDialog(this);
+        }
+
+        public void ShowReceiptDialog(PaymentModel payment)
+        {
+            ShowLoading();   // no-op if already showing
+
+            // Close the payment and confirm forms while the overlay covers the screen
+            var toClose = new List<Form>();
+            foreach (Form f in Application.OpenForms)
+                if (f is ConfirmPaymentView || f is CashierPaymentView)
+                    toClose.Add(f);
+
+            foreach (Form f in toClose)
+            {
+                f.Opacity = 0;     // makes it vanish instantly, no fade
+                f.Close();
+            }
+
+            using (var msg = new MessageView(this, payment))
+            {
+                // Receipt is up: drop the text, keep the dim backdrop behind it
+                msg.Shown += (s, e) =>
+                {
+                    if (_loading != null) _loading.BackdropOnly();
+                };
+                msg.ShowDialog(this);
+            }
+
+            HideLoading();   // after the receipt and print dialogs are done
+        }
 
         // ===================================================== ICashierHost (what child dialogs call)
 
@@ -532,7 +649,18 @@ namespace POS_88.Views
         public void AdjustQty(string id, decimal qty, decimal price, decimal total, string priceType, string note, decimal w, decimal h) =>
             _presenter.AdjustQty(id, qty, price, total, priceType, note, w, h);
 
-        public void ConfirmPayment(PaymentModel pm) => _presenter.ConfirmPayment(pm);
+        public void ConfirmPayment(PaymentModel pm)
+        {
+            ShowLoading();
+            try
+            {
+                _presenter.ConfirmPayment(pm);   // saves, then calls ShowReceiptDialog
+            }
+            finally
+            {
+                HideLoading();                   // safety net, does nothing if already closed
+            }
+        }
         public void RemoveCurrentItem(string itemCode, string priceType) => _presenter.RemoveCurrentItem();
         public void UpdateItem(inventory item) => _presenter.UpdateItem(item);
         public void ClearEntries() => _presenter.ClearEntries();
@@ -608,6 +736,40 @@ namespace POS_88.Views
             _sp.Write(new byte[] { 10, 13 }, 0, 2);
             _sp.Write(Clip(text));
             _sp.Close();
+        }
+
+
+        //public void ConfirmPayment(PaymentModel pm)
+        //{
+        //    ShowLoading();
+        //    try
+        //    {
+        //        _presenter.ConfirmPayment(pm);   // saves, then calls ShowReceiptDialog
+        //    }
+        //    finally
+        //    {
+        //        HideLoading();                   // safety net, does nothing if already closed
+        //    }
+        //}
+
+
+        private LoadingOverlay _loading;
+
+        private void ShowLoading(string text = "Processing payment...")
+        {
+            if (_loading != null) return;
+            _loading = new LoadingOverlay(this, text);
+            _loading.Show(this);
+            _loading.BringToFront();
+            _loading.Refresh();
+        }
+
+        private void HideLoading()
+        {
+            if (_loading == null) return;
+            _loading.Close();
+            _loading.Dispose();
+            _loading = null;
         }
     }
 

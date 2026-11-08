@@ -98,8 +98,6 @@
             this.btnNew = new System.Windows.Forms.Button();
             this.label33 = new System.Windows.Forms.Label();
             this.btQuantity = new System.Windows.Forms.Button();
-            this.label31 = new System.Windows.Forms.Label();
-            this.btAddTable = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
             this.btDiscount = new System.Windows.Forms.Button();
             this.label29 = new System.Windows.Forms.Label();
@@ -380,19 +378,19 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(20, 30, 20, 30);
             this.tableLayoutPanel1.RowCount = 13;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.431703F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.431703F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.431703F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.431703F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.431703F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.431703F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.431703F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.431703F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.05734F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.05734F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.431703F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 140F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(338, 518);
             this.tableLayoutPanel1.TabIndex = 26;
             // 
@@ -400,9 +398,9 @@
             // 
             this.panel16.BackColor = System.Drawing.Color.DarkGray;
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel16.Location = new System.Drawing.Point(23, 276);
+            this.panel16.Location = new System.Drawing.Point(23, 278);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(292, 4);
+            this.panel16.Size = new System.Drawing.Size(292, 1);
             this.panel16.TabIndex = 12;
             // 
             // panel4
@@ -412,322 +410,331 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(23, 33);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(292, 21);
+            this.panel4.Size = new System.Drawing.Size(292, 20);
             this.panel4.TabIndex = 0;
             // 
             // lblSubTotal
             // 
             this.lblSubTotal.BackColor = System.Drawing.Color.Transparent;
             this.lblSubTotal.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblSubTotal.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubTotal.ForeColor = System.Drawing.Color.White;
             this.lblSubTotal.Location = new System.Drawing.Point(142, 0);
             this.lblSubTotal.Name = "lblSubTotal";
-            this.lblSubTotal.Size = new System.Drawing.Size(150, 21);
+            this.lblSubTotal.Size = new System.Drawing.Size(150, 20);
             this.lblSubTotal.TabIndex = 14;
             this.lblSubTotal.Text = "₱0.00";
-            this.lblSubTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblSubTotal.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label12
             // 
             this.label12.AutoEllipsis = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(0, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(62, 21);
+            this.label12.Size = new System.Drawing.Size(62, 20);
             this.label12.TabIndex = 13;
             this.label12.Text = "Sub Total";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.lblSubDiscount);
             this.panel5.Controls.Add(this.label14);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(23, 60);
+            this.panel5.Location = new System.Drawing.Point(23, 59);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(292, 21);
+            this.panel5.Size = new System.Drawing.Size(292, 20);
             this.panel5.TabIndex = 1;
             // 
             // lblSubDiscount
             // 
             this.lblSubDiscount.BackColor = System.Drawing.Color.Transparent;
             this.lblSubDiscount.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblSubDiscount.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubDiscount.ForeColor = System.Drawing.Color.White;
             this.lblSubDiscount.Location = new System.Drawing.Point(142, 0);
             this.lblSubDiscount.Name = "lblSubDiscount";
-            this.lblSubDiscount.Size = new System.Drawing.Size(150, 21);
+            this.lblSubDiscount.Size = new System.Drawing.Size(150, 20);
             this.lblSubDiscount.TabIndex = 15;
             this.lblSubDiscount.Text = "₱0.00";
-            this.lblSubDiscount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblSubDiscount.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label14
             // 
             this.label14.AutoEllipsis = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(0, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(85, 21);
+            this.label14.Size = new System.Drawing.Size(85, 20);
             this.label14.TabIndex = 14;
             this.label14.Text = "Sub Discount";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.lblVATSales);
             this.panel6.Controls.Add(this.label16);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(23, 87);
+            this.panel6.Location = new System.Drawing.Point(23, 85);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(292, 21);
+            this.panel6.Size = new System.Drawing.Size(292, 20);
             this.panel6.TabIndex = 2;
             // 
             // lblVATSales
             // 
             this.lblVATSales.BackColor = System.Drawing.Color.Transparent;
             this.lblVATSales.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblVATSales.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVATSales.ForeColor = System.Drawing.Color.White;
             this.lblVATSales.Location = new System.Drawing.Point(142, 0);
             this.lblVATSales.Name = "lblVATSales";
-            this.lblVATSales.Size = new System.Drawing.Size(150, 21);
+            this.lblVATSales.Size = new System.Drawing.Size(150, 20);
             this.lblVATSales.TabIndex = 16;
             this.lblVATSales.Text = "₱0.00";
-            this.lblVATSales.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblVATSales.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label16
             // 
             this.label16.AutoEllipsis = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
             this.label16.Location = new System.Drawing.Point(0, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(65, 21);
+            this.label16.Size = new System.Drawing.Size(65, 20);
             this.label16.TabIndex = 15;
             this.label16.Text = "VAT Sales";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel7
             // 
             this.panel7.Controls.Add(this.lblVATAmt);
             this.panel7.Controls.Add(this.label18);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(23, 114);
+            this.panel7.Location = new System.Drawing.Point(23, 111);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(292, 21);
+            this.panel7.Size = new System.Drawing.Size(292, 20);
             this.panel7.TabIndex = 3;
             // 
             // lblVATAmt
             // 
             this.lblVATAmt.BackColor = System.Drawing.Color.Transparent;
             this.lblVATAmt.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblVATAmt.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVATAmt.ForeColor = System.Drawing.Color.White;
             this.lblVATAmt.Location = new System.Drawing.Point(142, 0);
             this.lblVATAmt.Name = "lblVATAmt";
-            this.lblVATAmt.Size = new System.Drawing.Size(150, 21);
+            this.lblVATAmt.Size = new System.Drawing.Size(150, 20);
             this.lblVATAmt.TabIndex = 17;
             this.lblVATAmt.Text = "₱0.00";
-            this.lblVATAmt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblVATAmt.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label18
             // 
             this.label18.AutoEllipsis = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label18.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.White;
             this.label18.Location = new System.Drawing.Point(0, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(81, 21);
+            this.label18.Size = new System.Drawing.Size(81, 20);
             this.label18.TabIndex = 16;
             this.label18.Text = "VAT Amount";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel8
             // 
             this.panel8.Controls.Add(this.lblVATExemptSales);
             this.panel8.Controls.Add(this.label20);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(23, 141);
+            this.panel8.Location = new System.Drawing.Point(23, 137);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(292, 21);
+            this.panel8.Size = new System.Drawing.Size(292, 20);
             this.panel8.TabIndex = 4;
             // 
             // lblVATExemptSales
             // 
             this.lblVATExemptSales.BackColor = System.Drawing.Color.Transparent;
             this.lblVATExemptSales.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblVATExemptSales.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVATExemptSales.ForeColor = System.Drawing.Color.White;
             this.lblVATExemptSales.Location = new System.Drawing.Point(142, 0);
             this.lblVATExemptSales.Name = "lblVATExemptSales";
-            this.lblVATExemptSales.Size = new System.Drawing.Size(150, 21);
+            this.lblVATExemptSales.Size = new System.Drawing.Size(150, 20);
             this.lblVATExemptSales.TabIndex = 18;
             this.lblVATExemptSales.Text = "₱0.00";
-            this.lblVATExemptSales.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblVATExemptSales.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label20
             // 
             this.label20.AutoEllipsis = true;
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label20.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.White;
             this.label20.Location = new System.Drawing.Point(0, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(113, 21);
+            this.label20.Size = new System.Drawing.Size(113, 20);
             this.label20.TabIndex = 17;
             this.label20.Text = "VAT-Exempt Sales";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel9
             // 
             this.panel9.Controls.Add(this.lblZeroRatedSales);
             this.panel9.Controls.Add(this.label22);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(23, 168);
+            this.panel9.Location = new System.Drawing.Point(23, 163);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(292, 21);
+            this.panel9.Size = new System.Drawing.Size(292, 20);
             this.panel9.TabIndex = 5;
             // 
             // lblZeroRatedSales
             // 
             this.lblZeroRatedSales.BackColor = System.Drawing.Color.Transparent;
             this.lblZeroRatedSales.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblZeroRatedSales.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblZeroRatedSales.ForeColor = System.Drawing.Color.White;
             this.lblZeroRatedSales.Location = new System.Drawing.Point(142, 0);
             this.lblZeroRatedSales.Name = "lblZeroRatedSales";
-            this.lblZeroRatedSales.Size = new System.Drawing.Size(150, 21);
+            this.lblZeroRatedSales.Size = new System.Drawing.Size(150, 20);
             this.lblZeroRatedSales.TabIndex = 19;
             this.lblZeroRatedSales.Text = "₱0.00";
-            this.lblZeroRatedSales.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblZeroRatedSales.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label22
             // 
             this.label22.AutoEllipsis = true;
             this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label22.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.White;
             this.label22.Location = new System.Drawing.Point(0, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(108, 21);
+            this.label22.Size = new System.Drawing.Size(108, 20);
             this.label22.TabIndex = 18;
             this.label22.Text = "Zero-Rated Sales";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel10
             // 
             this.panel10.Controls.Add(this.lblNonVATSales);
             this.panel10.Controls.Add(this.label44);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(23, 195);
+            this.panel10.Location = new System.Drawing.Point(23, 189);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(292, 21);
+            this.panel10.Size = new System.Drawing.Size(292, 20);
             this.panel10.TabIndex = 6;
             // 
             // lblNonVATSales
             // 
             this.lblNonVATSales.BackColor = System.Drawing.Color.Transparent;
             this.lblNonVATSales.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblNonVATSales.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNonVATSales.ForeColor = System.Drawing.Color.White;
             this.lblNonVATSales.Location = new System.Drawing.Point(142, 0);
             this.lblNonVATSales.Name = "lblNonVATSales";
-            this.lblNonVATSales.Size = new System.Drawing.Size(150, 21);
+            this.lblNonVATSales.Size = new System.Drawing.Size(150, 20);
             this.lblNonVATSales.TabIndex = 20;
             this.lblNonVATSales.Text = "₱0.00";
-            this.lblNonVATSales.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblNonVATSales.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label44
             // 
             this.label44.AutoEllipsis = true;
             this.label44.BackColor = System.Drawing.Color.Transparent;
             this.label44.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label44.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.ForeColor = System.Drawing.Color.White;
             this.label44.Location = new System.Drawing.Point(0, 0);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(93, 21);
+            this.label44.Size = new System.Drawing.Size(93, 20);
             this.label44.TabIndex = 19;
             this.label44.Text = "Non-VAT Sales";
-            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel11
             // 
             this.panel11.Controls.Add(this.lblRedeemAmt);
             this.panel11.Controls.Add(this.label46);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(23, 222);
+            this.panel11.Location = new System.Drawing.Point(23, 215);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(292, 21);
+            this.panel11.Size = new System.Drawing.Size(292, 20);
             this.panel11.TabIndex = 7;
             // 
             // lblRedeemAmt
             // 
             this.lblRedeemAmt.BackColor = System.Drawing.Color.Transparent;
             this.lblRedeemAmt.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblRedeemAmt.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRedeemAmt.ForeColor = System.Drawing.Color.White;
             this.lblRedeemAmt.Location = new System.Drawing.Point(142, 0);
             this.lblRedeemAmt.Name = "lblRedeemAmt";
-            this.lblRedeemAmt.Size = new System.Drawing.Size(150, 21);
+            this.lblRedeemAmt.Size = new System.Drawing.Size(150, 20);
             this.lblRedeemAmt.TabIndex = 21;
             this.lblRedeemAmt.Text = "₱0.00";
-            this.lblRedeemAmt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblRedeemAmt.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label46
             // 
             this.label46.AutoEllipsis = true;
             this.label46.BackColor = System.Drawing.Color.Transparent;
             this.label46.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label46.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.ForeColor = System.Drawing.Color.White;
             this.label46.Location = new System.Drawing.Point(0, 0);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(108, 21);
+            this.label46.Size = new System.Drawing.Size(108, 20);
             this.label46.TabIndex = 20;
             this.label46.Text = "Redeem Amount";
-            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel12
             // 
             this.panel12.Controls.Add(this.lblNoOfItems);
             this.panel12.Controls.Add(this.label48);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(23, 249);
+            this.panel12.Location = new System.Drawing.Point(23, 241);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(292, 21);
+            this.panel12.Size = new System.Drawing.Size(292, 31);
             this.panel12.TabIndex = 8;
             // 
             // lblNoOfItems
             // 
             this.lblNoOfItems.BackColor = System.Drawing.Color.Transparent;
             this.lblNoOfItems.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblNoOfItems.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNoOfItems.ForeColor = System.Drawing.Color.White;
             this.lblNoOfItems.Location = new System.Drawing.Point(142, 0);
             this.lblNoOfItems.Name = "lblNoOfItems";
-            this.lblNoOfItems.Size = new System.Drawing.Size(150, 21);
+            this.lblNoOfItems.Size = new System.Drawing.Size(150, 31);
             this.lblNoOfItems.TabIndex = 22;
             this.lblNoOfItems.Text = "0.00";
-            this.lblNoOfItems.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblNoOfItems.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label48
             // 
             this.label48.AutoEllipsis = true;
             this.label48.BackColor = System.Drawing.Color.Transparent;
             this.label48.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label48.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label48.ForeColor = System.Drawing.Color.White;
             this.label48.Location = new System.Drawing.Point(0, 0);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(78, 21);
+            this.label48.Size = new System.Drawing.Size(78, 31);
             this.label48.TabIndex = 21;
             this.label48.Text = "No. of Items";
-            this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel13
             // 
             this.panel13.Controls.Add(this.lblCashTendered);
             this.panel13.Controls.Add(this.label50);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Location = new System.Drawing.Point(23, 286);
+            this.panel13.Location = new System.Drawing.Point(23, 283);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(292, 21);
+            this.panel13.Size = new System.Drawing.Size(292, 31);
             this.panel13.TabIndex = 9;
             // 
             // lblCashTendered
@@ -735,13 +742,13 @@
             this.lblCashTendered.BackColor = System.Drawing.Color.Transparent;
             this.lblCashTendered.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblCashTendered.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCashTendered.ForeColor = System.Drawing.Color.White;
+            this.lblCashTendered.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.lblCashTendered.Location = new System.Drawing.Point(142, 0);
             this.lblCashTendered.Name = "lblCashTendered";
-            this.lblCashTendered.Size = new System.Drawing.Size(150, 21);
+            this.lblCashTendered.Size = new System.Drawing.Size(150, 31);
             this.lblCashTendered.TabIndex = 25;
             this.lblCashTendered.Text = "₱0.00";
-            this.lblCashTendered.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblCashTendered.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // label50
             // 
@@ -752,19 +759,19 @@
             this.label50.ForeColor = System.Drawing.Color.White;
             this.label50.Location = new System.Drawing.Point(0, 0);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(97, 21);
+            this.label50.Size = new System.Drawing.Size(97, 31);
             this.label50.TabIndex = 24;
             this.label50.Text = "Cash Tendered";
-            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label50.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // panel14
             // 
             this.panel14.Controls.Add(this.lblChange);
             this.panel14.Controls.Add(this.label52);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel14.Location = new System.Drawing.Point(23, 313);
+            this.panel14.Location = new System.Drawing.Point(23, 320);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(292, 21);
+            this.panel14.Size = new System.Drawing.Size(292, 20);
             this.panel14.TabIndex = 10;
             // 
             // lblChange
@@ -772,13 +779,13 @@
             this.lblChange.BackColor = System.Drawing.Color.Transparent;
             this.lblChange.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblChange.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChange.ForeColor = System.Drawing.Color.White;
+            this.lblChange.ForeColor = System.Drawing.Color.Red;
             this.lblChange.Location = new System.Drawing.Point(142, 0);
             this.lblChange.Name = "lblChange";
-            this.lblChange.Size = new System.Drawing.Size(150, 21);
+            this.lblChange.Size = new System.Drawing.Size(150, 20);
             this.lblChange.TabIndex = 26;
             this.lblChange.Text = "₱0.00";
-            this.lblChange.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblChange.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // label52
             // 
@@ -789,18 +796,18 @@
             this.label52.ForeColor = System.Drawing.Color.White;
             this.label52.Location = new System.Drawing.Point(0, 0);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(55, 21);
+            this.label52.Size = new System.Drawing.Size(55, 20);
             this.label52.TabIndex = 25;
             this.label52.Text = "Change";
-            this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label52.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // panel15
             // 
             this.panel15.Controls.Add(this.bunifuCards9);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel15.Location = new System.Drawing.Point(23, 340);
+            this.panel15.Location = new System.Drawing.Point(23, 346);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(292, 145);
+            this.panel15.Size = new System.Drawing.Size(292, 139);
             this.panel15.TabIndex = 11;
             // 
             // bunifuCards9
@@ -814,7 +821,7 @@
             this.bunifuCards9.Controls.Add(this.label41);
             this.bunifuCards9.Controls.Add(this.iconButton1);
             this.bunifuCards9.LeftSahddow = false;
-            this.bunifuCards9.Location = new System.Drawing.Point(3, 83);
+            this.bunifuCards9.Location = new System.Drawing.Point(3, 77);
             this.bunifuCards9.Name = "bunifuCards9";
             this.bunifuCards9.RightSahddow = false;
             this.bunifuCards9.ShadowDepth = 20;
@@ -966,8 +973,6 @@
             this.panelLeft.Controls.Add(this.btnNew);
             this.panelLeft.Controls.Add(this.label33);
             this.panelLeft.Controls.Add(this.btQuantity);
-            this.panelLeft.Controls.Add(this.label31);
-            this.panelLeft.Controls.Add(this.btAddTable);
             this.panelLeft.Controls.Add(this.label30);
             this.panelLeft.Controls.Add(this.btDiscount);
             this.panelLeft.Controls.Add(this.label29);
@@ -1047,37 +1052,6 @@
             this.btQuantity.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btQuantity.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btQuantity.UseVisualStyleBackColor = false;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label31.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.DimGray;
-            this.label31.Location = new System.Drawing.Point(409, 97);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(19, 15);
-            this.label31.TabIndex = 13;
-            this.label31.Text = "F4";
-            this.label31.Visible = false;
-            // 
-            // btAddTable
-            // 
-            this.btAddTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.btAddTable.FlatAppearance.BorderSize = 0;
-            this.btAddTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAddTable.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAddTable.ForeColor = System.Drawing.Color.White;
-            this.btAddTable.Image = ((System.Drawing.Image)(resources.GetObject("btAddTable.Image")));
-            this.btAddTable.Location = new System.Drawing.Point(407, 93);
-            this.btAddTable.Name = "btAddTable";
-            this.btAddTable.Size = new System.Drawing.Size(89, 67);
-            this.btAddTable.TabIndex = 12;
-            this.btAddTable.Text = "Add to table";
-            this.btAddTable.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btAddTable.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btAddTable.UseVisualStyleBackColor = false;
-            this.btAddTable.Visible = false;
             // 
             // label30
             // 
@@ -1199,7 +1173,7 @@
             // 
             this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(35, 3);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(597, 27);
@@ -1234,11 +1208,11 @@
             this.bunifuCardsTable.Controls.Add(this.dataGrid);
             this.bunifuCardsTable.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCardsTable.LeftSahddow = false;
-            this.bunifuCardsTable.Location = new System.Drawing.Point(12, 170);
+            this.bunifuCardsTable.Location = new System.Drawing.Point(12, 166);
             this.bunifuCardsTable.Name = "bunifuCardsTable";
             this.bunifuCardsTable.RightSahddow = true;
             this.bunifuCardsTable.ShadowDepth = 20;
-            this.bunifuCardsTable.Size = new System.Drawing.Size(913, 606);
+            this.bunifuCardsTable.Size = new System.Drawing.Size(913, 610);
             this.bunifuCardsTable.TabIndex = 0;
             // 
             // dataGrid
@@ -1261,13 +1235,14 @@
             this.dataGrid.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dataGrid.HighlightSelectedColumnHeaders = false;
-            this.dataGrid.Location = new System.Drawing.Point(3, 3);
+            this.dataGrid.Location = new System.Drawing.Point(3, 4);
             this.dataGrid.MultiSelect = false;
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.ReadOnly = true;
             this.dataGrid.RowHeadersVisible = false;
+            this.dataGrid.RowTemplate.Height = 40;
             this.dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGrid.Size = new System.Drawing.Size(907, 589);
+            this.dataGrid.Size = new System.Drawing.Size(907, 592);
             this.dataGrid.TabIndex = 24;
             // 
             // panelBottom
@@ -1306,7 +1281,7 @@
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(41, 15);
             this.label42.TabIndex = 24;
-            this.label42.Text = "Crt + 7";
+            this.label42.Text = "Crt + 8";
             // 
             // btnReturnSales
             // 
@@ -1338,6 +1313,7 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Need help with shortcut keys?";
             this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.linkLabel1.Visible = false;
             // 
             // label40
             // 
@@ -1640,8 +1616,6 @@
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Button btQuantity;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Button btAddTable;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Button btDiscount;
         private System.Windows.Forms.Label label29;

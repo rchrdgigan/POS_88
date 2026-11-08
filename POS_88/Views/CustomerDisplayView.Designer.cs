@@ -86,7 +86,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1354, 721);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1064, 661);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -103,7 +103,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 71F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 194F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(671, 715);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(526, 655);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // panel1
@@ -118,7 +118,7 @@
             this.panel1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(665, 65);
+            this.panel1.Size = new System.Drawing.Size(520, 65);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox2
@@ -183,7 +183,7 @@
             this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
             this.picLogo.Location = new System.Drawing.Point(0, 0);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(665, 65);
+            this.picLogo.Size = new System.Drawing.Size(520, 65);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogo.TabIndex = 3;
             this.picLogo.TabStop = false;
@@ -195,7 +195,7 @@
             this.panel2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(3, 74);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(665, 444);
+            this.panel2.Size = new System.Drawing.Size(520, 384);
             this.panel2.TabIndex = 1;
             // 
             // dataGrid
@@ -242,7 +242,7 @@
             this.dataGrid.ReadOnly = true;
             this.dataGrid.RowHeadersVisible = false;
             this.dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGrid.Size = new System.Drawing.Size(656, 425);
+            this.dataGrid.Size = new System.Drawing.Size(511, 365);
             this.dataGrid.TabIndex = 25;
             // 
             // ITEMCODE
@@ -316,9 +316,9 @@
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(3, 524);
+            this.panel3.Location = new System.Drawing.Point(3, 464);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(665, 188);
+            this.panel3.Size = new System.Drawing.Size(520, 188);
             this.panel3.TabIndex = 2;
             // 
             // lblChange
@@ -326,9 +326,9 @@
             this.lblChange.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblChange.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(45)))), ((int)(((byte)(55)))));
-            this.lblChange.Location = new System.Drawing.Point(132, 149);
+            this.lblChange.Location = new System.Drawing.Point(202, 149);
             this.lblChange.Name = "lblChange";
-            this.lblChange.Size = new System.Drawing.Size(507, 26);
+            this.lblChange.Size = new System.Drawing.Size(292, 26);
             this.lblChange.TabIndex = 13;
             this.lblChange.Text = "0.00";
             this.lblChange.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -338,9 +338,9 @@
             this.lblPayment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPayment.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPayment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.lblPayment.Location = new System.Drawing.Point(113, 119);
+            this.lblPayment.Location = new System.Drawing.Point(183, 119);
             this.lblPayment.Name = "lblPayment";
-            this.lblPayment.Size = new System.Drawing.Size(526, 19);
+            this.lblPayment.Size = new System.Drawing.Size(311, 19);
             this.lblPayment.TabIndex = 12;
             this.lblPayment.Text = "0.00";
             this.lblPayment.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -350,9 +350,9 @@
             this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.Color.SeaGreen;
-            this.lblTotal.Location = new System.Drawing.Point(113, 81);
+            this.lblTotal.Location = new System.Drawing.Point(183, 81);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(526, 28);
+            this.lblTotal.Size = new System.Drawing.Size(311, 28);
             this.lblTotal.TabIndex = 11;
             this.lblTotal.Text = "0.00";
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -362,9 +362,9 @@
             this.lblDiscount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDiscount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDiscount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.lblDiscount.Location = new System.Drawing.Point(113, 52);
+            this.lblDiscount.Location = new System.Drawing.Point(183, 52);
             this.lblDiscount.Name = "lblDiscount";
-            this.lblDiscount.Size = new System.Drawing.Size(526, 19);
+            this.lblDiscount.Size = new System.Drawing.Size(311, 19);
             this.lblDiscount.TabIndex = 10;
             this.lblDiscount.Text = "0.00";
             this.lblDiscount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -374,9 +374,9 @@
             this.lblSubtotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSubtotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubtotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.lblSubtotal.Location = new System.Drawing.Point(113, 18);
+            this.lblSubtotal.Location = new System.Drawing.Point(183, 18);
             this.lblSubtotal.Name = "lblSubtotal";
-            this.lblSubtotal.Size = new System.Drawing.Size(526, 19);
+            this.lblSubtotal.Size = new System.Drawing.Size(311, 19);
             this.lblSubtotal.TabIndex = 9;
             this.lblSubtotal.Text = "0.00";
             this.lblSubtotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -440,9 +440,9 @@
             // 
             this.panel4.Controls.Add(this.picPoster);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(680, 3);
+            this.panel4.Location = new System.Drawing.Point(535, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(671, 715);
+            this.panel4.Size = new System.Drawing.Size(526, 655);
             this.panel4.TabIndex = 3;
             // 
             // picPoster
@@ -451,7 +451,7 @@
             this.picPoster.Image = ((System.Drawing.Image)(resources.GetObject("picPoster.Image")));
             this.picPoster.Location = new System.Drawing.Point(0, 0);
             this.picPoster.Name = "picPoster";
-            this.picPoster.Size = new System.Drawing.Size(671, 715);
+            this.picPoster.Size = new System.Drawing.Size(526, 655);
             this.picPoster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picPoster.TabIndex = 0;
             this.picPoster.TabStop = false;
@@ -461,7 +461,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1354, 721);
+            this.ClientSize = new System.Drawing.Size(1064, 661);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CustomerDisplayView";

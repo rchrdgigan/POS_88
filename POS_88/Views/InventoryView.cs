@@ -24,6 +24,8 @@ namespace POS_88.Views
         private readonly SkeletonLoader totalPriceSkeletonLoader;
         private readonly SkeletonLoader totalQuantitySkeletonLoader;
         private readonly SkeletonLoader noOfItemsSkeletonLoader;
+        public bool IsCashierMode { get; private set; }
+
 
         public InventoryView()
         {
@@ -230,6 +232,41 @@ namespace POS_88.Views
                 }
             };
 
+        }
+        //how to apply this configuration when trigger 2 params in cashier then it will open this inventory form not in admin panel but in cashier to show only the stocks?
+        public InventoryView(string usernm, string cashierTrap) : this()
+        {
+            IsCashierMode = true;
+            AuthenticatedUserName = usernm;
+
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            //MaximizeBox = false;
+            //MinimizeBox = false;
+            //ShowInTaskbar = false;
+            Height = 709;
+            Width = 1105;
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "Inventory";
+
+            // view-only: hide instead of disable so the cashier doesn't see dead buttons
+            btnAddItem.Visible = false;
+            btnEdit.Visible = false;
+            btnDelete.Visible = false;
+            btnPrint.Visible = false;
+            btnImportStocks.Visible = false;
+            btnStockHistory.Visible = false;
+            btnExportExcel.Visible = false;
+
+            tableLayoutPanel1.ColumnStyles[1].SizeType = SizeType.Absolute;
+            tableLayoutPanel1.ColumnStyles[1].Width = 100F;
+
+            btnAddStock.Visible = true;
+            btnAddStock.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnAddStock.Location = new Point(panel5.Width - btnAddStock.Width - 7, 7);
+
+            dataGridViewX1.ReadOnly = true;
+            dataGridViewX1.AllowUserToAddRows = false;
+            dataGridViewX1.AllowUserToDeleteRows = false;
         }
 
         private void ExporttoExcel()

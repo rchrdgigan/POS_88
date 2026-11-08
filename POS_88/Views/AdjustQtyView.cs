@@ -50,18 +50,20 @@ namespace POS_88.Views
             this.txtNote.Text = note;
             this.txtQty.Focus();
 
-            btn0.Click += btn0_Click;
-            btn1.Click += btn1_Click;
-            btn2.Click += btn2_Click;
-            btn3.Click += btn3_Click;
-            btn4.Click += btn4_Click;
-            btn5.Click += btn5_Click;
-            btn6.Click += btn6_Click;
-            btn7.Click += btn7_Click;
-            btn8.Click += btn8_Click;
-            btn9.Click += btn9_Click;
+            btn0.Click += delegate { this.InpNum(this.btn0.Text); };
+            btn1.Click += delegate { this.InpNum(this.btn1.Text); };
+            btn2.Click += delegate { this.InpNum(this.btn2.Text); };
+            btn3.Click += delegate { this.InpNum(this.btn3.Text); };
+            btn4.Click += delegate { this.InpNum(this.btn4.Text); };
+            btn5.Click += delegate { this.InpNum(this.btn5.Text); };
+            btn6.Click += delegate { this.InpNum(this.btn6.Text); };
+            btn7.Click += delegate { this.InpNum(this.btn7.Text); };
+            btn8.Click += delegate { this.InpNum(this.btn8.Text); };
+            btn9.Click += delegate { this.InpNum(this.btn9.Text); };
+            btnDot.Click += delegate { this.InpNum(this.btnDot.Text); };
             btnClear.Click += btnClear_Click;
             btnBackSpace.Click += btnBackSpace_Click;
+            iconButton1.Click += delegate { this.Close(); };
         }
 
 
@@ -149,8 +151,6 @@ namespace POS_88.Views
 
         private void btnAdd_Click(object sender, EventArgs e) => this.AdjustQty(1);
 
-        private void btn0_Click(object sender, EventArgs e) => this.InpNum(this.btn0.Text);
-
         private void btnBackSpace_Click(object sender, EventArgs e)
         {
             string str = this.txtQty.Text;
@@ -159,26 +159,6 @@ namespace POS_88.Views
             this.txtQty.Text = str;
             this.txtQty.Focus();
         }
-
-        private void btnDot_Click(object sender, EventArgs e) => this.InpNum(this.btnDot.Text);
-
-        private void btn1_Click(object sender, EventArgs e) => this.InpNum(this.btn1.Text);
-
-        private void btn2_Click(object sender, EventArgs e) => this.InpNum(this.btn2.Text);
-
-        private void btn3_Click(object sender, EventArgs e) => this.InpNum(this.btn3.Text);
-
-        private void btn6_Click(object sender, EventArgs e) => this.InpNum(this.btn6.Text);
-
-        private void btn5_Click(object sender, EventArgs e) => this.InpNum(this.btn5.Text);
-
-        private void btn4_Click(object sender, EventArgs e) => this.InpNum(this.btn4.Text);
-
-        private void btn9_Click(object sender, EventArgs e) => this.InpNum(this.btn9.Text);
-
-        private void btn8_Click(object sender, EventArgs e) => this.InpNum(this.btn8.Text);
-
-        private void btn7_Click(object sender, EventArgs e) => this.InpNum(this.btn7.Text);
 
         private void btnClear_Click(object sender, EventArgs e)
         {
@@ -190,7 +170,6 @@ namespace POS_88.Views
             this.txtQty.Text += num;
             this.txtQty.Focus();
         }
-
 
     }
 }

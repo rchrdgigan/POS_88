@@ -81,6 +81,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
+            this.lblGrandTotal = new System.Windows.Forms.Label();
+            this.lblgrandGrandTotal = new System.Windows.Forms.Label();
+            this.lblCashCount = new System.Windows.Forms.Label();
+            this.lblCashOut = new System.Windows.Forms.Label();
+            this.lblCashIn = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblOpeningAmt = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -92,14 +100,6 @@
             this.txtOpeningAmt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblOpeningAmt = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lblCashIn = new System.Windows.Forms.Label();
-            this.lblCashOut = new System.Windows.Forms.Label();
-            this.lblCashCount = new System.Windows.Forms.Label();
-            this.lblgrandGrandTotal = new System.Windows.Forms.Label();
-            this.lblGrandTotal = new System.Windows.Forms.Label();
             this.bunifuCards1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.bunifuCards4.SuspendLayout();
@@ -164,9 +164,9 @@
             this.btnCashHistory.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCashHistory.ForeColor = System.Drawing.Color.White;
             this.btnCashHistory.Image = ((System.Drawing.Image)(resources.GetObject("btnCashHistory.Image")));
-            this.btnCashHistory.Location = new System.Drawing.Point(454, 12);
+            this.btnCashHistory.Location = new System.Drawing.Point(454, 17);
             this.btnCashHistory.Name = "btnCashHistory";
-            this.btnCashHistory.Size = new System.Drawing.Size(148, 67);
+            this.btnCashHistory.Size = new System.Drawing.Size(148, 60);
             this.btnCashHistory.TabIndex = 33;
             this.btnCashHistory.Text = "Cash In/Out Details";
             this.btnCashHistory.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -181,9 +181,9 @@
             this.btnCashInOut.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCashInOut.ForeColor = System.Drawing.Color.White;
             this.btnCashInOut.Image = ((System.Drawing.Image)(resources.GetObject("btnCashInOut.Image")));
-            this.btnCashInOut.Location = new System.Drawing.Point(342, 12);
+            this.btnCashInOut.Location = new System.Drawing.Point(342, 17);
             this.btnCashInOut.Name = "btnCashInOut";
-            this.btnCashInOut.Size = new System.Drawing.Size(106, 67);
+            this.btnCashInOut.Size = new System.Drawing.Size(106, 60);
             this.btnCashInOut.TabIndex = 32;
             this.btnCashInOut.Text = "Cash In/Out";
             this.btnCashInOut.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -198,9 +198,9 @@
             this.btnClose.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(692, 12);
+            this.btnClose.Location = new System.Drawing.Point(692, 17);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(89, 67);
+            this.btnClose.Size = new System.Drawing.Size(89, 60);
             this.btnClose.TabIndex = 31;
             this.btnClose.Text = "Close";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -215,9 +215,9 @@
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(609, 12);
+            this.btnSave.Location = new System.Drawing.Point(609, 17);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(77, 67);
+            this.btnSave.Size = new System.Drawing.Size(77, 60);
             this.btnSave.TabIndex = 30;
             this.btnSave.Text = "Save";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -232,9 +232,9 @@
             this.btnShift.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShift.ForeColor = System.Drawing.Color.White;
             this.btnShift.Image = ((System.Drawing.Image)(resources.GetObject("btnShift.Image")));
-            this.btnShift.Location = new System.Drawing.Point(211, 12);
+            this.btnShift.Location = new System.Drawing.Point(211, 17);
             this.btnShift.Name = "btnShift";
-            this.btnShift.Size = new System.Drawing.Size(125, 67);
+            this.btnShift.Size = new System.Drawing.Size(125, 60);
             this.btnShift.TabIndex = 27;
             this.btnShift.Text = "Start Shift";
             this.btnShift.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -249,9 +249,9 @@
             this.btnPrint.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.ForeColor = System.Drawing.Color.White;
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.Location = new System.Drawing.Point(130, 12);
+            this.btnPrint.Location = new System.Drawing.Point(130, 17);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(75, 67);
+            this.btnPrint.Size = new System.Drawing.Size(75, 60);
             this.btnPrint.TabIndex = 26;
             this.btnPrint.Text = "Print";
             this.btnPrint.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -795,6 +795,95 @@
             this.bunifuCards2.Size = new System.Drawing.Size(535, 137);
             this.bunifuCards2.TabIndex = 4;
             // 
+            // lblGrandTotal
+            // 
+            this.lblGrandTotal.AutoSize = true;
+            this.lblGrandTotal.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGrandTotal.ForeColor = System.Drawing.Color.White;
+            this.lblGrandTotal.Location = new System.Drawing.Point(299, 8);
+            this.lblGrandTotal.Name = "lblGrandTotal";
+            this.lblGrandTotal.Size = new System.Drawing.Size(73, 16);
+            this.lblGrandTotal.TabIndex = 20;
+            this.lblGrandTotal.Text = "Grand total";
+            this.lblGrandTotal.Visible = false;
+            // 
+            // lblgrandGrandTotal
+            // 
+            this.lblgrandGrandTotal.AutoSize = true;
+            this.lblgrandGrandTotal.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblgrandGrandTotal.ForeColor = System.Drawing.Color.White;
+            this.lblgrandGrandTotal.Location = new System.Drawing.Point(338, 109);
+            this.lblgrandGrandTotal.Name = "lblgrandGrandTotal";
+            this.lblgrandGrandTotal.Size = new System.Drawing.Size(32, 16);
+            this.lblgrandGrandTotal.TabIndex = 19;
+            this.lblgrandGrandTotal.Text = "0.00";
+            // 
+            // lblCashCount
+            // 
+            this.lblCashCount.AutoSize = true;
+            this.lblCashCount.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCashCount.ForeColor = System.Drawing.Color.White;
+            this.lblCashCount.Location = new System.Drawing.Point(338, 79);
+            this.lblCashCount.Name = "lblCashCount";
+            this.lblCashCount.Size = new System.Drawing.Size(32, 16);
+            this.lblCashCount.TabIndex = 18;
+            this.lblCashCount.Text = "0.00";
+            // 
+            // lblCashOut
+            // 
+            this.lblCashOut.AutoSize = true;
+            this.lblCashOut.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCashOut.ForeColor = System.Drawing.Color.White;
+            this.lblCashOut.Location = new System.Drawing.Point(340, 54);
+            this.lblCashOut.Name = "lblCashOut";
+            this.lblCashOut.Size = new System.Drawing.Size(32, 16);
+            this.lblCashOut.TabIndex = 17;
+            this.lblCashOut.Text = "0.00";
+            // 
+            // lblCashIn
+            // 
+            this.lblCashIn.AutoSize = true;
+            this.lblCashIn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCashIn.ForeColor = System.Drawing.Color.White;
+            this.lblCashIn.Location = new System.Drawing.Point(340, 30);
+            this.lblCashIn.Name = "lblCashIn";
+            this.lblCashIn.Size = new System.Drawing.Size(32, 16);
+            this.lblCashIn.TabIndex = 16;
+            this.lblCashIn.Text = "0.00";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(61, 79);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(32, 16);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "0.00";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(67, 54);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(32, 16);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "0.00";
+            // 
+            // lblOpeningAmt
+            // 
+            this.lblOpeningAmt.AutoSize = true;
+            this.lblOpeningAmt.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOpeningAmt.ForeColor = System.Drawing.Color.White;
+            this.lblOpeningAmt.Location = new System.Drawing.Point(131, 30);
+            this.lblOpeningAmt.Name = "lblOpeningAmt";
+            this.lblOpeningAmt.Size = new System.Drawing.Size(32, 16);
+            this.lblOpeningAmt.TabIndex = 13;
+            this.lblOpeningAmt.Text = "0.00";
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -917,95 +1006,6 @@
             this.label1.Size = new System.Drawing.Size(131, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Cash Count";
-            // 
-            // lblOpeningAmt
-            // 
-            this.lblOpeningAmt.AutoSize = true;
-            this.lblOpeningAmt.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOpeningAmt.ForeColor = System.Drawing.Color.White;
-            this.lblOpeningAmt.Location = new System.Drawing.Point(131, 30);
-            this.lblOpeningAmt.Name = "lblOpeningAmt";
-            this.lblOpeningAmt.Size = new System.Drawing.Size(32, 16);
-            this.lblOpeningAmt.TabIndex = 13;
-            this.lblOpeningAmt.Text = "0.00";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(67, 54);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(32, 16);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "0.00";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(61, 79);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(32, 16);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "0.00";
-            // 
-            // lblCashIn
-            // 
-            this.lblCashIn.AutoSize = true;
-            this.lblCashIn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCashIn.ForeColor = System.Drawing.Color.White;
-            this.lblCashIn.Location = new System.Drawing.Point(340, 30);
-            this.lblCashIn.Name = "lblCashIn";
-            this.lblCashIn.Size = new System.Drawing.Size(32, 16);
-            this.lblCashIn.TabIndex = 16;
-            this.lblCashIn.Text = "0.00";
-            // 
-            // lblCashOut
-            // 
-            this.lblCashOut.AutoSize = true;
-            this.lblCashOut.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCashOut.ForeColor = System.Drawing.Color.White;
-            this.lblCashOut.Location = new System.Drawing.Point(340, 54);
-            this.lblCashOut.Name = "lblCashOut";
-            this.lblCashOut.Size = new System.Drawing.Size(32, 16);
-            this.lblCashOut.TabIndex = 17;
-            this.lblCashOut.Text = "0.00";
-            // 
-            // lblCashCount
-            // 
-            this.lblCashCount.AutoSize = true;
-            this.lblCashCount.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCashCount.ForeColor = System.Drawing.Color.White;
-            this.lblCashCount.Location = new System.Drawing.Point(338, 79);
-            this.lblCashCount.Name = "lblCashCount";
-            this.lblCashCount.Size = new System.Drawing.Size(32, 16);
-            this.lblCashCount.TabIndex = 18;
-            this.lblCashCount.Text = "0.00";
-            // 
-            // lblgrandGrandTotal
-            // 
-            this.lblgrandGrandTotal.AutoSize = true;
-            this.lblgrandGrandTotal.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblgrandGrandTotal.ForeColor = System.Drawing.Color.White;
-            this.lblgrandGrandTotal.Location = new System.Drawing.Point(338, 109);
-            this.lblgrandGrandTotal.Name = "lblgrandGrandTotal";
-            this.lblgrandGrandTotal.Size = new System.Drawing.Size(32, 16);
-            this.lblgrandGrandTotal.TabIndex = 19;
-            this.lblgrandGrandTotal.Text = "0.00";
-            // 
-            // lblGrandTotal
-            // 
-            this.lblGrandTotal.AutoSize = true;
-            this.lblGrandTotal.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGrandTotal.ForeColor = System.Drawing.Color.White;
-            this.lblGrandTotal.Location = new System.Drawing.Point(299, 8);
-            this.lblGrandTotal.Name = "lblGrandTotal";
-            this.lblGrandTotal.Size = new System.Drawing.Size(73, 16);
-            this.lblGrandTotal.TabIndex = 20;
-            this.lblGrandTotal.Text = "Grand total";
-            this.lblGrandTotal.Visible = false;
             // 
             // CashierCashCountView
             // 

@@ -33,8 +33,8 @@ namespace POS_88.Views
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardView));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.panelNoItems = new System.Windows.Forms.Panel();
@@ -120,7 +120,7 @@ namespace POS_88.Views
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(59, 10);
+            this.label1.Location = new System.Drawing.Point(59, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 36);
             this.label1.TabIndex = 0;
@@ -130,7 +130,7 @@ namespace POS_88.Views
             // 
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(62, 46);
+            this.lblWelcome.Location = new System.Drawing.Point(61, 38);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(343, 17);
             this.lblWelcome.TabIndex = 1;
@@ -148,7 +148,7 @@ namespace POS_88.Views
             this.panelNoItems.Location = new System.Drawing.Point(9, 6);
             this.panelNoItems.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
             this.panelNoItems.Name = "panelNoItems";
-            this.panelNoItems.Size = new System.Drawing.Size(220, 100);
+            this.panelNoItems.Size = new System.Drawing.Size(220, 87);
             this.panelNoItems.TabIndex = 2;
             // 
             // pictureBox2
@@ -165,7 +165,7 @@ namespace POS_88.Views
             // 
             this.lblNoOfItems.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblNoOfItems.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoOfItems.Location = new System.Drawing.Point(0, 63);
+            this.lblNoOfItems.Location = new System.Drawing.Point(0, 50);
             this.lblNoOfItems.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.lblNoOfItems.Name = "lblNoOfItems";
             this.lblNoOfItems.Size = new System.Drawing.Size(220, 37);
@@ -178,7 +178,7 @@ namespace POS_88.Views
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(130, 44);
+            this.label3.Location = new System.Drawing.Point(130, 31);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 16);
             this.label3.TabIndex = 0;
@@ -196,7 +196,7 @@ namespace POS_88.Views
             this.panelTotalStocks.Location = new System.Drawing.Point(241, 6);
             this.panelTotalStocks.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.panelTotalStocks.Name = "panelTotalStocks";
-            this.panelTotalStocks.Size = new System.Drawing.Size(217, 100);
+            this.panelTotalStocks.Size = new System.Drawing.Size(217, 87);
             this.panelTotalStocks.TabIndex = 3;
             // 
             // pictureBox3
@@ -213,7 +213,7 @@ namespace POS_88.Views
             // 
             this.lblNoofStocks.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblNoofStocks.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoofStocks.Location = new System.Drawing.Point(0, 60);
+            this.lblNoofStocks.Location = new System.Drawing.Point(0, 47);
             this.lblNoofStocks.Name = "lblNoofStocks";
             this.lblNoofStocks.Size = new System.Drawing.Size(217, 40);
             this.lblNoofStocks.TabIndex = 3;
@@ -225,7 +225,7 @@ namespace POS_88.Views
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(130, 44);
+            this.label6.Location = new System.Drawing.Point(130, 31);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 16);
             this.label6.TabIndex = 2;
@@ -243,7 +243,7 @@ namespace POS_88.Views
             this.panelCriticalItems.Location = new System.Drawing.Point(470, 6);
             this.panelCriticalItems.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.panelCriticalItems.Name = "panelCriticalItems";
-            this.panelCriticalItems.Size = new System.Drawing.Size(217, 100);
+            this.panelCriticalItems.Size = new System.Drawing.Size(217, 87);
             this.panelCriticalItems.TabIndex = 3;
             // 
             // pictureBox4
@@ -260,7 +260,7 @@ namespace POS_88.Views
             // 
             this.lblCriticalStocks.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblCriticalStocks.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCriticalStocks.Location = new System.Drawing.Point(0, 63);
+            this.lblCriticalStocks.Location = new System.Drawing.Point(0, 50);
             this.lblCriticalStocks.Name = "lblCriticalStocks";
             this.lblCriticalStocks.Size = new System.Drawing.Size(217, 37);
             this.lblCriticalStocks.TabIndex = 3;
@@ -269,9 +269,10 @@ namespace POS_88.Views
             // 
             // label8
             // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(118, 47);
+            this.label8.Location = new System.Drawing.Point(118, 34);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(94, 16);
             this.label8.TabIndex = 2;
@@ -289,7 +290,7 @@ namespace POS_88.Views
             this.panelExpenses.Location = new System.Drawing.Point(699, 6);
             this.panelExpenses.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.panelExpenses.Name = "panelExpenses";
-            this.panelExpenses.Size = new System.Drawing.Size(221, 100);
+            this.panelExpenses.Size = new System.Drawing.Size(221, 87);
             this.panelExpenses.TabIndex = 3;
             // 
             // pictureBox5
@@ -306,7 +307,7 @@ namespace POS_88.Views
             // 
             this.lblExpenses.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblExpenses.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExpenses.Location = new System.Drawing.Point(0, 63);
+            this.lblExpenses.Location = new System.Drawing.Point(0, 50);
             this.lblExpenses.Name = "lblExpenses";
             this.lblExpenses.Size = new System.Drawing.Size(221, 37);
             this.lblExpenses.TabIndex = 5;
@@ -315,9 +316,10 @@ namespace POS_88.Views
             // 
             // label10
             // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(132, 46);
+            this.label10.Location = new System.Drawing.Point(132, 33);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(67, 16);
             this.label10.TabIndex = 4;
@@ -333,14 +335,14 @@ namespace POS_88.Views
             this.dataGridViewX1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewX1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dataGridViewX1.HighlightSelectedColumnHeaders = false;
             this.dataGridViewX1.Location = new System.Drawing.Point(12, 35);
@@ -389,15 +391,13 @@ namespace POS_88.Views
             // 
             // panel6
             // 
-            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(227)))), ((int)(((byte)(230)))));
             this.panel6.Controls.Add(this.panel4);
             this.panel6.Controls.Add(this.panel8);
             this.panel6.Controls.Add(this.panel9);
             this.panel6.Controls.Add(this.panel10);
             this.panel6.Controls.Add(this.panel11);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(652, 6);
             this.panel6.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.panel6.Name = "panel6";
@@ -617,7 +617,7 @@ namespace POS_88.Views
             this.panel7.Location = new System.Drawing.Point(9, 6);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(449, 420);
+            this.panel7.Size = new System.Drawing.Size(449, 445);
             this.panel7.TabIndex = 8;
             // 
             // label13
@@ -643,7 +643,7 @@ namespace POS_88.Views
             this.panel1.Location = new System.Drawing.Point(470, 6);
             this.panel1.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(450, 420);
+            this.panel1.Size = new System.Drawing.Size(450, 445);
             this.panel1.TabIndex = 9;
             // 
             // label4
@@ -668,14 +668,14 @@ namespace POS_88.Views
             this.dataGridViewX2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewX2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridViewX2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX2.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewX2.DefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridViewX2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dataGridViewX2.HighlightSelectedColumnHeaders = false;
             this.dataGridViewX2.Location = new System.Drawing.Point(14, 35);
@@ -689,7 +689,7 @@ namespace POS_88.Views
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(15, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(15, 11);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(40, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -704,7 +704,7 @@ namespace POS_88.Views
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(929, 70);
+            this.panel2.Size = new System.Drawing.Size(929, 58);
             this.panel2.TabIndex = 12;
             // 
             // tableLayoutPanel1
@@ -719,12 +719,12 @@ namespace POS_88.Views
             this.tableLayoutPanel1.Controls.Add(this.panelExpenses, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.panelCriticalItems, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 70);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 58);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(929, 112);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(929, 99);
             this.tableLayoutPanel1.TabIndex = 13;
             // 
             // tableLayoutPanel2
@@ -735,7 +735,7 @@ namespace POS_88.Views
             this.tableLayoutPanel2.Controls.Add(this.panel5, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel6, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 182);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 157);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.Padding = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.tableLayoutPanel2.RowCount = 1;
@@ -751,12 +751,12 @@ namespace POS_88.Views
             this.tableLayoutPanel3.Controls.Add(this.panel7, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.panel1, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 578);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 553);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.Padding = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(929, 432);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(929, 457);
             this.tableLayoutPanel3.TabIndex = 15;
             // 
             // DashboardView

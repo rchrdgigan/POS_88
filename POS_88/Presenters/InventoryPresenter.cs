@@ -18,7 +18,7 @@ namespace POS_88.Presenters
         private POSImplementation _posImplement;
         private BindingSource inventoryBindingSource;
 
-        public InventoryPresenter(IInventoryView view)
+        public InventoryPresenter(IInventoryView view, bool showView = true)
         {
             this.view = view;
             this._unitOfWork = new UnitOfWorkPOS(new POSDBEntities());
@@ -27,11 +27,10 @@ namespace POS_88.Presenters
 
             this.view.SearchEvent += this.SearchInventory;
             this.view.DeleteEvent += this.DeleteItem;
-
-            
             this.view.ClearFiltersEvent += this.ClearFilters;
             view.SetInventoryListBindingSource(this.inventoryBindingSource);
-            view.Show();
+
+            if (showView) view.Show();
             this.LoadInventory();
         }
 

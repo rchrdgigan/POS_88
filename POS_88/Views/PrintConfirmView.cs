@@ -1,9 +1,6 @@
 using POS_88.Database;
 using POS_88.Persistence;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Printing;
@@ -15,15 +12,17 @@ namespace POS_88.Views
 {
     public partial class PrintConfirmView : Form, IPrintConfirmView
     {
-        // Per-printer layout values, taken from the old PrintReceiptPageRGM / PrintReceiptPageMASBATE.
+        #region Layouts
+
+        // Per-printer layout values (RGM = 58mm style, MASBATE = wider paper).
         private sealed class ReceiptLayout
         {
             public bool IsRgm;
             public float Width;
             public float TitleSize;
-            public float NameW, QtyW, PriceW, AmtW;      // item columns
-            public float SumLabelW, SumValueW;           // summary rows
-            public int WrapChars;                        // description longer than this -> numbers go on next line
+            public float NameW, QtyW, PriceW, AmtW;   // item columns
+            public float SumLabelW, SumValueW;        // summary rows
+            public int WrapChars;                     // longer descriptions push the numbers to the next line
             public string QtyFormat;
             public StringAlignment PriceHeaderAlign;
             public float LogoOffset;
@@ -66,77 +65,89 @@ namespace POS_88.Views
             TimeInset = 8f
         };
 
+        #endregion
+
+        #region Fields
+
         private readonly UnitOfWorkPOS _unitOfWork;
-        private PrintDocument recordDoc;
-        private PrintDocument recordBlank;
-        private string _OpenType;
-        private string _PrinterNm;
-        private int _PrinterType;
-        private string _storename;
-        private string _footer;
-        private string _address;
-        private string _tinno;
-        private string _contactno;
-        private bool _isPrint;
-        private bool _iswithLogo;
-        private bool _isPointSystem;
+        private readonly CashierView _cashierView;
+        private readonly string _openType;
+
+        private PrintDocument _receiptDoc;
+        private PrintDocument _drawerDoc;      // blank page used to pop the cash drawer
+
         private int _receiptNo;
+        private int _printerType;
+        private string _printerName;
 
-        private static readonly string[] VirtualPrinterNames =
-        {
-            "Microsoft Print to PDF",
-            "Microsoft XPS Document Writer",
-            "OneNote",
-            "Send To OneNote",
-            "Fax",
-            "Adobe PDF",
-            "CutePDF",
-            "PDFCreator",
-            "doPDF",
-            "Foxit PDF",
-            "Bullzip PDF"
-        };
+        private string _storeName;
+        private string _address;
+        private string _tinNo;
+        private string _contactNo;
+        private string _footer;
+        private bool _withLogo;
+        private bool _pointSystem;
 
-        public PrintConfirmView() : this(0, string.Empty, 1)
-        {
-        }
+        private bool _isPrinted;
+        private bool _keyHandled;
 
-        public PrintConfirmView(int receiptNo) : this(receiptNo, string.Empty, 1)
-        {
-        }
+        #endregion
+
+        #region Construction
+
+        public PrintConfirmView() : this(0, string.Empty, 1, null) { }
+
+        public PrintConfirmView(int receiptNo) : this(receiptNo, string.Empty, 1, null) { }
 
         public PrintConfirmView(int receiptNo, string openType, int printerType)
+            : this(receiptNo, openType, printerType, null)
+        { }
+
+        public PrintConfirmView(int receiptNo, string openType, int printerType, CashierView cashierView)
         {
-            if (printerType != 1 && printerType != 2)
+            if (!IsValidPrinterType(printerType))
                 throw new ArgumentOutOfRangeException("printerType", "Printer type must be 1 (RGM) or 2 (MASBATE).");
 
             InitializeComponent();
+
+            FormBorderStyle = FormBorderStyle.None;
+            BackColor = Color.Fuchsia;
+            TransparencyKey = Color.Fuchsia;
+            StartPosition = FormStartPosition.CenterParent;
+
             _unitOfWork = new UnitOfWorkPOS(new POSDBEntities());
             _receiptNo = receiptNo;
-            _OpenType = openType ?? string.Empty;
-            _isPrint = false;
-            _PrinterNm = string.Empty;
-            _PrinterType = printerType;
+            _cashierView = cashierView;
+            _openType = openType ?? string.Empty;
+            _printerType = printerType;
+            _printerName = string.Empty;
 
             btnEscOrCancel.Click += btnEscOrCancel_Click;
             btnEnterOrPrint.Click += btnEnterOrPrint_Click;
-            KeyPreview = true;
-            KeyDown += PrintConfirmView_KeyDown;
             FormClosed += PrintConfirmView_FormClosed;
 
             if (_receiptNo > 0)
                 LoadDetails(_receiptNo);
         }
 
+        private static bool IsValidPrinterType(int printerType)
+        {
+            return printerType == 1 || printerType == 2;
+        }
+
+        #endregion
+
+        #region Public API (IPrintConfirmView)
+
         public int PrinterType
         {
-            get { return _PrinterType; }
+            get { return _printerType; }
             set
             {
-                if (value != 1 && value != 2)
+                if (!IsValidPrinterType(value))
                     throw new ArgumentOutOfRangeException("value", "Printer type must be 1 (RGM) or 2 (MASBATE).");
 
-                _PrinterType = value;
+                _printerType = value;
                 if (_receiptNo > 0)
                     PrintReceiptForTransaction();
             }
@@ -162,74 +173,38 @@ namespace POS_88.Views
             label1.Text = string.Format("Print Receipt #{0}?", _receiptNo);
         }
 
-        private void GetData()
-        {
-            var setting = _unitOfWork.Setting
-                .Find(x => x.settingsid == 1)
-                .FirstOrDefault();
-
-            if (setting == null)
-                return;
-
-            _storename = setting.storename ?? string.Empty;
-            _address = setting.address ?? string.Empty;
-            _footer = setting.footer ?? string.Empty;
-            _tinno = setting.tinno ?? string.Empty;
-            _contactno = setting.contactno ?? string.Empty;
-            _iswithLogo = setting.withLogo.GetValueOrDefault();
-            _isPointSystem = setting.enablepointspayment.GetValueOrDefault();
-            _PrinterNm = string.IsNullOrWhiteSpace(setting.printername) ? string.Empty : setting.printername;
-        }
-
         public void PrintReceiptForTransaction()
         {
             if (_receiptNo <= 0)
                 return;
 
-            if (recordDoc != null)
-            {
-                if (printPreviewControl1.Document == recordDoc)
-                    printPreviewControl1.Document = null;
-                recordDoc.Dispose();
-            }
-            if (recordBlank != null)
-                recordBlank.Dispose();
+            DisposeDocuments();
 
-            recordDoc = new PrintDocument();
-            recordBlank = new PrintDocument();
-            recordDoc.DocumentName = "Customer Receipt";
-            recordBlank.DocumentName = "Opening Cash Drawer";
+            _receiptDoc = new PrintDocument { DocumentName = "Customer Receipt" };
+            _drawerDoc = new PrintDocument { DocumentName = "Opening Cash Drawer" };
 
-            // Same as the old code: KITCHEN prints the same receipt layout as normal receipts.
-            if (_PrinterType == 1)
-                recordDoc.PrintPage += PrintReceiptPageRGM;
+            // KITCHEN prints the same layout as a normal receipt.
+            if (_printerType == 1)
+                _receiptDoc.PrintPage += PrintReceiptPageRGM;
             else
-                recordDoc.PrintPage += PrintReceiptPageMASBATE;
+                _receiptDoc.PrintPage += PrintReceiptPageMASBATE;
 
-            recordBlank.PrintPage += PrintReceiptBlank;
+            _drawerDoc.PrintPage += PrintReceiptBlank;
 
-            //string printerName = ResolvePrinterName();
-            //if (!string.IsNullOrEmpty(printerName))
-            //{
-            //    var printerSettings = new PrinterSettings();
-            //    printerSettings.PrinterName = printerName;
-            //    recordDoc.PrinterSettings = printerSettings;
-            //    recordBlank.PrinterSettings = printerSettings;
-            //}
             string printerName = ResolvePrinterName();
             if (!string.IsNullOrEmpty(printerName))
             {
                 var printerSettings = new PrinterSettings { PrinterName = printerName };
                 if (printerSettings.IsValid)
                 {
-                    recordDoc.PrinterSettings = printerSettings;
-                    recordBlank.PrinterSettings = printerSettings;
+                    _receiptDoc.PrinterSettings = printerSettings;
+                    _drawerDoc.PrinterSettings = printerSettings;
                 }
             }
 
             if (printPreviewControl1 != null)
             {
-                printPreviewControl1.Document = recordDoc;
+                printPreviewControl1.Document = _receiptDoc;
                 printPreviewControl1.AutoZoom = false;
                 printPreviewControl1.UseAntiAlias = true;
                 printPreviewControl1.Zoom = 1.5;
@@ -239,14 +214,30 @@ namespace POS_88.Views
             }
         }
 
-        // Virtual printers (Microsoft Print to PDF, XPS Document Writer, etc.) pop up a "Save as" dialog.
-        //private static bool IsVirtualPrinter(string name)
-        //{
-        //    return !string.IsNullOrEmpty(name) &&
-        //           (name.IndexOf("pdf", StringComparison.OrdinalIgnoreCase) >= 0 ||
-        //            name.IndexOf("xps", StringComparison.OrdinalIgnoreCase) >= 0 ||
-        //            name.IndexOf("onenote", StringComparison.OrdinalIgnoreCase) >= 0);
-        //}
+        #endregion
+
+        #region Data / printer resolution
+
+        private void GetData()
+        {
+            var setting = _unitOfWork.Setting
+                .Find(x => x.settingsid == 1)
+                .FirstOrDefault();
+
+            if (setting == null)
+                return;
+
+            _storeName = setting.storename ?? string.Empty;
+            _address = setting.address ?? string.Empty;
+            _footer = setting.footer ?? string.Empty;
+            _tinNo = setting.tinno ?? string.Empty;
+            _contactNo = setting.contactno ?? string.Empty;
+            _withLogo = setting.withLogo.GetValueOrDefault();
+            _pointSystem = setting.enablepointspayment.GetValueOrDefault();
+            _printerName = string.IsNullOrWhiteSpace(setting.printername) ? string.Empty : setting.printername;
+        }
+
+        // Printers that are not usable for receipts. (PDF printers are allowed on purpose.)
         private static bool IsVirtualPrinter(string name)
         {
             if (string.IsNullOrWhiteSpace(name))
@@ -257,11 +248,11 @@ namespace POS_88.Views
                    name.IndexOf("Fax", StringComparison.OrdinalIgnoreCase) >= 0;
         }
 
-        // Configured printer -> Windows default printer -> first physical printer. Never a PDF printer.
+        // Configured printer -> Windows default printer -> first non-virtual printer.
         private string ResolvePrinterName()
         {
-            if (!string.IsNullOrWhiteSpace(_PrinterNm) && !IsVirtualPrinter(_PrinterNm))
-                return _PrinterNm;
+            if (!string.IsNullOrWhiteSpace(_printerName) && !IsVirtualPrinter(_printerName))
+                return _printerName;
 
             string defaultName = new PrinterSettings().PrinterName;
             if (!string.IsNullOrEmpty(defaultName) && !IsVirtualPrinter(defaultName))
@@ -273,19 +264,43 @@ namespace POS_88.Views
                     return name;
             }
 
-            return _PrinterNm;
+            return _printerName;
         }
 
-        //private bool HasPhysicalPrinter(PrintDocument doc)
-        //{
-        //    return doc != null && !IsVirtualPrinter(doc.PrinterSettings.PrinterName);
-        //}
-        private bool HasPhysicalPrinter(PrintDocument doc)
+        private static bool HasPhysicalPrinter(PrintDocument doc)
         {
             return doc != null
                 && doc.PrinterSettings.IsValid
                 && !IsVirtualPrinter(doc.PrinterSettings.PrinterName);
         }
+
+        private void DisposeDocuments()
+        {
+            if (printPreviewControl1 != null &&
+                (printPreviewControl1.Document == _receiptDoc || printPreviewControl1.Document == _drawerDoc))
+                printPreviewControl1.Document = null;
+
+            if (_receiptDoc != null)
+            {
+                _receiptDoc.Dispose();
+                _receiptDoc = null;
+            }
+            if (_drawerDoc != null)
+            {
+                _drawerDoc.Dispose();
+                _drawerDoc = null;
+            }
+        }
+
+        private void ClearCashierEntries()
+        {
+            if (_openType != "PURCHASED" && _openType != "KITCHEN" && _cashierView != null)
+                _cashierView.ClearEntries();
+        }
+
+        #endregion
+
+        #region Page handlers
 
         private void PrintReceiptPageRGM(object sender, PrintPageEventArgs e)
         {
@@ -303,23 +318,23 @@ namespace POS_88.Views
                 e.Graphics.DrawString(string.Empty, font, Brushes.Black, new RectangleF(2f, 5f, 185f, 0f));
         }
 
-        // ------------------------------------------------------------------
-        // Receipt rendering (follows the old RGM / MASBATE layouts)
-        // ------------------------------------------------------------------
-        private void RenderReceipt(PrintPageEventArgs e, ReceiptLayout L)
+        #endregion
+
+        #region Receipt rendering
+
+        private void RenderReceipt(PrintPageEventArgs e, ReceiptLayout layout)
         {
             Graphics g = e.Graphics;
             const float x = 2f;
-            float w = L.Width;
+            float w = layout.Width;
             float y = 5f;
 
-            using (var titleFont = new Font("Tahoma", L.TitleSize, FontStyle.Bold))
+            using (var titleFont = new Font("Tahoma", layout.TitleSize, FontStyle.Bold))
             using (var font = new Font("Tahoma", 7f, FontStyle.Regular))
             using (var boldFont = new Font("Tahoma", 8f, FontStyle.Bold))
-            using (var pen = new Pen(Color.Black, 1f))
+            using (var pen = new Pen(Color.Black, 1f) { DashStyle = DashStyle.Dash })
             {
-                pen.DashStyle = DashStyle.Dash;
-                Font totalFont = L.IsRgm ? boldFont : font;   // old RGM printed TOTAL in bold
+                Font totalFont = layout.IsRgm ? boldFont : font;   // RGM prints TOTAL in bold
 
                 var invoice = _unitOfWork.Invoice
                     .Find(item => item.receiptno == _receiptNo)
@@ -339,8 +354,10 @@ namespace POS_88.Views
                     .Find(u => u.usernm == invoice.crtdby)
                     .FirstOrDefault();
 
+                string cashierName = cashier == null ? string.Empty : cashier.nameuser ?? string.Empty;
+
                 // ---------- Logo ----------
-                if (_iswithLogo)
+                if (_withLogo)
                 {
                     string logoPath = Path.Combine(Application.StartupPath, "receiptlogo.jpg");
                     if (File.Exists(logoPath))
@@ -348,23 +365,21 @@ namespace POS_88.Views
                         using (var image = Image.FromFile(logoPath))
                             g.DrawImage(image, (e.PageBounds.Width - image.Width) / 2f, y, image.Width, image.Height);
                     }
-                    y += L.LogoOffset;
+                    y += layout.LogoOffset;
                 }
 
                 // ---------- Header ----------
-                y += DrawText(g, _storename, titleFont, x, y, w, StringAlignment.Center);
+                y += DrawText(g, _storeName, titleFont, x, y, w, StringAlignment.Center);
                 y += DrawText(g, _address, font, x, y, w, StringAlignment.Center);
-                if (L.IsRgm)
+                if (layout.IsRgm)
                 {
-                    y += DrawText(g, "TIN No.: " + _tinno, font, x, y, w, StringAlignment.Center);
-                    y += DrawText(g, "Contact No: " + _contactno, font, x, y, w, StringAlignment.Center);
+                    y += DrawText(g, "TIN No.: " + _tinNo, font, x, y, w, StringAlignment.Center);
+                    y += DrawText(g, "Contact No: " + _contactNo, font, x, y, w, StringAlignment.Center);
                 }
-                y += 10f;
-                DrawDash(g, pen, x, y, w);
-                y += 10f;
+                y = DrawSeparator(g, pen, x, y, w, 10f, 10f);
 
                 // ---------- Receipt info ----------
-                if (L.IsRgm)
+                if (layout.IsRgm)
                 {
                     var customer = _unitOfWork.Customers
                         .Find(c => c.customerid == invoice.customerid)
@@ -379,14 +394,14 @@ namespace POS_88.Views
                     if (customer != null && customerName != "WALK-IN")
                         y += DrawText(g, "ADDRESS: " + (customer.address ?? string.Empty), font, x, y, w, StringAlignment.Near);
                     y += DrawText(g, "DRIVER: " + (invoice.drivername ?? string.Empty), font, x, y, w, StringAlignment.Near);
-                    y += DrawText(g, "CASHIER: " + (cashier == null ? string.Empty : cashier.nameuser ?? string.Empty), font, x, y, w, StringAlignment.Near);
+                    y += DrawText(g, "CASHIER: " + cashierName, font, x, y, w, StringAlignment.Near);
                     y += DrawText(g, "PAYMENT TYPE: " + (invoice.paymenttype ?? string.Empty), font, x, y, w, StringAlignment.Near);
                     y += DrawText(g, "TABLE #: " + (invoice.tableno ?? string.Empty), font, x, y, w, StringAlignment.Near);
                 }
                 else
                 {
                     y += DrawText(g, "RECEIPT NO. : " + invoice.receiptno.ToString("00000#"), font, x, y, w, StringAlignment.Near);
-                    y += DrawText(g, "CASHIER: " + (cashier == null ? string.Empty : cashier.nameuser ?? string.Empty), font, x, y, w, StringAlignment.Near);
+                    y += DrawText(g, "CASHIER: " + cashierName, font, x, y, w, StringAlignment.Near);
                     y += DrawText(g, "PAYMENT TYPE: " + (invoice.paymenttype ?? string.Empty), font, x, y, w, StringAlignment.Near);
                     if (!string.IsNullOrEmpty(invoice.tableno))
                         y += DrawText(g, "TABLE #: " + invoice.tableno, font, x, y, w, StringAlignment.Near);
@@ -395,123 +410,109 @@ namespace POS_88.Views
                 string dateText = "DATE: " + (invoice.solddate.HasValue ? invoice.solddate.Value.ToString("M/d/yyyy") : string.Empty);
                 string timeText = "TIME : " + (invoice.solddate.HasValue ? invoice.solddate.Value.ToString("hh:mm tt") : string.Empty);
                 DrawText(g, dateText, font, x, y, w, StringAlignment.Near);
-                DrawText(g, timeText, font, x, y, w - L.TimeInset, StringAlignment.Far);
-                y += font.GetHeight(g) + 12f;
-                DrawDash(g, pen, x, y, w);
-                y += 8f;
+                DrawText(g, timeText, font, x, y, w - layout.TimeInset, StringAlignment.Far);
+                y += font.GetHeight(g);
+                y = DrawSeparator(g, pen, x, y, w, 12f, 8f);
 
                 // ---------- Item header ----------
-                float qtyX = x + L.NameW;
-                float priceX = qtyX + L.QtyW;
-                float amtX = priceX + L.PriceW;
+                float qtyX = x + layout.NameW;
+                float priceX = qtyX + layout.QtyW;
+                float amtX = priceX + layout.PriceW;
 
-                DrawText(g, "NAME", font, x, y, L.NameW, StringAlignment.Near);
-                DrawText(g, "QTY", font, qtyX, y, L.QtyW, StringAlignment.Center);
-                DrawText(g, "PRICE", font, priceX, y, L.PriceW, L.PriceHeaderAlign);
-                DrawText(g, "AMOUNT", font, amtX, y, L.AmtW, StringAlignment.Far);
-                y += font.GetHeight(g) + 8f;
-                DrawDash(g, pen, x, y, w);
-                y += 8f;
+                DrawText(g, "NAME", font, x, y, layout.NameW, StringAlignment.Near);
+                DrawText(g, "QTY", font, qtyX, y, layout.QtyW, StringAlignment.Center);
+                DrawText(g, "PRICE", font, priceX, y, layout.PriceW, layout.PriceHeaderAlign);
+                DrawText(g, "AMOUNT", font, amtX, y, layout.AmtW, StringAlignment.Far);
+                y += font.GetHeight(g);
+                y = DrawSeparator(g, pen, x, y, w, 8f, 8f);
 
                 // ---------- Items ----------
                 foreach (var item in items)
                 {
                     string name = item.description ?? string.Empty;
-                    if (L.IsRgm && !string.IsNullOrWhiteSpace(item.note))
-                        name += " " + item.note;      // old RGM printed "description note"
+                    if (layout.IsRgm && !string.IsNullOrWhiteSpace(item.note))
+                        name += " " + item.note;
 
                     float nameHeight = DrawText(g, name, font, x, y, w, StringAlignment.Near);
-                    if (name.Length > L.WrapChars)
-                        y += nameHeight;              // long name: numbers go on the next line
+                    if (name.Length > layout.WrapChars)
+                        y += nameHeight;   // long name: numbers go on the next line
 
-                    DrawText(g, item.quantity.HasValue ? item.quantity.Value.ToString(L.QtyFormat) : "0",
-                        font, qtyX, y, L.QtyW, StringAlignment.Center);
-                    DrawText(g, Money(item.price), font, priceX, y, L.PriceW, StringAlignment.Far);
-                    DrawText(g, Money(item.totaldue), font, amtX, y, L.AmtW, StringAlignment.Far);
+                    string qty = item.quantity.HasValue ? item.quantity.Value.ToString(layout.QtyFormat) : "0";
+                    DrawText(g, qty, font, qtyX, y, layout.QtyW, StringAlignment.Center);
+                    DrawText(g, Money(item.price), font, priceX, y, layout.PriceW, StringAlignment.Far);
+                    DrawText(g, Money(item.totaldue), font, amtX, y, layout.AmtW, StringAlignment.Far);
                     y += font.GetHeight(g);
                 }
 
-                y += 8f;
-                DrawDash(g, pen, x, y, w);
+                y = DrawSeparator(g, pen, x, y, w, 8f, layout.IsRgm ? 6f : 8f);
 
                 // ---------- NO OF ITEMS (RGM only) ----------
-                if (L.IsRgm)
+                if (layout.IsRgm)
                 {
-                    y += 6f;
-                    y += DrawPair(g, "NO OF ITEMS", Money(invoice.noofitems), font, x, y, L.SumLabelW, L.SumValueW);
-                    y += 6f;
-                    DrawDash(g, pen, x, y, w);
+                    y += DrawPair(g, "NO OF ITEMS", Money(invoice.noofitems), font, x, y, layout.SumLabelW, layout.SumValueW);
+                    y = DrawSeparator(g, pen, x, y, w, 6f, 8f);
                 }
 
                 // ---------- Totals ----------
-                y += 8f;
-                y += DrawPair(g, "SUBTOTAL", Money(invoice.subtotal), font, x, y, L.SumLabelW, L.SumValueW);
-                y += DrawPair(g, "DISCOUNT", Money(invoice.subdiscount), font, x, y, L.SumLabelW, L.SumValueW);
-                y += DrawPair(g, "REDEEMED", Money(invoice.loyaltyamt), font, x, y, L.SumLabelW, L.SumValueW);
-                y += DrawPair(g, "TOTAL", Money(invoice.amountdue), totalFont, x, y, L.SumLabelW, L.SumValueW);
-                y += 8f;
-                DrawDash(g, pen, x, y, w);
-                y += 8f;
+                y += DrawPair(g, "SUBTOTAL", Money(invoice.subtotal), font, x, y, layout.SumLabelW, layout.SumValueW);
+                y += DrawPair(g, "DISCOUNT", Money(invoice.subdiscount), font, x, y, layout.SumLabelW, layout.SumValueW);
+                y += DrawPair(g, "REDEEMED", Money(invoice.loyaltyamt), font, x, y, layout.SumLabelW, layout.SumValueW);
+                y += DrawPair(g, "TOTAL", Money(invoice.amountdue), totalFont, x, y, layout.SumLabelW, layout.SumValueW);
+                y = DrawSeparator(g, pen, x, y, w, 8f, 8f);
 
-                y += DrawPair(g, "CASH", Money(invoice.cashtender), font, x, y, L.SumLabelW, L.SumValueW);
-                if (L.IsRgm)
-                    y += DrawPair(g, "BALANCE", Money(invoice.balance), font, x, y, L.SumLabelW, L.SumValueW);
-                y += DrawPair(g, "CHANGE", Money(invoice.changeamt), font, x, y, L.SumLabelW, L.SumValueW);
-                y += 8f;
-                DrawDash(g, pen, x, y, w);
+                y += DrawPair(g, "CASH", Money(invoice.cashtender), font, x, y, layout.SumLabelW, layout.SumValueW);
+                if (layout.IsRgm)
+                    y += DrawPair(g, "BALANCE", Money(invoice.balance), font, x, y, layout.SumLabelW, layout.SumValueW);
+                y += DrawPair(g, "CHANGE", Money(invoice.changeamt), font, x, y, layout.SumLabelW, layout.SumValueW);
+                y = DrawSeparator(g, pen, x, y, w, 8f, layout.IsRgm ? 8f : 0f);
 
                 // ---------- VAT breakdown (RGM only) ----------
-                if (L.IsRgm)
+                if (layout.IsRgm)
                 {
-                    y += 8f;
-                    DrawText(g, "NET", font, qtyX, y, L.PriceW, StringAlignment.Far);                 // x + 95, width 45
-                    DrawText(g, "VAT", font, x + L.SumLabelW, y, L.SumValueW, StringAlignment.Far);   // x + 100, width 85
+                    DrawText(g, "NET", font, qtyX, y, layout.PriceW, StringAlignment.Far);
+                    DrawText(g, "VAT", font, x + layout.SumLabelW, y, layout.SumValueW, StringAlignment.Far);
                     y += font.GetHeight(g);
-                    y += DrawVatRow(g, "VATABLE", invoice.vatsales, invoice.vatamount, font, x, y, L, qtyX);
-                    y += DrawVatRow(g, "VAT EXEMPT", invoice.vatexemptsales, null, font, x, y, L, qtyX);
-                    y += DrawVatRow(g, "VAT ZERO-RATED", invoice.zeroratedsales, null, font, x, y, L, qtyX);
-                    y += 8f;
-                    DrawDash(g, pen, x, y, w);
+                    y += DrawVatRow(g, "VATABLE", invoice.vatsales, invoice.vatamount, font, x, y, layout, qtyX);
+                    y += DrawVatRow(g, "VAT EXEMPT", invoice.vatexemptsales, null, font, x, y, layout, qtyX);
+                    y += DrawVatRow(g, "VAT ZERO-RATED", invoice.zeroratedsales, null, font, x, y, layout, qtyX);
+                    y = DrawSeparator(g, pen, x, y, w, 8f, 0f);
                 }
 
                 y += 10f;
 
                 // ---------- Loyalty points ----------
-                if (invoice.customerid.GetValueOrDefault() > 1 && _isPointSystem)
+                if (invoice.customerid.GetValueOrDefault() > 1 && _pointSystem)
                 {
                     y += DrawText(g, "LOYALTY POINTS", font, x, y, w, StringAlignment.Center);
-                    y += DrawPair(g, "Earned", Points(invoice.earned), font, x, y, L.SumLabelW, L.SumValueW);
-                    y += DrawPair(g, "Previous Balance", Points(invoice.previouspoints), font, x, y, L.SumLabelW, L.SumValueW);
-                    y += DrawPair(g, "Current Balance", Points(invoice.currentpoints), font, x, y, L.SumLabelW, L.SumValueW);
+                    y += DrawPair(g, "Earned", Points(invoice.earned), font, x, y, layout.SumLabelW, layout.SumValueW);
+                    y += DrawPair(g, "Previous Balance", Points(invoice.previouspoints), font, x, y, layout.SumLabelW, layout.SumValueW);
+                    y += DrawPair(g, "Current Balance", Points(invoice.currentpoints), font, x, y, layout.SumLabelW, layout.SumValueW);
 
                     string redeemed = invoice.pointsRedeem.HasValue
                         ? invoice.pointsRedeem.Value.ToString("0.##")
                         : "0 (" + Money(invoice.loyaltyamt) + ")";
-                    y += DrawPair(g, "Redeemed", redeemed, font, x, y, L.SumLabelW, L.SumValueW);
-                    y += 8f;
-                    DrawDash(g, pen, x, y, w);
-                    y += 10f;
+                    y += DrawPair(g, "Redeemed", redeemed, font, x, y, layout.SumLabelW, layout.SumValueW);
+                    y = DrawSeparator(g, pen, x, y, w, 8f, 10f);
                 }
 
                 // ---------- Note (RGM only) ----------
-                if (L.IsRgm && !string.IsNullOrEmpty(invoice.note))
+                if (layout.IsRgm && !string.IsNullOrEmpty(invoice.note))
                 {
                     y += DrawText(g, "NOTE: " + invoice.note, font, x, y, w, StringAlignment.Center);
-                    y += 8f;
-                    DrawDash(g, pen, x, y, w);
-                    y += 10f;
+                    y = DrawSeparator(g, pen, x, y, w, 8f, 10f);
                 }
 
                 // ---------- Footer ----------
-                if (!L.IsRgm)
+                if (!layout.IsRgm)
                     y += 20f;
                 DrawText(g, _footer, font, x, y, w, StringAlignment.Center);
             }
         }
 
-        // ------------------------------------------------------------------
-        // Helpers
-        // ------------------------------------------------------------------
+        #endregion
+
+        #region Drawing helpers
+
         private static string Money(decimal? value)
         {
             return (value ?? 0m).ToString("N2");
@@ -522,29 +523,31 @@ namespace POS_88.Views
             return (value ?? 0m).ToString("0.##");
         }
 
-        private static void DrawDash(Graphics graphics, Pen pen, float x, float y, float width)
+        // Adds gapBefore, draws a dashed line from x to endX, and returns the y after gapAfter.
+        private static float DrawSeparator(Graphics g, Pen pen, float x, float y, float endX, float gapBefore, float gapAfter)
         {
-            graphics.DrawLine(pen, x, y, width, y);
+            y += gapBefore;
+            g.DrawLine(pen, x, y, endX, y);
+            return y + gapAfter;
         }
 
-        private static float DrawPair(Graphics graphics, string label, string value, Font font,
+        private static float DrawPair(Graphics g, string label, string value, Font font,
             float x, float y, float labelWidth, float valueWidth)
         {
-            float h = DrawText(graphics, label, font, x, y, labelWidth, StringAlignment.Near);
-            h = Math.Max(h, DrawText(graphics, value, font, x + labelWidth, y, valueWidth, StringAlignment.Far));
-            return h;
+            float h = DrawText(g, label, font, x, y, labelWidth, StringAlignment.Near);
+            return Math.Max(h, DrawText(g, value, font, x + labelWidth, y, valueWidth, StringAlignment.Far));
         }
 
-        private static float DrawVatRow(Graphics graphics, string label, decimal? net, decimal? vat, Font font,
-            float x, float y, ReceiptLayout L, float netX)
+        private static float DrawVatRow(Graphics g, string label, decimal? net, decimal? vat, Font font,
+            float x, float y, ReceiptLayout layout, float netX)
         {
-            float h = DrawText(graphics, label, font, x, y, L.SumLabelW, StringAlignment.Near);
-            h = Math.Max(h, DrawText(graphics, Money(net), font, netX, y, L.PriceW, StringAlignment.Far));
-            h = Math.Max(h, DrawText(graphics, Money(vat), font, x + L.SumLabelW, y, L.SumValueW, StringAlignment.Far));
-            return h;
+            float h = DrawText(g, label, font, x, y, layout.SumLabelW, StringAlignment.Near);
+            h = Math.Max(h, DrawText(g, Money(net), font, netX, y, layout.PriceW, StringAlignment.Far));
+            return Math.Max(h, DrawText(g, Money(vat), font, x + layout.SumLabelW, y, layout.SumValueW, StringAlignment.Far));
         }
 
-        private static float DrawText(Graphics graphics, string text, Font font, float x, float y, float width, StringAlignment alignment)
+        // Draws wrapped text and returns the height it used.
+        private static float DrawText(Graphics g, string text, Font font, float x, float y, float width, StringAlignment alignment)
         {
             if (string.IsNullOrEmpty(text))
                 return 0f;
@@ -554,27 +557,38 @@ namespace POS_88.Views
                 format.Alignment = alignment;
                 format.LineAlignment = StringAlignment.Near;
                 format.Trimming = StringTrimming.Word;
-                SizeF measured = graphics.MeasureString(text, font, new SizeF(width, 1000f), format);
-                float height = Math.Max(font.GetHeight(graphics), measured.Height);
-                graphics.DrawString(text, font, Brushes.Black, new RectangleF(x, y, width, height), format);
+
+                SizeF measured = g.MeasureString(text, font, new SizeF(width, 1000f), format);
+                float height = Math.Max(font.GetHeight(g), measured.Height);
+                g.DrawString(text, font, Brushes.Black, new RectangleF(x, y, width, height), format);
                 return height;
             }
         }
 
-        // ------------------------------------------------------------------
-        // Form behaviour
-        // ------------------------------------------------------------------
+        #endregion
+
+        #region Form behaviour
+
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
-            if (keyData == Keys.Escape)
+            if (keyData == Keys.Escape || keyData == Keys.Return)
             {
-                btnEscOrCancel_Click(this, EventArgs.Empty);
-                return true;
-            }
+                // Bit 30 of lParam is set while the key is auto-repeating (held down).
+                bool isRepeat = (msg.LParam.ToInt64() & 0x40000000) != 0;
+                if (isRepeat || _keyHandled)
+                    return true;
 
-            if (keyData == Keys.Return && !_isPrint)
-            {
-                btnEnterOrPrint_Click(this, EventArgs.Empty);
+                _keyHandled = true;
+
+                if (keyData == Keys.Escape)
+                    btnEscOrCancel_Click(this, EventArgs.Empty);
+                else
+                    btnEnterOrPrint_Click(this, EventArgs.Empty);
+
+                // The form stayed open (e.g. "No receipt printer found"): allow another try.
+                if (!IsDisposed && DialogResult == DialogResult.None)
+                    _keyHandled = false;
+
                 return true;
             }
 
@@ -590,53 +604,55 @@ namespace POS_88.Views
                 return;
             }
 
-            if (!HasPhysicalPrinter(recordDoc))
+            if (!HasPhysicalPrinter(_receiptDoc))
             {
                 MessageBox.Show("No receipt printer found. Please set a printer in Settings.", "Print Receipt",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                //MessageBox.Show("Warning: Printing is currently suspended due to a backlog; please contact IT or the system administrator for assistance.", "Print Receipt",
-                //    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             try
             {
-                recordDoc.Print();
+                _receiptDoc.Print();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Print Receipt", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //MessageBox.Show("Warning: Printing is currently suspended due to a backlog; please contact IT or the system administrator for assistance.", "Print Receipt",
-                //    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            _isPrint = true;
+            _isPrinted = true;
+            ClearCashierEntries();
             DialogResult = DialogResult.OK;
             Close();
         }
 
         private void btnEscOrCancel_Click(object sender, EventArgs e)
         {
-            if (!_isPrint && _OpenType != "PURCHASED" && _OpenType != "KITCHEN" && HasPhysicalPrinter(recordBlank))
+            bool shouldOpenDrawer = !_isPrinted
+                && _openType != "PURCHASED"
+                && _openType != "KITCHEN"
+                && HasPhysicalPrinter(_drawerDoc);
+
+            if (shouldOpenDrawer)
             {
                 try
                 {
-                    recordBlank.Print();
+                    _drawerDoc.Print();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Opening Cash Drawer", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //MessageBox.Show("Warning: Printing is currently suspended due to a backlog; please contact IT or the system administrator for assistance.", "Opening Cash Drawer",
-                    //MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                _isPrint = true;
+                _isPrinted = true;
             }
 
+            ClearCashierEntries();
             DialogResult = DialogResult.Cancel;
             Close();
         }
 
+        // Kept in case the Designer wires it up; ProcessCmdKey already handles Esc/Enter.
         private void PrintConfirmView_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
@@ -653,12 +669,15 @@ namespace POS_88.Views
 
         private void PrintConfirmView_FormClosed(object sender, FormClosedEventArgs e)
         {
-            printPreviewControl1.Document = null;
-            if (recordDoc != null)
-                recordDoc.Dispose();
-            if (recordBlank != null)
-                recordBlank.Dispose();
+            DisposeDocuments();
             _unitOfWork.Dispose();
+        }
+
+        #endregion
+
+        private void PrintConfirmView_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

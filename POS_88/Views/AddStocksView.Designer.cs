@@ -42,11 +42,11 @@
             this.txtItemCode = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAddQty = new System.Windows.Forms.TextBox();
+            this.txtNewStocks = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtRemarks = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClearFilter = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -65,7 +65,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(590, 50);
+            this.panel1.Size = new System.Drawing.Size(422, 50);
             this.panel1.TabIndex = 1;
             // 
             // lblModalTitle
@@ -87,7 +87,7 @@
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimize.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnMinimize.Location = new System.Drawing.Point(488, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(320, 0);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(51, 50);
             this.btnMinimize.TabIndex = 4;
@@ -102,7 +102,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(539, 0);
+            this.btnClose.Location = new System.Drawing.Point(371, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(51, 50);
             this.btnClose.TabIndex = 3;
@@ -120,7 +120,7 @@
             this.groupBox1.Controls.Add(this.txtItemCode);
             this.groupBox1.Location = new System.Drawing.Point(12, 58);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(565, 176);
+            this.groupBox1.Size = new System.Drawing.Size(398, 176);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Item Stock Details";
@@ -137,9 +137,11 @@
             // 
             // txtUnit
             // 
+            this.txtUnit.BackColor = System.Drawing.Color.White;
             this.txtUnit.Location = new System.Drawing.Point(140, 123);
             this.txtUnit.Name = "txtUnit";
-            this.txtUnit.Size = new System.Drawing.Size(348, 22);
+            this.txtUnit.ReadOnly = true;
+            this.txtUnit.Size = new System.Drawing.Size(223, 22);
             this.txtUnit.TabIndex = 6;
             this.txtUnit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -155,10 +157,12 @@
             // 
             // txtName
             // 
+            this.txtName.BackColor = System.Drawing.Color.White;
             this.txtName.Location = new System.Drawing.Point(140, 67);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(348, 50);
+            this.txtName.ReadOnly = true;
+            this.txtName.Size = new System.Drawing.Size(223, 50);
             this.txtName.TabIndex = 4;
             // 
             // label2
@@ -173,23 +177,25 @@
             // 
             // txtItemCode
             // 
+            this.txtItemCode.BackColor = System.Drawing.Color.White;
             this.txtItemCode.Location = new System.Drawing.Point(140, 39);
             this.txtItemCode.Name = "txtItemCode";
-            this.txtItemCode.Size = new System.Drawing.Size(348, 22);
+            this.txtItemCode.ReadOnly = true;
+            this.txtItemCode.Size = new System.Drawing.Size(223, 22);
             this.txtItemCode.TabIndex = 2;
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txtAddQty);
+            this.groupBox2.Controls.Add(this.txtNewStocks);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.txtRemarks);
             this.groupBox2.Location = new System.Drawing.Point(12, 240);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(565, 176);
+            this.groupBox2.Size = new System.Drawing.Size(398, 176);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Modify Stocks";
@@ -197,27 +203,31 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(57, 121);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(32, 121);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 16);
+            this.label1.Size = new System.Drawing.Size(103, 20);
             this.label1.TabIndex = 13;
             this.label1.Text = "New Stocks";
             // 
-            // textBox3
+            // txtAddQty
             // 
-            this.textBox3.Location = new System.Drawing.Point(140, 34);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(348, 22);
-            this.textBox3.TabIndex = 8;
+            this.txtAddQty.Location = new System.Drawing.Point(140, 34);
+            this.txtAddQty.Name = "txtAddQty";
+            this.txtAddQty.Size = new System.Drawing.Size(223, 22);
+            this.txtAddQty.TabIndex = 8;
+            this.txtAddQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox1
+            // txtNewStocks
             // 
-            this.textBox1.Location = new System.Drawing.Point(140, 118);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(348, 22);
-            this.textBox1.TabIndex = 12;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNewStocks.BackColor = System.Drawing.Color.White;
+            this.txtNewStocks.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewStocks.Location = new System.Drawing.Point(140, 118);
+            this.txtNewStocks.Name = "txtNewStocks";
+            this.txtNewStocks.ReadOnly = true;
+            this.txtNewStocks.Size = new System.Drawing.Size(223, 26);
+            this.txtNewStocks.TabIndex = 12;
+            this.txtNewStocks.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
@@ -239,13 +249,13 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Remarks";
             // 
-            // textBox2
+            // txtRemarks
             // 
-            this.textBox2.Location = new System.Drawing.Point(140, 62);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(348, 50);
-            this.textBox2.TabIndex = 10;
+            this.txtRemarks.Location = new System.Drawing.Point(140, 62);
+            this.txtRemarks.Multiline = true;
+            this.txtRemarks.Name = "txtRemarks";
+            this.txtRemarks.Size = new System.Drawing.Size(223, 50);
+            this.txtRemarks.TabIndex = 10;
             // 
             // btnSave
             // 
@@ -256,7 +266,7 @@
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(453, 3);
+            this.btnSave.Location = new System.Drawing.Point(285, 3);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(110, 35);
             this.btnSave.TabIndex = 22;
@@ -285,11 +295,12 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.btnSave);
             this.panel2.Controls.Add(this.btnClearFilter);
             this.panel2.Location = new System.Drawing.Point(12, 422);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(566, 45);
+            this.panel2.Size = new System.Drawing.Size(398, 45);
             this.panel2.TabIndex = 23;
             // 
             // AddStocksView
@@ -297,7 +308,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(227)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(590, 473);
+            this.ClientSize = new System.Drawing.Size(422, 473);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
@@ -336,11 +347,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtUnit;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAddQty;
+        private System.Windows.Forms.TextBox txtNewStocks;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtRemarks;
         private System.Windows.Forms.Panel panel2;
     }
 }

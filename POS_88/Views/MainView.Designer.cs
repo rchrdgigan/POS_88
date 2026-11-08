@@ -46,7 +46,6 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
-            this.btnMyStore = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.btnExpenses = new System.Windows.Forms.Button();
@@ -61,6 +60,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnBurger = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnMyStore = new System.Windows.Forms.Button();
             this.panelSideBar.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -77,7 +77,6 @@
             this.panelSideBar.Controls.Add(this.panelLogo);
             this.panelSideBar.Controls.Add(this.panelMark);
             this.panelSideBar.Controls.Add(this.panelUserNav);
-            this.panelSideBar.Controls.Add(this.btnMyStore);
             this.panelSideBar.Controls.Add(this.btnSettings);
             this.panelSideBar.Controls.Add(this.btnUsers);
             this.panelSideBar.Controls.Add(this.btnExpenses);
@@ -182,6 +181,7 @@
             // panelUserNav
             // 
             this.panelUserNav.BackColor = System.Drawing.Color.Transparent;
+            this.panelUserNav.Controls.Add(this.btnMyStore);
             this.panelUserNav.Controls.Add(this.lblRole);
             this.panelUserNav.Controls.Add(this.lblName);
             this.panelUserNav.Controls.Add(this.pictureBox3);
@@ -190,16 +190,16 @@
             this.panelUserNav.Controls.Add(this.label5);
             this.panelUserNav.Controls.Add(this.lblStatus);
             this.panelUserNav.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelUserNav.Location = new System.Drawing.Point(0, 593);
+            this.panelUserNav.Location = new System.Drawing.Point(0, 565);
             this.panelUserNav.Name = "panelUserNav";
-            this.panelUserNav.Size = new System.Drawing.Size(201, 187);
+            this.panelUserNav.Size = new System.Drawing.Size(201, 215);
             this.panelUserNav.TabIndex = 10;
             // 
             // lblRole
             // 
             this.lblRole.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRole.ForeColor = System.Drawing.Color.White;
-            this.lblRole.Location = new System.Drawing.Point(75, 33);
+            this.lblRole.Location = new System.Drawing.Point(78, 31);
             this.lblRole.Name = "lblRole";
             this.lblRole.Size = new System.Drawing.Size(127, 26);
             this.lblRole.TabIndex = 15;
@@ -210,7 +210,7 @@
             this.lblName.AutoEllipsis = true;
             this.lblName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.White;
-            this.lblName.Location = new System.Drawing.Point(73, 12);
+            this.lblName.Location = new System.Drawing.Point(76, 10);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(128, 21);
             this.lblName.TabIndex = 14;
@@ -219,7 +219,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(13, 11);
+            this.pictureBox3.Location = new System.Drawing.Point(16, 9);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(37, 38);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -229,7 +229,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(13, 142);
+            this.pictureBox2.Location = new System.Drawing.Point(14, 172);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(11, 14);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -246,7 +246,7 @@
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(12, 68);
+            this.btnLogout.Location = new System.Drawing.Point(14, 112);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(186, 41);
             this.btnLogout.TabIndex = 11;
@@ -257,7 +257,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(18, 161);
+            this.label5.Location = new System.Drawing.Point(19, 191);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 16);
             this.label5.TabIndex = 1;
@@ -267,31 +267,11 @@
             // 
             this.lblStatus.AutoSize = true;
             this.lblStatus.ForeColor = System.Drawing.Color.White;
-            this.lblStatus.Location = new System.Drawing.Point(23, 142);
+            this.lblStatus.Location = new System.Drawing.Point(24, 172);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(43, 16);
             this.lblStatus.TabIndex = 0;
             this.lblStatus.Text = "Active";
-            // 
-            // btnMyStore
-            // 
-            this.btnMyStore.BackColor = System.Drawing.Color.Transparent;
-            this.btnMyStore.FlatAppearance.BorderSize = 0;
-            this.btnMyStore.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.btnMyStore.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnMyStore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMyStore.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMyStore.ForeColor = System.Drawing.Color.White;
-            this.btnMyStore.Image = ((System.Drawing.Image)(resources.GetObject("btnMyStore.Image")));
-            this.btnMyStore.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMyStore.Location = new System.Drawing.Point(13, 597);
-            this.btnMyStore.Name = "btnMyStore";
-            this.btnMyStore.Size = new System.Drawing.Size(188, 41);
-            this.btnMyStore.TabIndex = 9;
-            this.btnMyStore.Text = "        My Store";
-            this.btnMyStore.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMyStore.UseVisualStyleBackColor = false;
-            this.btnMyStore.Visible = false;
             // 
             // btnSettings
             // 
@@ -520,6 +500,25 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // btnMyStore
+            // 
+            this.btnMyStore.BackColor = System.Drawing.Color.Transparent;
+            this.btnMyStore.FlatAppearance.BorderSize = 0;
+            this.btnMyStore.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.btnMyStore.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnMyStore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMyStore.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMyStore.ForeColor = System.Drawing.Color.White;
+            this.btnMyStore.Image = ((System.Drawing.Image)(resources.GetObject("btnMyStore.Image")));
+            this.btnMyStore.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMyStore.Location = new System.Drawing.Point(13, 56);
+            this.btnMyStore.Name = "btnMyStore";
+            this.btnMyStore.Size = new System.Drawing.Size(188, 41);
+            this.btnMyStore.TabIndex = 13;
+            this.btnMyStore.Text = "        My Store";
+            this.btnMyStore.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMyStore.UseVisualStyleBackColor = false;
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -567,7 +566,6 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblStatus;
-        private System.Windows.Forms.Button btnMyStore;
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnExpenses;
@@ -585,5 +583,6 @@
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btnCustomers;
+        private System.Windows.Forms.Button btnMyStore;
     }
 }

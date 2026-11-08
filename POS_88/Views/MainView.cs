@@ -68,8 +68,24 @@ namespace POS_88.Views
             btnExpenses.Click += NavButton_Click;
             btnUsers.Click += NavButton_Click;
             btnSettings.Click += NavButton_Click;
-            btnMyStore.Click += NavButton_Click;
             btnCustomers.Click += NavButton_Click;
+            btnMyStore.Click += delegate
+            {
+                Form modalOwner = this.MdiParent ?? this;
+                using (Form backdrop = new Form())
+                {
+                    backdrop.FormBorderStyle = FormBorderStyle.None;
+                    backdrop.StartPosition = FormStartPosition.Manual;
+                    backdrop.ShowInTaskbar = false;
+                    backdrop.BackColor = Color.Black;
+                    backdrop.Opacity = 0.45;
+                    backdrop.Bounds = modalOwner.Bounds;
+                    backdrop.Show(modalOwner);
+                    backdrop.BringToFront();
+
+                    new StoreSettingsView().ShowDialog();
+                }
+            };
         }
 
 
@@ -263,6 +279,7 @@ namespace POS_88.Views
                     child.Hide();
                 new CashierView(AuthenticatedUserName).ShowDialog();
             }
+          
         }
 
         //Event

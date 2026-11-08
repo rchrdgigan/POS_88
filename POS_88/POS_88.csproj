@@ -92,9 +92,11 @@
     <Compile Include="4SearchInventory.cs" />
     <Compile Include="5SearchInventory.cs" />
     <Compile Include="CashierModels.cs" />
+    <Compile Include="SummaryItemSales.cs" />
     <Compile Include="PaymentModel.cs" />
     <Compile Include="Persistence\POSImplementation.cs" />
     <Compile Include="Persistence\UnitOfWorkPOS.cs" />
+    <Compile Include="PoleDisplayService.cs" />
     <Compile Include="Presenters\AddOrEditCustomersPresenter.cs" />
     <Compile Include="Presenters\AddOrEditSupplierPresenter.cs" />
     <Compile Include="Presenters\AddOrEditCategoryPresenter.cs" />
@@ -280,6 +282,12 @@
     <Compile Include="Views\CashierCashCountView.Designer.cs">
       <DependentUpon>CashierCashCountView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\CashierPaymentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CashierPaymentView.Designer.cs">
+      <DependentUpon>CashierPaymentView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\CashierReportView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -303,6 +311,15 @@
     </Compile>
     <Compile Include="Views\CashInOutView.Designer.cs">
       <DependentUpon>CashInOutView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoadingOverlay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ConfirmPaymentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ConfirmPaymentView.Designer.cs">
+      <DependentUpon>ConfirmPaymentView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\CustomerDisplayView.cs">
       <SubType>Form</SubType>
@@ -390,11 +407,23 @@
     <Compile Include="Views\MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\MessageView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MessageView.Designer.cs">
+      <DependentUpon>MessageView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\PaymentView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\PaymentView.Designer.cs">
       <DependentUpon>PaymentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PickItemView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PickItemView.Designer.cs">
+      <DependentUpon>PickItemView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\PrintCashCountView.cs">
       <SubType>Form</SubType>
@@ -407,6 +436,12 @@
     </Compile>
     <Compile Include="Views\PrintConfirmView.Designer.cs">
       <DependentUpon>PrintConfirmView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PrintZReadingView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PrintZReadingView.Designer.cs">
+      <DependentUpon>PrintZReadingView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\PurchaseItemView.cs">
       <SubType>Form</SubType>
@@ -568,6 +603,9 @@
     <EmbeddedResource Include="Views\CashierCashCountView.resx">
       <DependentUpon>CashierCashCountView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\CashierPaymentView.resx">
+      <DependentUpon>CashierPaymentView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\CashierReportView.resx">
       <DependentUpon>CashierReportView.cs</DependentUpon>
     </EmbeddedResource>
@@ -579,6 +617,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CashInOutView.resx">
       <DependentUpon>CashInOutView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ConfirmPaymentView.resx">
+      <DependentUpon>ConfirmPaymentView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CustomerDisplayView.resx">
       <DependentUpon>CustomerDisplayView.cs</DependentUpon>
@@ -610,14 +651,23 @@
     <EmbeddedResource Include="Views\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\MessageView.resx">
+      <DependentUpon>MessageView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\PaymentView.resx">
       <DependentUpon>PaymentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PickItemView.resx">
+      <DependentUpon>PickItemView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\PrintCashCountView.resx">
       <DependentUpon>PrintCashCountView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\PrintConfirmView.resx">
       <DependentUpon>PrintConfirmView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PrintZReadingView.resx">
+      <DependentUpon>PrintZReadingView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\PurchaseItemView.resx">
       <DependentUpon>PurchaseItemView.cs</DependentUpon>

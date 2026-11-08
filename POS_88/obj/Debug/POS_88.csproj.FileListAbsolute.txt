@@ -131,3 +131,8 @@ C:\Users\Admin-PC\documents\visual studio 2015\Projects\POS_88\POS_88\obj\Debug\
 C:\Users\Admin-PC\documents\visual studio 2015\Projects\POS_88\POS_88\obj\Debug\POS_88.Views.CustomerDisplayView.resources
 C:\Users\Admin-PC\documents\visual studio 2015\Projects\POS_88\POS_88\obj\Debug\POS_88.Views.DiscountView.resources
 C:\Users\Admin-PC\documents\visual studio 2015\Projects\POS_88\POS_88\obj\Debug\POS_88.Views.AdjustQtyView.resources
+C:\Users\Admin-PC\documents\visual studio 2015\Projects\POS_88\POS_88\obj\Debug\POS_88.Views.CashierPaymentView.resources
+C:\Users\Admin-PC\documents\visual studio 2015\Projects\POS_88\POS_88\obj\Debug\POS_88.Views.ConfirmPaymentView.resources
+C:\Users\Admin-PC\documents\visual studio 2015\Projects\POS_88\POS_88\obj\Debug\POS_88.Views.MessageView.resources
+C:\Users\Admin-PC\documents\visual studio 2015\Projects\POS_88\POS_88\obj\Debug\POS_88.Views.PrintZReadingView.resources
+C:\Users\Admin-PC\documents\visual studio 2015\Projects\POS_88\POS_88\obj\Debug\POS_88.Views.PickItemView.resources

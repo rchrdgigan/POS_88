@@ -14,7 +14,7 @@ namespace POS_88.Views
             btnClose.Click += (sender, args) => Close();
             btnSave.Click += (sender, args) => SaveEvent?.Invoke(this, EventArgs.Empty);
             btnClearFilter.Click += (sender, args) => ClearEvent?.Invoke(this, EventArgs.Empty);
-            textBox3.TextChanged += (sender, args) => UpdateNewStocks();
+            txtAddQty.TextChanged += (sender, args) => UpdateNewStocks();
             btnMinimize.Click += (sender, args) =>
             {
                 WindowState = FormWindowState.Minimized;
@@ -68,9 +68,9 @@ namespace POS_88.Views
             get
             {
                 decimal quantity;
-                return decimal.TryParse(textBox3.Text, out quantity) ? quantity : 0M;
+                return decimal.TryParse(txtAddQty.Text, out quantity) ? quantity : 0M;
             }
-            set { textBox3.Text = value.ToString(); }
+            set { txtAddQty.Text = value.ToString(); }
         }
 
         public decimal NewStocks
@@ -78,15 +78,15 @@ namespace POS_88.Views
             get
             {
                 decimal newStocks;
-                return decimal.TryParse(textBox1.Text, out newStocks) ? newStocks : 0M;
+                return decimal.TryParse(txtNewStocks.Text, out newStocks) ? newStocks : 0M;
             }
-            set { textBox1.Text = value.ToString("N"); }
+            set { txtNewStocks.Text = value.ToString("N"); }
         }
 
         public string Remarks
         {
-            get { return textBox2.Text; }
-            set { textBox2.Text = value; }
+            get { return txtRemarks.Text; }
+            set { txtRemarks.Text = value; }
         }
 
         public void ClearFields()
@@ -101,7 +101,7 @@ namespace POS_88.Views
             decimal currentQty;
             decimal addedQty;
             decimal.TryParse(CurrentQty, out currentQty);
-            decimal.TryParse(textBox3.Text, out addedQty);
+            decimal.TryParse(txtAddQty.Text, out addedQty);
             NewStocks = currentQty + addedQty;
         }
 

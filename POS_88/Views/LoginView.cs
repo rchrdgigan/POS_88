@@ -233,7 +233,7 @@ namespace POS_88.Views
                 case "Z-READING":
                     if (!isAdmin) { Deny(); return; }
                     Succeed(accountUser, accountName, accountType);
-                    //using (var z = new frmPrintZReading()) z.ShowDialog();
+                    using (var z = new PrintZReadingView()) z.ShowDialog();
                     break;
 
                 //case "RECENT SALES":          // any valid user
