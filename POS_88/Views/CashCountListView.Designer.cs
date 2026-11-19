@@ -59,7 +59,7 @@
             this.lblModalTitle.AutoSize = true;
             this.lblModalTitle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModalTitle.ForeColor = System.Drawing.Color.White;
-            this.lblModalTitle.Location = new System.Drawing.Point(27, 19);
+            this.lblModalTitle.Location = new System.Drawing.Point(12, 11);
             this.lblModalTitle.Name = "lblModalTitle";
             this.lblModalTitle.Size = new System.Drawing.Size(192, 19);
             this.lblModalTitle.TabIndex = 5;
@@ -73,9 +73,9 @@
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimize.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnMinimize.Location = new System.Drawing.Point(968, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(864, 0);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(51, 50);
+            this.btnMinimize.Size = new System.Drawing.Size(51, 40);
             this.btnMinimize.TabIndex = 4;
             this.btnMinimize.Text = "_";
             this.btnMinimize.UseVisualStyleBackColor = false;
@@ -88,9 +88,9 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(1019, 0);
+            this.btnClose.Location = new System.Drawing.Point(915, 0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(51, 50);
+            this.btnClose.Size = new System.Drawing.Size(51, 40);
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -104,7 +104,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1070, 50);
+            this.panel1.Size = new System.Drawing.Size(966, 40);
             this.panel1.TabIndex = 37;
             // 
             // panel2
@@ -119,9 +119,9 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 50);
+            this.panel2.Location = new System.Drawing.Point(0, 40);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1070, 88);
+            this.panel2.Size = new System.Drawing.Size(966, 74);
             this.panel2.TabIndex = 38;
             // 
             // btnClearFilter
@@ -145,7 +145,7 @@
             this.btnExportExcel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExportExcel.ForeColor = System.Drawing.Color.White;
             this.btnExportExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExportExcel.Image")));
-            this.btnExportExcel.Location = new System.Drawing.Point(962, 6);
+            this.btnExportExcel.Location = new System.Drawing.Point(858, 6);
             this.btnExportExcel.Name = "btnExportExcel";
             this.btnExportExcel.Size = new System.Drawing.Size(101, 60);
             this.btnExportExcel.TabIndex = 17;
@@ -175,7 +175,7 @@
             this.btnPrint.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.ForeColor = System.Drawing.Color.White;
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.Location = new System.Drawing.Point(785, 6);
+            this.btnPrint.Location = new System.Drawing.Point(681, 6);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(77, 60);
             this.btnPrint.TabIndex = 16;
@@ -201,7 +201,7 @@
             this.btnCashInOut.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCashInOut.ForeColor = System.Drawing.Color.White;
             this.btnCashInOut.Image = ((System.Drawing.Image)(resources.GetObject("btnCashInOut.Image")));
-            this.btnCashInOut.Location = new System.Drawing.Point(870, 6);
+            this.btnCashInOut.Location = new System.Drawing.Point(766, 6);
             this.btnCashInOut.Name = "btnCashInOut";
             this.btnCashInOut.Size = new System.Drawing.Size(86, 60);
             this.btnCashInOut.TabIndex = 15;
@@ -255,12 +255,12 @@
             this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dataGridViewX1.HighlightSelectedColumnHeaders = false;
-            this.dataGridViewX1.Location = new System.Drawing.Point(15, 152);
+            this.dataGridViewX1.Location = new System.Drawing.Point(15, 120);
             this.dataGridViewX1.Name = "dataGridViewX1";
             this.dataGridViewX1.ReadOnly = true;
             this.dataGridViewX1.RowHeadersVisible = false;
             this.dataGridViewX1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewX1.Size = new System.Drawing.Size(1043, 568);
+            this.dataGridViewX1.Size = new System.Drawing.Size(940, 440);
             this.dataGridViewX1.TabIndex = 39;
             // 
             // panel3
@@ -268,9 +268,9 @@
             this.panel3.Controls.Add(this.lblGrandTotal);
             this.panel3.Controls.Add(this.lblOpeningAmount);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 726);
+            this.panel3.Location = new System.Drawing.Point(0, 566);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1070, 34);
+            this.panel3.Size = new System.Drawing.Size(966, 34);
             this.panel3.TabIndex = 42;
             // 
             // lblGrandTotal
@@ -278,7 +278,7 @@
             this.lblGrandTotal.AutoSize = true;
             this.lblGrandTotal.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblGrandTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGrandTotal.Location = new System.Drawing.Point(601, 0);
+            this.lblGrandTotal.Location = new System.Drawing.Point(497, 0);
             this.lblGrandTotal.Name = "lblGrandTotal";
             this.lblGrandTotal.Padding = new System.Windows.Forms.Padding(100, 0, 0, 0);
             this.lblGrandTotal.Size = new System.Drawing.Size(207, 19);
@@ -291,7 +291,7 @@
             this.lblOpeningAmount.AutoSize = true;
             this.lblOpeningAmount.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblOpeningAmount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOpeningAmount.Location = new System.Drawing.Point(808, 0);
+            this.lblOpeningAmount.Location = new System.Drawing.Point(704, 0);
             this.lblOpeningAmount.Name = "lblOpeningAmount";
             this.lblOpeningAmount.Padding = new System.Windows.Forms.Padding(100, 0, 10, 0);
             this.lblOpeningAmount.Size = new System.Drawing.Size(262, 19);
@@ -303,7 +303,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(227)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(1070, 760);
+            this.ClientSize = new System.Drawing.Size(966, 600);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.dataGridViewX1);
             this.Controls.Add(this.panel2);

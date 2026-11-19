@@ -92,13 +92,13 @@
             this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dataGridViewX1.HighlightSelectedColumnHeaders = false;
-            this.dataGridViewX1.Location = new System.Drawing.Point(15, 156);
+            this.dataGridViewX1.Location = new System.Drawing.Point(15, 135);
             this.dataGridViewX1.MultiSelect = false;
             this.dataGridViewX1.Name = "dataGridViewX1";
             this.dataGridViewX1.ReadOnly = true;
             this.dataGridViewX1.RowHeadersVisible = false;
             this.dataGridViewX1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewX1.Size = new System.Drawing.Size(1171, 580);
+            this.dataGridViewX1.Size = new System.Drawing.Size(1171, 601);
             this.dataGridViewX1.TabIndex = 53;
             // 
             // label6
@@ -119,7 +119,7 @@
             this.btnClearFilter.FlatAppearance.BorderSize = 0;
             this.btnClearFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearFilter.Image = ((System.Drawing.Image)(resources.GetObject("btnClearFilter.Image")));
-            this.btnClearFilter.Location = new System.Drawing.Point(1137, 95);
+            this.btnClearFilter.Location = new System.Drawing.Point(1137, 84);
             this.btnClearFilter.Name = "btnClearFilter";
             this.btnClearFilter.Size = new System.Drawing.Size(49, 45);
             this.btnClearFilter.TabIndex = 48;
@@ -150,7 +150,7 @@
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(1082, 95);
+            this.btnSearch.Location = new System.Drawing.Point(1082, 84);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(49, 45);
             this.btnSearch.TabIndex = 47;
@@ -160,7 +160,7 @@
             // 
             this.txtSearchParam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearchParam.Location = new System.Drawing.Point(15, 115);
+            this.txtSearchParam.Location = new System.Drawing.Point(15, 104);
             this.txtSearchParam.Multiline = true;
             this.txtSearchParam.Name = "txtSearchParam";
             this.txtSearchParam.Size = new System.Drawing.Size(1061, 25);
@@ -170,7 +170,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 95);
+            this.label5.Location = new System.Drawing.Point(12, 84);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(112, 16);
             this.label5.TabIndex = 45;
@@ -249,7 +249,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(358, 17);
             this.label7.TabIndex = 9;
-            this.label7.Text = "Manage customers in one place.";
+            this.label7.Text = "Track customer details from a single dashboard.";
             // 
             // panel1
             // 
@@ -263,7 +263,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1200, 86);
+            this.panel1.Size = new System.Drawing.Size(1200, 78);
             this.panel1.TabIndex = 44;
             // 
             // CustomersView

@@ -82,7 +82,7 @@
             this.dataGridViewX1.ReadOnly = true;
             this.dataGridViewX1.RowHeadersVisible = false;
             this.dataGridViewX1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewX1.Size = new System.Drawing.Size(1043, 779);
+            this.dataGridViewX1.Size = new System.Drawing.Size(1043, 789);
             this.dataGridViewX1.TabIndex = 53;
             // 
             // btnClearFilter
@@ -92,7 +92,7 @@
             this.btnClearFilter.FlatAppearance.BorderSize = 0;
             this.btnClearFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearFilter.Image = ((System.Drawing.Image)(resources.GetObject("btnClearFilter.Image")));
-            this.btnClearFilter.Location = new System.Drawing.Point(1037, 95);
+            this.btnClearFilter.Location = new System.Drawing.Point(1037, 85);
             this.btnClearFilter.Name = "btnClearFilter";
             this.btnClearFilter.Size = new System.Drawing.Size(49, 48);
             this.btnClearFilter.TabIndex = 51;
@@ -105,7 +105,7 @@
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(982, 95);
+            this.btnSearch.Location = new System.Drawing.Point(982, 85);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(49, 48);
             this.btnSearch.TabIndex = 50;
@@ -115,7 +115,7 @@
             // 
             this.txtSearchParam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearchParam.Location = new System.Drawing.Point(503, 117);
+            this.txtSearchParam.Location = new System.Drawing.Point(503, 107);
             this.txtSearchParam.Multiline = true;
             this.txtSearchParam.Name = "txtSearchParam";
             this.txtSearchParam.Size = new System.Drawing.Size(473, 26);
@@ -179,14 +179,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1100, 86);
+            this.panel1.Size = new System.Drawing.Size(1100, 79);
             this.panel1.TabIndex = 42;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(500, 95);
+            this.label3.Location = new System.Drawing.Point(500, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 16);
             this.label3.TabIndex = 43;
@@ -228,18 +228,18 @@
             this.bunifuCards1.Controls.Add(this.dataGridViewX1);
             this.bunifuCards1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(15, 149);
+            this.bunifuCards1.Location = new System.Drawing.Point(15, 139);
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(1071, 851);
+            this.bunifuCards1.Size = new System.Drawing.Size(1071, 861);
             this.bunifuCards1.TabIndex = 55;
             // 
             // lblShowEntriesCount
             // 
             this.lblShowEntriesCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblShowEntriesCount.AutoSize = true;
-            this.lblShowEntriesCount.Location = new System.Drawing.Point(11, 807);
+            this.lblShowEntriesCount.Location = new System.Drawing.Point(11, 817);
             this.lblShowEntriesCount.Name = "lblShowEntriesCount";
             this.lblShowEntriesCount.Size = new System.Drawing.Size(210, 21);
             this.lblShowEntriesCount.TabIndex = 56;
@@ -252,7 +252,7 @@
             this.btnNextPage.FlatAppearance.BorderSize = 0;
             this.btnNextPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNextPage.ForeColor = System.Drawing.Color.White;
-            this.btnNextPage.Location = new System.Drawing.Point(913, 800);
+            this.btnNextPage.Location = new System.Drawing.Point(913, 810);
             this.btnNextPage.Name = "btnNextPage";
             this.btnNextPage.Size = new System.Drawing.Size(142, 34);
             this.btnNextPage.TabIndex = 55;
@@ -266,7 +266,7 @@
             this.btnPriveiwPage.FlatAppearance.BorderSize = 0;
             this.btnPriveiwPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPriveiwPage.ForeColor = System.Drawing.Color.White;
-            this.btnPriveiwPage.Location = new System.Drawing.Point(726, 800);
+            this.btnPriveiwPage.Location = new System.Drawing.Point(726, 810);
             this.btnPriveiwPage.Name = "btnPriveiwPage";
             this.btnPriveiwPage.Size = new System.Drawing.Size(167, 34);
             this.btnPriveiwPage.TabIndex = 54;
@@ -277,7 +277,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 120);
+            this.label1.Location = new System.Drawing.Point(16, 110);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 16);
             this.label1.TabIndex = 57;
@@ -292,7 +292,7 @@
             "50",
             "100",
             "All"});
-            this.cbBoxSelectCountEntries.Location = new System.Drawing.Point(61, 117);
+            this.cbBoxSelectCountEntries.Location = new System.Drawing.Point(61, 107);
             this.cbBoxSelectCountEntries.Name = "cbBoxSelectCountEntries";
             this.cbBoxSelectCountEntries.Size = new System.Drawing.Size(55, 25);
             this.cbBoxSelectCountEntries.TabIndex = 56;
@@ -301,7 +301,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(122, 120);
+            this.label2.Location = new System.Drawing.Point(122, 110);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 16);
             this.label2.TabIndex = 58;

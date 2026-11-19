@@ -378,19 +378,19 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(20, 30, 20, 30);
             this.tableLayoutPanel1.RowCount = 13;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.431703F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.431703F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.431703F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.431703F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.431703F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.431703F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.431703F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.431703F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.05734F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.737864F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.737864F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.737864F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.737864F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.737864F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.737864F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.737864F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.737864F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.67961F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.05734F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.431703F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 140F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.67961F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.737864F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(338, 518);
             this.tableLayoutPanel1.TabIndex = 26;
             // 
@@ -398,7 +398,7 @@
             // 
             this.panel16.BackColor = System.Drawing.Color.DarkGray;
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel16.Location = new System.Drawing.Point(23, 278);
+            this.panel16.Location = new System.Drawing.Point(23, 310);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(292, 1);
             this.panel16.TabIndex = 12;
@@ -410,7 +410,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(23, 33);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(292, 20);
+            this.panel4.Size = new System.Drawing.Size(292, 24);
             this.panel4.TabIndex = 0;
             // 
             // lblSubTotal
@@ -421,7 +421,7 @@
             this.lblSubTotal.ForeColor = System.Drawing.Color.White;
             this.lblSubTotal.Location = new System.Drawing.Point(142, 0);
             this.lblSubTotal.Name = "lblSubTotal";
-            this.lblSubTotal.Size = new System.Drawing.Size(150, 20);
+            this.lblSubTotal.Size = new System.Drawing.Size(150, 24);
             this.lblSubTotal.TabIndex = 14;
             this.lblSubTotal.Text = "₱0.00";
             this.lblSubTotal.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -435,7 +435,7 @@
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(0, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(62, 20);
+            this.label12.Size = new System.Drawing.Size(62, 24);
             this.label12.TabIndex = 13;
             this.label12.Text = "Sub Total";
             // 
@@ -444,9 +444,9 @@
             this.panel5.Controls.Add(this.lblSubDiscount);
             this.panel5.Controls.Add(this.label14);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(23, 59);
+            this.panel5.Location = new System.Drawing.Point(23, 63);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(292, 20);
+            this.panel5.Size = new System.Drawing.Size(292, 24);
             this.panel5.TabIndex = 1;
             // 
             // lblSubDiscount
@@ -457,7 +457,7 @@
             this.lblSubDiscount.ForeColor = System.Drawing.Color.White;
             this.lblSubDiscount.Location = new System.Drawing.Point(142, 0);
             this.lblSubDiscount.Name = "lblSubDiscount";
-            this.lblSubDiscount.Size = new System.Drawing.Size(150, 20);
+            this.lblSubDiscount.Size = new System.Drawing.Size(150, 24);
             this.lblSubDiscount.TabIndex = 15;
             this.lblSubDiscount.Text = "₱0.00";
             this.lblSubDiscount.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -471,7 +471,7 @@
             this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(0, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(85, 20);
+            this.label14.Size = new System.Drawing.Size(85, 24);
             this.label14.TabIndex = 14;
             this.label14.Text = "Sub Discount";
             // 
@@ -480,9 +480,9 @@
             this.panel6.Controls.Add(this.lblVATSales);
             this.panel6.Controls.Add(this.label16);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(23, 85);
+            this.panel6.Location = new System.Drawing.Point(23, 93);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(292, 20);
+            this.panel6.Size = new System.Drawing.Size(292, 24);
             this.panel6.TabIndex = 2;
             // 
             // lblVATSales
@@ -493,7 +493,7 @@
             this.lblVATSales.ForeColor = System.Drawing.Color.White;
             this.lblVATSales.Location = new System.Drawing.Point(142, 0);
             this.lblVATSales.Name = "lblVATSales";
-            this.lblVATSales.Size = new System.Drawing.Size(150, 20);
+            this.lblVATSales.Size = new System.Drawing.Size(150, 24);
             this.lblVATSales.TabIndex = 16;
             this.lblVATSales.Text = "₱0.00";
             this.lblVATSales.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -507,7 +507,7 @@
             this.label16.ForeColor = System.Drawing.Color.White;
             this.label16.Location = new System.Drawing.Point(0, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(65, 20);
+            this.label16.Size = new System.Drawing.Size(65, 24);
             this.label16.TabIndex = 15;
             this.label16.Text = "VAT Sales";
             // 
@@ -516,9 +516,9 @@
             this.panel7.Controls.Add(this.lblVATAmt);
             this.panel7.Controls.Add(this.label18);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(23, 111);
+            this.panel7.Location = new System.Drawing.Point(23, 123);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(292, 20);
+            this.panel7.Size = new System.Drawing.Size(292, 24);
             this.panel7.TabIndex = 3;
             // 
             // lblVATAmt
@@ -529,7 +529,7 @@
             this.lblVATAmt.ForeColor = System.Drawing.Color.White;
             this.lblVATAmt.Location = new System.Drawing.Point(142, 0);
             this.lblVATAmt.Name = "lblVATAmt";
-            this.lblVATAmt.Size = new System.Drawing.Size(150, 20);
+            this.lblVATAmt.Size = new System.Drawing.Size(150, 24);
             this.lblVATAmt.TabIndex = 17;
             this.lblVATAmt.Text = "₱0.00";
             this.lblVATAmt.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -543,7 +543,7 @@
             this.label18.ForeColor = System.Drawing.Color.White;
             this.label18.Location = new System.Drawing.Point(0, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(81, 20);
+            this.label18.Size = new System.Drawing.Size(81, 24);
             this.label18.TabIndex = 16;
             this.label18.Text = "VAT Amount";
             // 
@@ -552,9 +552,9 @@
             this.panel8.Controls.Add(this.lblVATExemptSales);
             this.panel8.Controls.Add(this.label20);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(23, 137);
+            this.panel8.Location = new System.Drawing.Point(23, 153);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(292, 20);
+            this.panel8.Size = new System.Drawing.Size(292, 24);
             this.panel8.TabIndex = 4;
             // 
             // lblVATExemptSales
@@ -565,7 +565,7 @@
             this.lblVATExemptSales.ForeColor = System.Drawing.Color.White;
             this.lblVATExemptSales.Location = new System.Drawing.Point(142, 0);
             this.lblVATExemptSales.Name = "lblVATExemptSales";
-            this.lblVATExemptSales.Size = new System.Drawing.Size(150, 20);
+            this.lblVATExemptSales.Size = new System.Drawing.Size(150, 24);
             this.lblVATExemptSales.TabIndex = 18;
             this.lblVATExemptSales.Text = "₱0.00";
             this.lblVATExemptSales.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -579,7 +579,7 @@
             this.label20.ForeColor = System.Drawing.Color.White;
             this.label20.Location = new System.Drawing.Point(0, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(113, 20);
+            this.label20.Size = new System.Drawing.Size(113, 24);
             this.label20.TabIndex = 17;
             this.label20.Text = "VAT-Exempt Sales";
             // 
@@ -588,9 +588,9 @@
             this.panel9.Controls.Add(this.lblZeroRatedSales);
             this.panel9.Controls.Add(this.label22);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(23, 163);
+            this.panel9.Location = new System.Drawing.Point(23, 183);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(292, 20);
+            this.panel9.Size = new System.Drawing.Size(292, 24);
             this.panel9.TabIndex = 5;
             // 
             // lblZeroRatedSales
@@ -601,7 +601,7 @@
             this.lblZeroRatedSales.ForeColor = System.Drawing.Color.White;
             this.lblZeroRatedSales.Location = new System.Drawing.Point(142, 0);
             this.lblZeroRatedSales.Name = "lblZeroRatedSales";
-            this.lblZeroRatedSales.Size = new System.Drawing.Size(150, 20);
+            this.lblZeroRatedSales.Size = new System.Drawing.Size(150, 24);
             this.lblZeroRatedSales.TabIndex = 19;
             this.lblZeroRatedSales.Text = "₱0.00";
             this.lblZeroRatedSales.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -615,7 +615,7 @@
             this.label22.ForeColor = System.Drawing.Color.White;
             this.label22.Location = new System.Drawing.Point(0, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(108, 20);
+            this.label22.Size = new System.Drawing.Size(108, 24);
             this.label22.TabIndex = 18;
             this.label22.Text = "Zero-Rated Sales";
             // 
@@ -624,9 +624,9 @@
             this.panel10.Controls.Add(this.lblNonVATSales);
             this.panel10.Controls.Add(this.label44);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(23, 189);
+            this.panel10.Location = new System.Drawing.Point(23, 213);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(292, 20);
+            this.panel10.Size = new System.Drawing.Size(292, 24);
             this.panel10.TabIndex = 6;
             // 
             // lblNonVATSales
@@ -637,7 +637,7 @@
             this.lblNonVATSales.ForeColor = System.Drawing.Color.White;
             this.lblNonVATSales.Location = new System.Drawing.Point(142, 0);
             this.lblNonVATSales.Name = "lblNonVATSales";
-            this.lblNonVATSales.Size = new System.Drawing.Size(150, 20);
+            this.lblNonVATSales.Size = new System.Drawing.Size(150, 24);
             this.lblNonVATSales.TabIndex = 20;
             this.lblNonVATSales.Text = "₱0.00";
             this.lblNonVATSales.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -651,7 +651,7 @@
             this.label44.ForeColor = System.Drawing.Color.White;
             this.label44.Location = new System.Drawing.Point(0, 0);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(93, 20);
+            this.label44.Size = new System.Drawing.Size(93, 24);
             this.label44.TabIndex = 19;
             this.label44.Text = "Non-VAT Sales";
             // 
@@ -660,9 +660,9 @@
             this.panel11.Controls.Add(this.lblRedeemAmt);
             this.panel11.Controls.Add(this.label46);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(23, 215);
+            this.panel11.Location = new System.Drawing.Point(23, 243);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(292, 20);
+            this.panel11.Size = new System.Drawing.Size(292, 24);
             this.panel11.TabIndex = 7;
             // 
             // lblRedeemAmt
@@ -673,7 +673,7 @@
             this.lblRedeemAmt.ForeColor = System.Drawing.Color.White;
             this.lblRedeemAmt.Location = new System.Drawing.Point(142, 0);
             this.lblRedeemAmt.Name = "lblRedeemAmt";
-            this.lblRedeemAmt.Size = new System.Drawing.Size(150, 20);
+            this.lblRedeemAmt.Size = new System.Drawing.Size(150, 24);
             this.lblRedeemAmt.TabIndex = 21;
             this.lblRedeemAmt.Text = "₱0.00";
             this.lblRedeemAmt.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -687,7 +687,7 @@
             this.label46.ForeColor = System.Drawing.Color.White;
             this.label46.Location = new System.Drawing.Point(0, 0);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(108, 20);
+            this.label46.Size = new System.Drawing.Size(108, 24);
             this.label46.TabIndex = 20;
             this.label46.Text = "Redeem Amount";
             // 
@@ -696,7 +696,7 @@
             this.panel12.Controls.Add(this.lblNoOfItems);
             this.panel12.Controls.Add(this.label48);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(23, 241);
+            this.panel12.Location = new System.Drawing.Point(23, 273);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(292, 31);
             this.panel12.TabIndex = 8;
@@ -732,7 +732,7 @@
             this.panel13.Controls.Add(this.lblCashTendered);
             this.panel13.Controls.Add(this.label50);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Location = new System.Drawing.Point(23, 283);
+            this.panel13.Location = new System.Drawing.Point(23, 315);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(292, 31);
             this.panel13.TabIndex = 9;
@@ -769,9 +769,9 @@
             this.panel14.Controls.Add(this.lblChange);
             this.panel14.Controls.Add(this.label52);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel14.Location = new System.Drawing.Point(23, 320);
+            this.panel14.Location = new System.Drawing.Point(23, 352);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(292, 20);
+            this.panel14.Size = new System.Drawing.Size(292, 24);
             this.panel14.TabIndex = 10;
             // 
             // lblChange
@@ -782,7 +782,7 @@
             this.lblChange.ForeColor = System.Drawing.Color.Red;
             this.lblChange.Location = new System.Drawing.Point(142, 0);
             this.lblChange.Name = "lblChange";
-            this.lblChange.Size = new System.Drawing.Size(150, 20);
+            this.lblChange.Size = new System.Drawing.Size(150, 24);
             this.lblChange.TabIndex = 26;
             this.lblChange.Text = "₱0.00";
             this.lblChange.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -796,7 +796,7 @@
             this.label52.ForeColor = System.Drawing.Color.White;
             this.label52.Location = new System.Drawing.Point(0, 0);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(55, 20);
+            this.label52.Size = new System.Drawing.Size(55, 24);
             this.label52.TabIndex = 25;
             this.label52.Text = "Change";
             this.label52.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -805,9 +805,9 @@
             // 
             this.panel15.Controls.Add(this.bunifuCards9);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel15.Location = new System.Drawing.Point(23, 346);
+            this.panel15.Location = new System.Drawing.Point(23, 382);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(292, 139);
+            this.panel15.Size = new System.Drawing.Size(292, 103);
             this.panel15.TabIndex = 11;
             // 
             // bunifuCards9
@@ -821,7 +821,7 @@
             this.bunifuCards9.Controls.Add(this.label41);
             this.bunifuCards9.Controls.Add(this.iconButton1);
             this.bunifuCards9.LeftSahddow = false;
-            this.bunifuCards9.Location = new System.Drawing.Point(3, 77);
+            this.bunifuCards9.Location = new System.Drawing.Point(3, 41);
             this.bunifuCards9.Name = "bunifuCards9";
             this.bunifuCards9.RightSahddow = false;
             this.bunifuCards9.ShadowDepth = 20;

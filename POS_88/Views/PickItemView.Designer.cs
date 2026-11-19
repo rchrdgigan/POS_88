@@ -70,11 +70,11 @@
             this.bunifuCards1.color = System.Drawing.Color.Gray;
             this.bunifuCards1.Controls.Add(this.tableLayoutPanel1);
             this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(286, 13);
+            this.bunifuCards1.Location = new System.Drawing.Point(260, 13);
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(786, 670);
+            this.bunifuCards1.Size = new System.Drawing.Size(681, 670);
             this.bunifuCards1.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -90,7 +90,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.656716F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.34328F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(786, 670);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(681, 670);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // panel1
@@ -103,7 +103,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(780, 51);
+            this.panel1.Size = new System.Drawing.Size(675, 52);
             this.panel1.TabIndex = 0;
             // 
             // btnClose
@@ -114,9 +114,9 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(729, 0);
+            this.btnClose.Location = new System.Drawing.Point(624, 0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(51, 51);
+            this.btnClose.Size = new System.Drawing.Size(51, 52);
             this.btnClose.TabIndex = 16;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -128,7 +128,7 @@
             this.txtSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(117, 18);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(469, 27);
+            this.txtSearch.Size = new System.Drawing.Size(364, 27);
             this.txtSearch.TabIndex = 15;
             // 
             // btnClearFilter
@@ -138,7 +138,7 @@
             this.btnClearFilter.FlatAppearance.BorderSize = 0;
             this.btnClearFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearFilter.Image = ((System.Drawing.Image)(resources.GetObject("btnClearFilter.Image")));
-            this.btnClearFilter.Location = new System.Drawing.Point(633, 15);
+            this.btnClearFilter.Location = new System.Drawing.Point(528, 15);
             this.btnClearFilter.Name = "btnClearFilter";
             this.btnClearFilter.Size = new System.Drawing.Size(35, 35);
             this.btnClearFilter.TabIndex = 14;
@@ -151,7 +151,7 @@
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(592, 15);
+            this.btnSearch.Location = new System.Drawing.Point(487, 15);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(35, 35);
             this.btnSearch.TabIndex = 13;
@@ -171,10 +171,10 @@
             // 
             this.panel2.Controls.Add(this.lvwItems);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(4, 62);
+            this.panel2.Location = new System.Drawing.Point(4, 63);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(778, 603);
+            this.panel2.Size = new System.Drawing.Size(673, 602);
             this.panel2.TabIndex = 1;
             // 
             // lvwItems
@@ -184,7 +184,7 @@
             this.lvwItems.Location = new System.Drawing.Point(0, 0);
             this.lvwItems.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lvwItems.Name = "lvwItems";
-            this.lvwItems.Size = new System.Drawing.Size(778, 603);
+            this.lvwItems.Size = new System.Drawing.Size(673, 602);
             this.lvwItems.TabIndex = 0;
             this.lvwItems.UseCompatibleStateImageBehavior = false;
             this.lvwItems.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lvwItems_MouseClick);
@@ -202,7 +202,7 @@
             this.bunifuCards2.Name = "bunifuCards2";
             this.bunifuCards2.RightSahddow = true;
             this.bunifuCards2.ShadowDepth = 20;
-            this.bunifuCards2.Size = new System.Drawing.Size(266, 670);
+            this.bunifuCards2.Size = new System.Drawing.Size(240, 670);
             this.bunifuCards2.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -218,7 +218,7 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.507463F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.49254F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(266, 670);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(240, 670);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // panel3
@@ -228,7 +228,7 @@
             this.panel3.Location = new System.Drawing.Point(4, 5);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(258, 46);
+            this.panel3.Size = new System.Drawing.Size(232, 47);
             this.panel3.TabIndex = 0;
             // 
             // label2
@@ -240,7 +240,7 @@
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(258, 46);
+            this.label2.Size = new System.Drawing.Size(232, 47);
             this.label2.TabIndex = 0;
             this.label2.Text = "Select Category";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -249,10 +249,10 @@
             // 
             this.panel4.Controls.Add(this.lstCategory);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(4, 61);
+            this.panel4.Location = new System.Drawing.Point(4, 62);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(258, 604);
+            this.panel4.Size = new System.Drawing.Size(232, 603);
             this.panel4.TabIndex = 1;
             // 
             // lstCategory
@@ -263,7 +263,7 @@
             this.lstCategory.ItemHeight = 25;
             this.lstCategory.Location = new System.Drawing.Point(0, 0);
             this.lstCategory.Name = "lstCategory";
-            this.lstCategory.Size = new System.Drawing.Size(258, 604);
+            this.lstCategory.Size = new System.Drawing.Size(232, 603);
             this.lstCategory.TabIndex = 0;
             this.lstCategory.SelectedIndexChanged += new System.EventHandler(this.lstCategory_SelectedIndexChanged);
             // 
@@ -272,7 +272,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1086, 698);
+            this.ClientSize = new System.Drawing.Size(952, 698);
             this.Controls.Add(this.bunifuCards2);
             this.Controls.Add(this.bunifuCards1);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

@@ -312,6 +312,12 @@
     <Compile Include="Views\CashInOutView.Designer.cs">
       <DependentUpon>CashInOutView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\CriticalStocksView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CriticalStocksView.Designer.cs">
+      <DependentUpon>CriticalStocksView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\LoadingOverlay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -620,6 +626,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ConfirmPaymentView.resx">
       <DependentUpon>ConfirmPaymentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CriticalStocksView.resx">
+      <DependentUpon>CriticalStocksView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CustomerDisplayView.resx">
       <DependentUpon>CustomerDisplayView.cs</DependentUpon>

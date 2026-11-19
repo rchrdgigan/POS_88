@@ -379,7 +379,27 @@ namespace POS_88.Views
         public bool Confirm(string text) =>
             MessageBox.Show(text, "Verify", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
 
-        public void ShowItemNotFound(string code) => new ItemNotFoundView(code).ShowDialog();
+        public void ShowItemNotFound(string code)
+        {
+            Form modalOwner = this.MdiParent ?? this;
+            using (Form backdrop = new Form())
+            {
+                backdrop.FormBorderStyle = FormBorderStyle.None;
+                backdrop.StartPosition = FormStartPosition.Manual;
+                backdrop.ShowInTaskbar = false;
+                backdrop.BackColor = Color.Black;
+                backdrop.Opacity = 0.45;
+                backdrop.Bounds = modalOwner.Bounds;
+                backdrop.Show(modalOwner);
+                backdrop.BringToFront();
+
+                using (ItemNotFoundView view = new ItemNotFoundView(code))
+                {
+                    view.StartPosition = FormStartPosition.CenterParent;
+                    POSTheme.ShowSmoothFadeDialog(view, modalOwner);
+                }
+            }
+        }
 
         // NOTE: these legacy dialogs must accept ICashierHost instead of frmCashier (see reply).
         public void OpenDialog(CashierDialog dialog, int receiptNo)

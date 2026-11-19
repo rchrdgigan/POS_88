@@ -130,7 +130,10 @@
             // 
             this.btnEscOrCancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnEscOrCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.btnEscOrCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
             this.btnEscOrCancel.FlatAppearance.BorderSize = 0;
+            this.btnEscOrCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.btnEscOrCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
             this.btnEscOrCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEscOrCancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEscOrCancel.ForeColor = System.Drawing.Color.White;

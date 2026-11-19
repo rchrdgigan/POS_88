@@ -16,6 +16,7 @@ namespace POS_88.Views
         public AddOrEditManufacturerView()
         {
             InitializeComponent();
+            ApplyTheme();
 
             btnClose.Click += (sender, args) => Close();
             btnMinimize.Click += (sender, args) =>
@@ -30,6 +31,23 @@ namespace POS_88.Views
                 SaveEvent?.Invoke(this, EventArgs.Empty);
             };
             btnClear.Click += (sender, args) => ClearEvent?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void ApplyTheme()
+        {
+            // topbar gradients
+            lblModalTitle.BackColor = Color.Transparent;
+            POSTheme.ApplyTopbar(panel1);
+
+            // button close
+            btnMinimize.BackColor = POSTheme.Navy;
+            btnClose.ForeColor = Color.White;
+            btnClose.UseVisualStyleBackColor = false;
+
+            // button close
+            btnClose.BackColor = POSTheme.Danger;
+            btnClose.ForeColor = Color.White;
+            btnClose.UseVisualStyleBackColor = false;
         }
 
         public string ManufacturerId

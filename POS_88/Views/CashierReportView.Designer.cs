@@ -244,7 +244,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.105271F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.09369F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 56F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 57F));
             this.tableLayoutPanel3.Controls.Add(this.panel6, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.panel7, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.panel8, 2, 0);
@@ -319,7 +319,7 @@
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel12.Location = new System.Drawing.Point(619, 3);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(330, 48);
+            this.panel12.Size = new System.Drawing.Size(329, 48);
             this.panel12.TabIndex = 6;
             // 
             // txtSearch
@@ -328,7 +328,7 @@
             this.txtSearch.Location = new System.Drawing.Point(0, 22);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(330, 26);
+            this.txtSearch.Size = new System.Drawing.Size(329, 26);
             this.txtSearch.TabIndex = 24;
             // 
             // lblSearch
@@ -338,7 +338,7 @@
             this.lblSearch.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSearch.Location = new System.Drawing.Point(0, 0);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(330, 19);
+            this.lblSearch.Size = new System.Drawing.Size(329, 19);
             this.lblSearch.TabIndex = 23;
             this.lblSearch.Text = "Search Receipt / Customer";
             // 
@@ -349,7 +349,7 @@
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(955, 3);
+            this.btnSearch.Location = new System.Drawing.Point(954, 3);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(44, 48);
             this.btnSearch.TabIndex = 25;

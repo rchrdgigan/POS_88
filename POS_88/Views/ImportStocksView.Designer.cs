@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ImportStocksView));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblModalTitle = new System.Windows.Forms.Label();
             this.btnMinimize = new System.Windows.Forms.Button();
@@ -64,7 +64,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1083, 50);
+            this.panel1.Size = new System.Drawing.Size(1083, 40);
             this.panel1.TabIndex = 2;
             // 
             // lblModalTitle
@@ -72,7 +72,7 @@
             this.lblModalTitle.AutoSize = true;
             this.lblModalTitle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModalTitle.ForeColor = System.Drawing.Color.White;
-            this.lblModalTitle.Location = new System.Drawing.Point(27, 19);
+            this.lblModalTitle.Location = new System.Drawing.Point(12, 11);
             this.lblModalTitle.Name = "lblModalTitle";
             this.lblModalTitle.Size = new System.Drawing.Size(148, 19);
             this.lblModalTitle.TabIndex = 5;
@@ -88,7 +88,7 @@
             this.btnMinimize.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnMinimize.Location = new System.Drawing.Point(981, 0);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(51, 50);
+            this.btnMinimize.Size = new System.Drawing.Size(51, 40);
             this.btnMinimize.TabIndex = 4;
             this.btnMinimize.Text = "_";
             this.btnMinimize.UseVisualStyleBackColor = false;
@@ -103,7 +103,7 @@
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Location = new System.Drawing.Point(1032, 0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(51, 50);
+            this.btnClose.Size = new System.Drawing.Size(51, 40);
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -112,7 +112,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(8, 215);
+            this.label4.Location = new System.Drawing.Point(10, 177);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(237, 16);
             this.label4.TabIndex = 9;
@@ -122,7 +122,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(8, 91);
+            this.label3.Location = new System.Drawing.Point(10, 53);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(163, 16);
             this.label3.TabIndex = 8;
@@ -131,14 +131,14 @@
             // cBoxImportType
             // 
             this.cBoxImportType.FormattingEnabled = true;
-            this.cBoxImportType.Location = new System.Drawing.Point(13, 153);
+            this.cBoxImportType.Location = new System.Drawing.Point(15, 115);
             this.cBoxImportType.Name = "cBoxImportType";
             this.cBoxImportType.Size = new System.Drawing.Size(219, 25);
             this.cBoxImportType.TabIndex = 11;
             // 
             // txtFilePath
             // 
-            this.txtFilePath.Location = new System.Drawing.Point(11, 267);
+            this.txtFilePath.Location = new System.Drawing.Point(13, 229);
             this.txtFilePath.Name = "txtFilePath";
             this.txtFilePath.ReadOnly = true;
             this.txtFilePath.Size = new System.Drawing.Size(221, 22);
@@ -152,7 +152,7 @@
             this.btnBrowseExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBrowseExcel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBrowseExcel.ForeColor = System.Drawing.Color.White;
-            this.btnBrowseExcel.Location = new System.Drawing.Point(13, 295);
+            this.btnBrowseExcel.Location = new System.Drawing.Point(15, 257);
             this.btnBrowseExcel.Name = "btnBrowseExcel";
             this.btnBrowseExcel.Size = new System.Drawing.Size(219, 32);
             this.btnBrowseExcel.TabIndex = 22;
@@ -164,7 +164,7 @@
             // 
             this.txtSheetName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtSheetName.Enabled = false;
-            this.txtSheetName.Location = new System.Drawing.Point(11, 430);
+            this.txtSheetName.Location = new System.Drawing.Point(13, 392);
             this.txtSheetName.Name = "txtSheetName";
             this.txtSheetName.Size = new System.Drawing.Size(221, 25);
             this.txtSheetName.TabIndex = 23;
@@ -178,7 +178,7 @@
             this.btnLoadData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoadData.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoadData.ForeColor = System.Drawing.Color.White;
-            this.btnLoadData.Location = new System.Drawing.Point(11, 458);
+            this.btnLoadData.Location = new System.Drawing.Point(13, 420);
             this.btnLoadData.Name = "btnLoadData";
             this.btnLoadData.Size = new System.Drawing.Size(221, 32);
             this.btnLoadData.TabIndex = 24;
@@ -191,7 +191,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 375);
+            this.label1.Location = new System.Drawing.Point(10, 337);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(148, 16);
             this.label1.TabIndex = 25;
@@ -207,9 +207,9 @@
             this.btnImportData.ForeColor = System.Drawing.Color.White;
             this.btnImportData.Image = ((System.Drawing.Image)(resources.GetObject("btnImportData.Image")));
             this.btnImportData.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnImportData.Location = new System.Drawing.Point(13, 654);
+            this.btnImportData.Location = new System.Drawing.Point(16, 581);
             this.btnImportData.Name = "btnImportData";
-            this.btnImportData.Size = new System.Drawing.Size(219, 55);
+            this.btnImportData.Size = new System.Drawing.Size(218, 55);
             this.btnImportData.TabIndex = 26;
             this.btnImportData.Text = "Import Data";
             this.btnImportData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -220,7 +220,7 @@
             this.chkSelectAll.AutoSize = true;
             this.chkSelectAll.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkSelectAll.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.chkSelectAll.Location = new System.Drawing.Point(261, 66);
+            this.chkSelectAll.Location = new System.Drawing.Point(268, 46);
             this.chkSelectAll.Name = "chkSelectAll";
             this.chkSelectAll.Size = new System.Drawing.Size(81, 20);
             this.chkSelectAll.TabIndex = 27;
@@ -233,27 +233,27 @@
             this.dataGridViewX1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridViewX1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dataGridViewX1.HighlightSelectedColumnHeaders = false;
-            this.dataGridViewX1.Location = new System.Drawing.Point(251, 91);
+            this.dataGridViewX1.Location = new System.Drawing.Point(251, 69);
             this.dataGridViewX1.Name = "dataGridViewX1";
             this.dataGridViewX1.RowHeadersVisible = false;
-            this.dataGridViewX1.Size = new System.Drawing.Size(820, 618);
+            this.dataGridViewX1.Size = new System.Drawing.Size(820, 567);
             this.dataGridViewX1.TabIndex = 28;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(28, 111);
+            this.label2.Location = new System.Drawing.Point(30, 73);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(200, 30);
             this.label2.TabIndex = 29;
@@ -263,7 +263,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(28, 241);
+            this.label5.Location = new System.Drawing.Point(30, 203);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(171, 15);
             this.label5.TabIndex = 30;
@@ -273,7 +273,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(28, 401);
+            this.label6.Location = new System.Drawing.Point(30, 363);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(163, 15);
             this.label6.TabIndex = 31;
@@ -284,7 +284,7 @@
             // 
             this.picBoxNoData.BackColor = System.Drawing.Color.White;
             this.picBoxNoData.Image = ((System.Drawing.Image)(resources.GetObject("picBoxNoData.Image")));
-            this.picBoxNoData.Location = new System.Drawing.Point(487, 271);
+            this.picBoxNoData.Location = new System.Drawing.Point(490, 223);
             this.picBoxNoData.Name = "picBoxNoData";
             this.picBoxNoData.Size = new System.Drawing.Size(345, 259);
             this.picBoxNoData.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -296,7 +296,7 @@
             this.lblNoData.AutoSize = true;
             this.lblNoData.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNoData.ForeColor = System.Drawing.Color.Red;
-            this.lblNoData.Location = new System.Drawing.Point(967, 66);
+            this.lblNoData.Location = new System.Drawing.Point(967, 47);
             this.lblNoData.Name = "lblNoData";
             this.lblNoData.Size = new System.Drawing.Size(104, 16);
             this.lblNoData.TabIndex = 33;
@@ -307,7 +307,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(227)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(1083, 721);
+            this.ClientSize = new System.Drawing.Size(1083, 649);
             this.Controls.Add(this.lblNoData);
             this.Controls.Add(this.picBoxNoData);
             this.Controls.Add(this.label6);

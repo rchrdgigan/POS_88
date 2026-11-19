@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SetupView));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnClearFilter = new System.Windows.Forms.Button();
@@ -67,7 +67,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(126, 120);
+            this.label2.Location = new System.Drawing.Point(126, 110);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 16);
             this.label2.TabIndex = 68;
@@ -77,7 +77,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(20, 120);
+            this.label1.Location = new System.Drawing.Point(20, 110);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 16);
             this.label1.TabIndex = 67;
@@ -90,7 +90,7 @@
             this.btnClearFilter.FlatAppearance.BorderSize = 0;
             this.btnClearFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearFilter.Image = ((System.Drawing.Image)(resources.GetObject("btnClearFilter.Image")));
-            this.btnClearFilter.Location = new System.Drawing.Point(1037, 95);
+            this.btnClearFilter.Location = new System.Drawing.Point(1037, 85);
             this.btnClearFilter.Name = "btnClearFilter";
             this.btnClearFilter.Size = new System.Drawing.Size(49, 48);
             this.btnClearFilter.TabIndex = 63;
@@ -103,7 +103,7 @@
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(982, 95);
+            this.btnSearch.Location = new System.Drawing.Point(982, 85);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(49, 48);
             this.btnSearch.TabIndex = 62;
@@ -113,7 +113,7 @@
             // 
             this.txtSearchParam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearchParam.Location = new System.Drawing.Point(503, 117);
+            this.txtSearchParam.Location = new System.Drawing.Point(503, 107);
             this.txtSearchParam.Multiline = true;
             this.txtSearchParam.Name = "txtSearchParam";
             this.txtSearchParam.Size = new System.Drawing.Size(473, 26);
@@ -123,7 +123,7 @@
             // 
             this.lblShowEntriesCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblShowEntriesCount.AutoSize = true;
-            this.lblShowEntriesCount.Location = new System.Drawing.Point(11, 807);
+            this.lblShowEntriesCount.Location = new System.Drawing.Point(11, 817);
             this.lblShowEntriesCount.Name = "lblShowEntriesCount";
             this.lblShowEntriesCount.Size = new System.Drawing.Size(210, 21);
             this.lblShowEntriesCount.TabIndex = 56;
@@ -136,7 +136,7 @@
             this.btnNextPage.FlatAppearance.BorderSize = 0;
             this.btnNextPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNextPage.ForeColor = System.Drawing.Color.White;
-            this.btnNextPage.Location = new System.Drawing.Point(913, 800);
+            this.btnNextPage.Location = new System.Drawing.Point(913, 810);
             this.btnNextPage.Name = "btnNextPage";
             this.btnNextPage.Size = new System.Drawing.Size(142, 34);
             this.btnNextPage.TabIndex = 55;
@@ -150,7 +150,7 @@
             this.btnPriveiwPage.FlatAppearance.BorderSize = 0;
             this.btnPriveiwPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPriveiwPage.ForeColor = System.Drawing.Color.White;
-            this.btnPriveiwPage.Location = new System.Drawing.Point(726, 800);
+            this.btnPriveiwPage.Location = new System.Drawing.Point(726, 810);
             this.btnPriveiwPage.Name = "btnPriveiwPage";
             this.btnPriveiwPage.Size = new System.Drawing.Size(167, 34);
             this.btnPriveiwPage.TabIndex = 54;
@@ -166,7 +166,7 @@
             "50",
             "100",
             "All"});
-            this.cbBoxSelectCountEntries.Location = new System.Drawing.Point(65, 117);
+            this.cbBoxSelectCountEntries.Location = new System.Drawing.Point(65, 107);
             this.cbBoxSelectCountEntries.Name = "cbBoxSelectCountEntries";
             this.cbBoxSelectCountEntries.Size = new System.Drawing.Size(55, 25);
             this.cbBoxSelectCountEntries.TabIndex = 66;
@@ -186,11 +186,11 @@
             this.bunifuCards1.Controls.Add(this.dataGridViewX1);
             this.bunifuCards1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(15, 149);
+            this.bunifuCards1.Location = new System.Drawing.Point(15, 139);
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(1071, 851);
+            this.bunifuCards1.Size = new System.Drawing.Size(1071, 861);
             this.bunifuCards1.TabIndex = 65;
             // 
             // dataGridViewX1
@@ -203,14 +203,14 @@
             this.dataGridViewX1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridViewX1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dataGridViewX1.HighlightSelectedColumnHeaders = false;
             this.dataGridViewX1.Location = new System.Drawing.Point(15, 15);
@@ -219,14 +219,14 @@
             this.dataGridViewX1.ReadOnly = true;
             this.dataGridViewX1.RowHeadersVisible = false;
             this.dataGridViewX1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewX1.Size = new System.Drawing.Size(1043, 779);
+            this.dataGridViewX1.Size = new System.Drawing.Size(1043, 789);
             this.dataGridViewX1.TabIndex = 53;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(500, 95);
+            this.label3.Location = new System.Drawing.Point(500, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 16);
             this.label3.TabIndex = 60;
@@ -243,7 +243,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1100, 86);
+            this.panel1.Size = new System.Drawing.Size(1100, 79);
             this.panel1.TabIndex = 59;
             // 
             // btnMyStore

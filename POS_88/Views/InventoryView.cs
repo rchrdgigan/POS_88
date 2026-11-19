@@ -49,6 +49,34 @@ namespace POS_88.Views
             btnSearch.Click += (sender, args) => SearchEvent?.Invoke(this, EventArgs.Empty);
             btnDelete.Click += (sender, args) => DeleteEvent?.Invoke(this, EventArgs.Empty);
             btnClearFilter.Click += (sender, args) => ClearFiltersEvent?.Invoke(this, EventArgs.Empty);
+            btnBarcode.Click += (sender, args) => 
+            {
+                if (dataGridViewX1.CurrentRow == null || dataGridViewX1.CurrentRow.Cells[0].Value == null)
+                {
+                    MessageBox.Show("Select an item before viewing barcode.", "Inventory", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                ArrayList paramArrayList = new ArrayList();
+                ArrayList paramValueArrayList = new ArrayList();
+                string str = this.dataGridViewX1.CurrentRow.Cells[0].Value.ToString();
+                paramArrayList.Add((object)"@ItemCode");
+                paramValueArrayList.Add((object)str);
+
+                ReportViewerView reportView = new ReportViewerView(
+                    "BARCODE2.rpt",
+                    paramArrayList,
+                    paramValueArrayList);
+                try
+                {
+                    new ReportViewerPresenter(reportView).LoadReport();
+                    reportView.Show();
+                }
+                catch (Exception exception)
+                {
+                    reportView.Dispose();
+                    MessageBox.Show(exception.Message, "Report", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            };
 
 
             //Show modal with backdrop opacity

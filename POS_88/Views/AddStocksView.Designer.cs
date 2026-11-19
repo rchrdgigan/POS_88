@@ -49,11 +49,15 @@
             this.txtRemarks = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClearFilter = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.bunifuCards3 = new Bunifu.Framework.UI.BunifuCards();
+            this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.bunifuCards3.SuspendLayout();
+            this.bunifuCards2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,7 +69,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(422, 50);
+            this.panel1.Size = new System.Drawing.Size(411, 40);
             this.panel1.TabIndex = 1;
             // 
             // lblModalTitle
@@ -73,7 +77,7 @@
             this.lblModalTitle.AutoSize = true;
             this.lblModalTitle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModalTitle.ForeColor = System.Drawing.Color.White;
-            this.lblModalTitle.Location = new System.Drawing.Point(27, 19);
+            this.lblModalTitle.Location = new System.Drawing.Point(12, 11);
             this.lblModalTitle.Name = "lblModalTitle";
             this.lblModalTitle.Size = new System.Drawing.Size(158, 19);
             this.lblModalTitle.TabIndex = 5;
@@ -87,9 +91,9 @@
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimize.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnMinimize.Location = new System.Drawing.Point(320, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(309, 0);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(51, 50);
+            this.btnMinimize.Size = new System.Drawing.Size(51, 40);
             this.btnMinimize.TabIndex = 4;
             this.btnMinimize.Text = "_";
             this.btnMinimize.UseVisualStyleBackColor = false;
@@ -102,9 +106,9 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(371, 0);
+            this.btnClose.Location = new System.Drawing.Point(360, 0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(51, 50);
+            this.btnClose.Size = new System.Drawing.Size(51, 40);
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -118,9 +122,9 @@
             this.groupBox1.Controls.Add(this.txtName);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtItemCode);
-            this.groupBox1.Location = new System.Drawing.Point(12, 58);
+            this.groupBox1.Location = new System.Drawing.Point(6, 46);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(398, 176);
+            this.groupBox1.Size = new System.Drawing.Size(398, 151);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Item Stock Details";
@@ -129,7 +133,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(40, 126);
+            this.label4.Location = new System.Drawing.Point(40, 118);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 16);
             this.label4.TabIndex = 7;
@@ -138,7 +142,7 @@
             // txtUnit
             // 
             this.txtUnit.BackColor = System.Drawing.Color.White;
-            this.txtUnit.Location = new System.Drawing.Point(140, 123);
+            this.txtUnit.Location = new System.Drawing.Point(140, 115);
             this.txtUnit.Name = "txtUnit";
             this.txtUnit.ReadOnly = true;
             this.txtUnit.Size = new System.Drawing.Size(223, 22);
@@ -149,7 +153,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(90, 70);
+            this.label3.Location = new System.Drawing.Point(90, 62);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 16);
             this.label3.TabIndex = 5;
@@ -158,7 +162,7 @@
             // txtName
             // 
             this.txtName.BackColor = System.Drawing.Color.White;
-            this.txtName.Location = new System.Drawing.Point(140, 67);
+            this.txtName.Location = new System.Drawing.Point(140, 59);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
             this.txtName.ReadOnly = true;
@@ -169,7 +173,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(63, 42);
+            this.label2.Location = new System.Drawing.Point(63, 34);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 16);
             this.label2.TabIndex = 3;
@@ -178,7 +182,7 @@
             // txtItemCode
             // 
             this.txtItemCode.BackColor = System.Drawing.Color.White;
-            this.txtItemCode.Location = new System.Drawing.Point(140, 39);
+            this.txtItemCode.Location = new System.Drawing.Point(140, 31);
             this.txtItemCode.Name = "txtItemCode";
             this.txtItemCode.ReadOnly = true;
             this.txtItemCode.Size = new System.Drawing.Size(223, 22);
@@ -187,15 +191,16 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.panel3);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.txtAddQty);
             this.groupBox2.Controls.Add(this.txtNewStocks);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.txtRemarks);
-            this.groupBox2.Location = new System.Drawing.Point(12, 240);
+            this.groupBox2.Location = new System.Drawing.Point(6, 203);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(398, 176);
+            this.groupBox2.Size = new System.Drawing.Size(398, 223);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Modify Stocks";
@@ -204,7 +209,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 121);
+            this.label1.Location = new System.Drawing.Point(32, 119);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(103, 20);
             this.label1.TabIndex = 13;
@@ -212,7 +217,7 @@
             // 
             // txtAddQty
             // 
-            this.txtAddQty.Location = new System.Drawing.Point(140, 34);
+            this.txtAddQty.Location = new System.Drawing.Point(140, 32);
             this.txtAddQty.Name = "txtAddQty";
             this.txtAddQty.Size = new System.Drawing.Size(223, 22);
             this.txtAddQty.TabIndex = 8;
@@ -222,7 +227,7 @@
             // 
             this.txtNewStocks.BackColor = System.Drawing.Color.White;
             this.txtNewStocks.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNewStocks.Location = new System.Drawing.Point(140, 118);
+            this.txtNewStocks.Location = new System.Drawing.Point(140, 116);
             this.txtNewStocks.Name = "txtNewStocks";
             this.txtNewStocks.ReadOnly = true;
             this.txtNewStocks.Size = new System.Drawing.Size(223, 26);
@@ -233,7 +238,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(47, 37);
+            this.label6.Location = new System.Drawing.Point(47, 35);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 16);
             this.label6.TabIndex = 9;
@@ -243,7 +248,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(77, 65);
+            this.label5.Location = new System.Drawing.Point(77, 63);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 16);
             this.label5.TabIndex = 11;
@@ -251,7 +256,7 @@
             // 
             // txtRemarks
             // 
-            this.txtRemarks.Location = new System.Drawing.Point(140, 62);
+            this.txtRemarks.Location = new System.Drawing.Point(140, 60);
             this.txtRemarks.Multiline = true;
             this.txtRemarks.Name = "txtRemarks";
             this.txtRemarks.Size = new System.Drawing.Size(223, 50);
@@ -266,9 +271,9 @@
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(285, 3);
+            this.btnSave.Location = new System.Drawing.Point(-6, -1);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(110, 35);
+            this.btnSave.Size = new System.Drawing.Size(157, 48);
             this.btnSave.TabIndex = 22;
             this.btnSave.Text = " Save";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -284,35 +289,64 @@
             this.btnClearFilter.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearFilter.ForeColor = System.Drawing.Color.White;
             this.btnClearFilter.Image = ((System.Drawing.Image)(resources.GetObject("btnClearFilter.Image")));
-            this.btnClearFilter.Location = new System.Drawing.Point(3, 3);
+            this.btnClearFilter.Location = new System.Drawing.Point(-12, -3);
             this.btnClearFilter.Name = "btnClearFilter";
-            this.btnClearFilter.Size = new System.Drawing.Size(110, 35);
+            this.btnClearFilter.Size = new System.Drawing.Size(161, 49);
             this.btnClearFilter.TabIndex = 21;
             this.btnClearFilter.Text = "Clear";
             this.btnClearFilter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClearFilter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClearFilter.UseVisualStyleBackColor = false;
             // 
-            // panel2
+            // panel3
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.btnSave);
-            this.panel2.Controls.Add(this.btnClearFilter);
-            this.panel2.Location = new System.Drawing.Point(12, 422);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(398, 45);
-            this.panel2.TabIndex = 23;
+            this.panel3.Controls.Add(this.bunifuCards3);
+            this.panel3.Controls.Add(this.bunifuCards2);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(3, 160);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(392, 60);
+            this.panel3.TabIndex = 57;
+            // 
+            // bunifuCards3
+            // 
+            this.bunifuCards3.BackColor = System.Drawing.Color.SeaGreen;
+            this.bunifuCards3.BorderRadius = 20;
+            this.bunifuCards3.BottomSahddow = true;
+            this.bunifuCards3.color = System.Drawing.Color.SeaGreen;
+            this.bunifuCards3.Controls.Add(this.btnSave);
+            this.bunifuCards3.LeftSahddow = false;
+            this.bunifuCards3.Location = new System.Drawing.Point(238, 6);
+            this.bunifuCards3.Name = "bunifuCards3";
+            this.bunifuCards3.RightSahddow = true;
+            this.bunifuCards3.ShadowDepth = 20;
+            this.bunifuCards3.Size = new System.Drawing.Size(140, 45);
+            this.bunifuCards3.TabIndex = 29;
+            // 
+            // bunifuCards2
+            // 
+            this.bunifuCards2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bunifuCards2.BorderRadius = 20;
+            this.bunifuCards2.BottomSahddow = true;
+            this.bunifuCards2.color = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bunifuCards2.Controls.Add(this.btnClearFilter);
+            this.bunifuCards2.LeftSahddow = false;
+            this.bunifuCards2.Location = new System.Drawing.Point(15, 6);
+            this.bunifuCards2.Name = "bunifuCards2";
+            this.bunifuCards2.RightSahddow = true;
+            this.bunifuCards2.ShadowDepth = 20;
+            this.bunifuCards2.Size = new System.Drawing.Size(140, 45);
+            this.bunifuCards2.TabIndex = 28;
             // 
             // AddStocksView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(227)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(422, 473);
+            this.ClientSize = new System.Drawing.Size(411, 432);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -325,7 +359,9 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.bunifuCards3.ResumeLayout(false);
+            this.bunifuCards2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -352,6 +388,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtRemarks;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private Bunifu.Framework.UI.BunifuCards bunifuCards3;
+        private Bunifu.Framework.UI.BunifuCards bunifuCards2;
     }
 }

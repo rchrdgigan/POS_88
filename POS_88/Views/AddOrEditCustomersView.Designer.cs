@@ -37,8 +37,6 @@
             this.numericCreditLimit = new System.Windows.Forms.NumericUpDown();
             this.numericLoyaltyPoints = new System.Windows.Forms.NumericUpDown();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnClearFilter = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -53,11 +51,17 @@
             this.txtCustomerID = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+            this.bunifuCards3 = new Bunifu.Framework.UI.BunifuCards();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
+            this.btnClearFilter = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.bunifuCards1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericCreditLimit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericLoyaltyPoints)).BeginInit();
             this.panel2.SuspendLayout();
+            this.bunifuCards3.SuspendLayout();
+            this.bunifuCards2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,7 +73,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(456, 50);
+            this.panel1.Size = new System.Drawing.Size(432, 40);
             this.panel1.TabIndex = 2;
             // 
             // lblModalTitle
@@ -77,7 +81,7 @@
             this.lblModalTitle.AutoSize = true;
             this.lblModalTitle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModalTitle.ForeColor = System.Drawing.Color.White;
-            this.lblModalTitle.Location = new System.Drawing.Point(27, 19);
+            this.lblModalTitle.Location = new System.Drawing.Point(12, 11);
             this.lblModalTitle.Name = "lblModalTitle";
             this.lblModalTitle.Size = new System.Drawing.Size(179, 19);
             this.lblModalTitle.TabIndex = 5;
@@ -91,9 +95,9 @@
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimize.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnMinimize.Location = new System.Drawing.Point(354, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(330, 0);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(51, 50);
+            this.btnMinimize.Size = new System.Drawing.Size(51, 40);
             this.btnMinimize.TabIndex = 4;
             this.btnMinimize.Text = "_";
             this.btnMinimize.UseVisualStyleBackColor = false;
@@ -106,9 +110,9 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(405, 0);
+            this.btnClose.Location = new System.Drawing.Point(381, 0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(51, 50);
+            this.btnClose.Size = new System.Drawing.Size(51, 40);
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -137,17 +141,17 @@
             this.bunifuCards1.Controls.Add(this.label4);
             this.bunifuCards1.Controls.Add(this.label22);
             this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(11, 56);
+            this.bunifuCards1.Location = new System.Drawing.Point(7, 46);
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(436, 359);
+            this.bunifuCards1.Size = new System.Drawing.Size(420, 324);
             this.bunifuCards1.TabIndex = 3;
             // 
             // numericCreditLimit
             // 
             this.numericCreditLimit.DecimalPlaces = 2;
-            this.numericCreditLimit.Location = new System.Drawing.Point(103, 236);
+            this.numericCreditLimit.Location = new System.Drawing.Point(101, 225);
             this.numericCreditLimit.Maximum = new decimal(new int[] {
             100000000,
             0,
@@ -160,7 +164,7 @@
             // numericLoyaltyPoints
             // 
             this.numericLoyaltyPoints.DecimalPlaces = 2;
-            this.numericLoyaltyPoints.Location = new System.Drawing.Point(103, 208);
+            this.numericLoyaltyPoints.Location = new System.Drawing.Point(101, 197);
             this.numericLoyaltyPoints.Maximum = new decimal(new int[] {
             100000000,
             0,
@@ -172,55 +176,19 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnSave);
-            this.panel2.Controls.Add(this.btnClearFilter);
+            this.panel2.Controls.Add(this.bunifuCards2);
+            this.panel2.Controls.Add(this.bunifuCards3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 287);
+            this.panel2.Location = new System.Drawing.Point(0, 264);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(436, 72);
+            this.panel2.Size = new System.Drawing.Size(420, 60);
             this.panel2.TabIndex = 56;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(292, 16);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(110, 35);
-            this.btnSave.TabIndex = 22;
-            this.btnSave.Text = " Save";
-            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSave.UseVisualStyleBackColor = false;
-            // 
-            // btnClearFilter
-            // 
-            this.btnClearFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClearFilter.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnClearFilter.FlatAppearance.BorderSize = 0;
-            this.btnClearFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClearFilter.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearFilter.ForeColor = System.Drawing.Color.White;
-            this.btnClearFilter.Image = ((System.Drawing.Image)(resources.GetObject("btnClearFilter.Image")));
-            this.btnClearFilter.Location = new System.Drawing.Point(37, 16);
-            this.btnClearFilter.Name = "btnClearFilter";
-            this.btnClearFilter.Size = new System.Drawing.Size(110, 35);
-            this.btnClearFilter.TabIndex = 21;
-            this.btnClearFilter.Text = "Clear";
-            this.btnClearFilter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnClearFilter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnClearFilter.UseVisualStyleBackColor = false;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(26, 238);
+            this.label9.Location = new System.Drawing.Point(24, 227);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(71, 16);
             this.label9.TabIndex = 53;
@@ -230,7 +198,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(12, 210);
+            this.label8.Location = new System.Drawing.Point(10, 199);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 16);
             this.label8.TabIndex = 51;
@@ -240,7 +208,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(57, 183);
+            this.label7.Location = new System.Drawing.Point(55, 172);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 16);
             this.label7.TabIndex = 49;
@@ -248,7 +216,7 @@
             // 
             // txtIDNo
             // 
-            this.txtIDNo.Location = new System.Drawing.Point(103, 180);
+            this.txtIDNo.Location = new System.Drawing.Point(101, 169);
             this.txtIDNo.Name = "txtIDNo";
             this.txtIDNo.Size = new System.Drawing.Size(297, 22);
             this.txtIDNo.TabIndex = 48;
@@ -257,7 +225,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(23, 155);
+            this.label6.Location = new System.Drawing.Point(21, 144);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 16);
             this.label6.TabIndex = 47;
@@ -265,7 +233,7 @@
             // 
             // txtContactNo
             // 
-            this.txtContactNo.Location = new System.Drawing.Point(103, 152);
+            this.txtContactNo.Location = new System.Drawing.Point(101, 141);
             this.txtContactNo.Name = "txtContactNo";
             this.txtContactNo.Size = new System.Drawing.Size(297, 22);
             this.txtContactNo.TabIndex = 46;
@@ -274,7 +242,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(42, 100);
+            this.label5.Location = new System.Drawing.Point(40, 89);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 16);
             this.label5.TabIndex = 45;
@@ -282,7 +250,7 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(103, 97);
+            this.txtAddress.Location = new System.Drawing.Point(101, 86);
             this.txtAddress.MaxLength = 10;
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
@@ -293,7 +261,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(53, 54);
+            this.label3.Location = new System.Drawing.Point(51, 43);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 16);
             this.label3.TabIndex = 37;
@@ -301,7 +269,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(103, 51);
+            this.txtName.Location = new System.Drawing.Point(101, 40);
             this.txtName.MaxLength = 250;
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
@@ -313,7 +281,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(19, 26);
+            this.label2.Location = new System.Drawing.Point(17, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 16);
             this.label2.TabIndex = 35;
@@ -321,7 +289,7 @@
             // 
             // txtCustomerID
             // 
-            this.txtCustomerID.Location = new System.Drawing.Point(103, 23);
+            this.txtCustomerID.Location = new System.Drawing.Point(101, 12);
             this.txtCustomerID.MaxLength = 250;
             this.txtCustomerID.Name = "txtCustomerID";
             this.txtCustomerID.ReadOnly = true;
@@ -333,7 +301,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(41, 51);
+            this.label4.Location = new System.Drawing.Point(40, 40);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(15, 20);
             this.label4.TabIndex = 43;
@@ -345,17 +313,85 @@
             this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.Red;
-            this.label22.Location = new System.Drawing.Point(11, 23);
+            this.label22.Location = new System.Drawing.Point(6, 12);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(15, 20);
             this.label22.TabIndex = 42;
             this.label22.Text = "*";
             // 
+            // bunifuCards3
+            // 
+            this.bunifuCards3.BackColor = System.Drawing.Color.SeaGreen;
+            this.bunifuCards3.BorderRadius = 20;
+            this.bunifuCards3.BottomSahddow = true;
+            this.bunifuCards3.color = System.Drawing.Color.SeaGreen;
+            this.bunifuCards3.Controls.Add(this.btnSave);
+            this.bunifuCards3.LeftSahddow = false;
+            this.bunifuCards3.Location = new System.Drawing.Point(258, 8);
+            this.bunifuCards3.Name = "bunifuCards3";
+            this.bunifuCards3.RightSahddow = true;
+            this.bunifuCards3.ShadowDepth = 20;
+            this.bunifuCards3.Size = new System.Drawing.Size(140, 45);
+            this.bunifuCards3.TabIndex = 26;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.Location = new System.Drawing.Point(-5, -11);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(155, 63);
+            this.btnSave.TabIndex = 22;
+            this.btnSave.Text = " Save";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSave.UseVisualStyleBackColor = false;
+            // 
+            // bunifuCards2
+            // 
+            this.bunifuCards2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bunifuCards2.BorderRadius = 20;
+            this.bunifuCards2.BottomSahddow = true;
+            this.bunifuCards2.color = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bunifuCards2.Controls.Add(this.btnClearFilter);
+            this.bunifuCards2.LeftSahddow = false;
+            this.bunifuCards2.Location = new System.Drawing.Point(27, 8);
+            this.bunifuCards2.Name = "bunifuCards2";
+            this.bunifuCards2.RightSahddow = true;
+            this.bunifuCards2.ShadowDepth = 20;
+            this.bunifuCards2.Size = new System.Drawing.Size(140, 45);
+            this.bunifuCards2.TabIndex = 27;
+            // 
+            // btnClearFilter
+            // 
+            this.btnClearFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClearFilter.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnClearFilter.FlatAppearance.BorderSize = 0;
+            this.btnClearFilter.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnClearFilter.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnClearFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearFilter.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearFilter.ForeColor = System.Drawing.Color.White;
+            this.btnClearFilter.Image = ((System.Drawing.Image)(resources.GetObject("btnClearFilter.Image")));
+            this.btnClearFilter.Location = new System.Drawing.Point(-5, -5);
+            this.btnClearFilter.Name = "btnClearFilter";
+            this.btnClearFilter.Size = new System.Drawing.Size(152, 53);
+            this.btnClearFilter.TabIndex = 20;
+            this.btnClearFilter.Text = "Clear";
+            this.btnClearFilter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClearFilter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClearFilter.UseVisualStyleBackColor = false;
+            // 
             // AddOrEditCustomersView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(456, 422);
+            this.ClientSize = new System.Drawing.Size(432, 378);
             this.Controls.Add(this.bunifuCards1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -371,6 +407,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericCreditLimit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericLoyaltyPoints)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.bunifuCards3.ResumeLayout(false);
+            this.bunifuCards2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -383,8 +421,6 @@
         private System.Windows.Forms.Button btnClose;
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnClearFilter;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -401,5 +437,9 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.NumericUpDown numericCreditLimit;
         private System.Windows.Forms.NumericUpDown numericLoyaltyPoints;
+        private Bunifu.Framework.UI.BunifuCards bunifuCards3;
+        private System.Windows.Forms.Button btnSave;
+        private Bunifu.Framework.UI.BunifuCards bunifuCards2;
+        private System.Windows.Forms.Button btnClearFilter;
     }
 }

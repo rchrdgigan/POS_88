@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PurchaseOrderView));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -37,7 +37,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnExportExcel = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnEditPurchaseOrder = new System.Windows.Forms.Button();
+            this.btnAddPurchaseOrder = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -59,16 +64,12 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btnClearFilter = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnExportExcel = new System.Windows.Forms.Button();
-            this.btnPrint = new System.Windows.Forms.Button();
-            this.btnEditPurchaseOrder = new System.Windows.Forms.Button();
-            this.btnAddPurchaseOrder = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -77,7 +78,6 @@
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -163,6 +163,16 @@
             this.panel3.Size = new System.Drawing.Size(52, 65);
             this.panel3.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(9, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.btnExportExcel);
@@ -174,6 +184,78 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(387, 71);
             this.panel5.TabIndex = 18;
+            // 
+            // btnExportExcel
+            // 
+            this.btnExportExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExportExcel.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnExportExcel.FlatAppearance.BorderSize = 0;
+            this.btnExportExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportExcel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportExcel.ForeColor = System.Drawing.Color.White;
+            this.btnExportExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExportExcel.Image")));
+            this.btnExportExcel.Location = new System.Drawing.Point(280, 5);
+            this.btnExportExcel.Name = "btnExportExcel";
+            this.btnExportExcel.Size = new System.Drawing.Size(104, 60);
+            this.btnExportExcel.TabIndex = 6;
+            this.btnExportExcel.Text = "Export to Excel";
+            this.btnExportExcel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnExportExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnExportExcel.UseVisualStyleBackColor = false;
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPrint.BackColor = System.Drawing.Color.Navy;
+            this.btnPrint.FlatAppearance.BorderSize = 0;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
+            this.btnPrint.Location = new System.Drawing.Point(197, 5);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(77, 60);
+            this.btnPrint.TabIndex = 3;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnPrint.UseVisualStyleBackColor = false;
+            // 
+            // btnEditPurchaseOrder
+            // 
+            this.btnEditPurchaseOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditPurchaseOrder.BackColor = System.Drawing.Color.Navy;
+            this.btnEditPurchaseOrder.FlatAppearance.BorderSize = 0;
+            this.btnEditPurchaseOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditPurchaseOrder.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditPurchaseOrder.ForeColor = System.Drawing.Color.White;
+            this.btnEditPurchaseOrder.Image = ((System.Drawing.Image)(resources.GetObject("btnEditPurchaseOrder.Image")));
+            this.btnEditPurchaseOrder.Location = new System.Drawing.Point(101, 5);
+            this.btnEditPurchaseOrder.Name = "btnEditPurchaseOrder";
+            this.btnEditPurchaseOrder.Size = new System.Drawing.Size(90, 60);
+            this.btnEditPurchaseOrder.TabIndex = 2;
+            this.btnEditPurchaseOrder.Text = "Update/Edit";
+            this.btnEditPurchaseOrder.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEditPurchaseOrder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnEditPurchaseOrder.UseVisualStyleBackColor = false;
+            // 
+            // btnAddPurchaseOrder
+            // 
+            this.btnAddPurchaseOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddPurchaseOrder.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnAddPurchaseOrder.FlatAppearance.BorderSize = 0;
+            this.btnAddPurchaseOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddPurchaseOrder.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddPurchaseOrder.ForeColor = System.Drawing.Color.White;
+            this.btnAddPurchaseOrder.Image = ((System.Drawing.Image)(resources.GetObject("btnAddPurchaseOrder.Image")));
+            this.btnAddPurchaseOrder.Location = new System.Drawing.Point(9, 5);
+            this.btnAddPurchaseOrder.Name = "btnAddPurchaseOrder";
+            this.btnAddPurchaseOrder.Size = new System.Drawing.Size(86, 60);
+            this.btnAddPurchaseOrder.TabIndex = 0;
+            this.btnAddPurchaseOrder.Text = "New Order";
+            this.btnAddPurchaseOrder.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAddPurchaseOrder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAddPurchaseOrder.UseVisualStyleBackColor = false;
             // 
             // label7
             // 
@@ -430,88 +512,6 @@
             this.btnSearch.TabIndex = 25;
             this.btnSearch.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(9, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnExportExcel
-            // 
-            this.btnExportExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExportExcel.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnExportExcel.FlatAppearance.BorderSize = 0;
-            this.btnExportExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportExcel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExportExcel.ForeColor = System.Drawing.Color.White;
-            this.btnExportExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExportExcel.Image")));
-            this.btnExportExcel.Location = new System.Drawing.Point(280, 5);
-            this.btnExportExcel.Name = "btnExportExcel";
-            this.btnExportExcel.Size = new System.Drawing.Size(104, 60);
-            this.btnExportExcel.TabIndex = 6;
-            this.btnExportExcel.Text = "Export to Excel";
-            this.btnExportExcel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnExportExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnExportExcel.UseVisualStyleBackColor = false;
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPrint.BackColor = System.Drawing.Color.Navy;
-            this.btnPrint.FlatAppearance.BorderSize = 0;
-            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrint.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.Location = new System.Drawing.Point(197, 5);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(77, 60);
-            this.btnPrint.TabIndex = 3;
-            this.btnPrint.Text = "Print";
-            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnPrint.UseVisualStyleBackColor = false;
-            // 
-            // btnEditPurchaseOrder
-            // 
-            this.btnEditPurchaseOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditPurchaseOrder.BackColor = System.Drawing.Color.Navy;
-            this.btnEditPurchaseOrder.FlatAppearance.BorderSize = 0;
-            this.btnEditPurchaseOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditPurchaseOrder.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditPurchaseOrder.ForeColor = System.Drawing.Color.White;
-            this.btnEditPurchaseOrder.Image = ((System.Drawing.Image)(resources.GetObject("btnEditPurchaseOrder.Image")));
-            this.btnEditPurchaseOrder.Location = new System.Drawing.Point(101, 5);
-            this.btnEditPurchaseOrder.Name = "btnEditPurchaseOrder";
-            this.btnEditPurchaseOrder.Size = new System.Drawing.Size(90, 60);
-            this.btnEditPurchaseOrder.TabIndex = 2;
-            this.btnEditPurchaseOrder.Text = "Update/Edit";
-            this.btnEditPurchaseOrder.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEditPurchaseOrder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnEditPurchaseOrder.UseVisualStyleBackColor = false;
-            // 
-            // btnAddPurchaseOrder
-            // 
-            this.btnAddPurchaseOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddPurchaseOrder.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnAddPurchaseOrder.FlatAppearance.BorderSize = 0;
-            this.btnAddPurchaseOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddPurchaseOrder.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddPurchaseOrder.ForeColor = System.Drawing.Color.White;
-            this.btnAddPurchaseOrder.Image = ((System.Drawing.Image)(resources.GetObject("btnAddPurchaseOrder.Image")));
-            this.btnAddPurchaseOrder.Location = new System.Drawing.Point(9, 5);
-            this.btnAddPurchaseOrder.Name = "btnAddPurchaseOrder";
-            this.btnAddPurchaseOrder.Size = new System.Drawing.Size(86, 60);
-            this.btnAddPurchaseOrder.TabIndex = 0;
-            this.btnAddPurchaseOrder.Text = "New Order";
-            this.btnAddPurchaseOrder.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAddPurchaseOrder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnAddPurchaseOrder.UseVisualStyleBackColor = false;
-            // 
             // PurchaseOrderView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -535,6 +535,7 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -548,7 +549,6 @@
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

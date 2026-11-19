@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panelMark = new System.Windows.Forms.Panel();
             this.panelUserNav = new System.Windows.Forms.Panel();
+            this.btnMyStore = new System.Windows.Forms.Button();
             this.lblRole = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -60,7 +61,6 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnBurger = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnMyStore = new System.Windows.Forms.Button();
             this.panelSideBar.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -104,7 +104,7 @@
             this.btnCustomers.ForeColor = System.Drawing.Color.White;
             this.btnCustomers.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomers.Image")));
             this.btnCustomers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomers.Location = new System.Drawing.Point(13, 348);
+            this.btnCustomers.Location = new System.Drawing.Point(12, 308);
             this.btnCustomers.Name = "btnCustomers";
             this.btnCustomers.Size = new System.Drawing.Size(188, 41);
             this.btnCustomers.TabIndex = 12;
@@ -124,13 +124,13 @@
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(201, 77);
+            this.panelLogo.Size = new System.Drawing.Size(201, 68);
             this.panelLogo.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(16, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 13);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(45, 47);
@@ -142,7 +142,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label3.Location = new System.Drawing.Point(79, 40);
+            this.label3.Location = new System.Drawing.Point(79, 34);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 32);
             this.label3.TabIndex = 3;
@@ -153,7 +153,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(135, 9);
+            this.label2.Location = new System.Drawing.Point(135, 3);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 32);
             this.label2.TabIndex = 2;
@@ -164,7 +164,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(73, 9);
+            this.label1.Location = new System.Drawing.Point(73, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 32);
             this.label1.TabIndex = 1;
@@ -173,9 +173,9 @@
             // panelMark
             // 
             this.panelMark.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panelMark.Location = new System.Drawing.Point(0, 82);
+            this.panelMark.Location = new System.Drawing.Point(1, 73);
             this.panelMark.Name = "panelMark";
-            this.panelMark.Size = new System.Drawing.Size(10, 51);
+            this.panelMark.Size = new System.Drawing.Size(10, 41);
             this.panelMark.TabIndex = 11;
             // 
             // panelUserNav
@@ -194,6 +194,25 @@
             this.panelUserNav.Name = "panelUserNav";
             this.panelUserNav.Size = new System.Drawing.Size(201, 215);
             this.panelUserNav.TabIndex = 10;
+            // 
+            // btnMyStore
+            // 
+            this.btnMyStore.BackColor = System.Drawing.Color.Transparent;
+            this.btnMyStore.FlatAppearance.BorderSize = 0;
+            this.btnMyStore.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.btnMyStore.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnMyStore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMyStore.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMyStore.ForeColor = System.Drawing.Color.White;
+            this.btnMyStore.Image = ((System.Drawing.Image)(resources.GetObject("btnMyStore.Image")));
+            this.btnMyStore.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMyStore.Location = new System.Drawing.Point(12, 53);
+            this.btnMyStore.Name = "btnMyStore";
+            this.btnMyStore.Size = new System.Drawing.Size(189, 41);
+            this.btnMyStore.TabIndex = 13;
+            this.btnMyStore.Text = "        My Store";
+            this.btnMyStore.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMyStore.UseVisualStyleBackColor = false;
             // 
             // lblRole
             // 
@@ -246,9 +265,9 @@
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(14, 112);
+            this.btnLogout.Location = new System.Drawing.Point(12, 100);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(186, 41);
+            this.btnLogout.Size = new System.Drawing.Size(189, 41);
             this.btnLogout.TabIndex = 11;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
@@ -284,7 +303,7 @@
             this.btnSettings.ForeColor = System.Drawing.Color.White;
             this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
             this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSettings.Location = new System.Drawing.Point(13, 501);
+            this.btnSettings.Location = new System.Drawing.Point(12, 449);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(188, 41);
             this.btnSettings.TabIndex = 8;
@@ -303,7 +322,7 @@
             this.btnUsers.ForeColor = System.Drawing.Color.White;
             this.btnUsers.Image = ((System.Drawing.Image)(resources.GetObject("btnUsers.Image")));
             this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsers.Location = new System.Drawing.Point(13, 450);
+            this.btnUsers.Location = new System.Drawing.Point(12, 402);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Size = new System.Drawing.Size(188, 41);
             this.btnUsers.TabIndex = 7;
@@ -322,7 +341,7 @@
             this.btnExpenses.ForeColor = System.Drawing.Color.White;
             this.btnExpenses.Image = ((System.Drawing.Image)(resources.GetObject("btnExpenses.Image")));
             this.btnExpenses.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExpenses.Location = new System.Drawing.Point(13, 399);
+            this.btnExpenses.Location = new System.Drawing.Point(12, 355);
             this.btnExpenses.Name = "btnExpenses";
             this.btnExpenses.Size = new System.Drawing.Size(188, 41);
             this.btnExpenses.TabIndex = 6;
@@ -341,7 +360,7 @@
             this.btnCashier.ForeColor = System.Drawing.Color.White;
             this.btnCashier.Image = ((System.Drawing.Image)(resources.GetObject("btnCashier.Image")));
             this.btnCashier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCashier.Location = new System.Drawing.Point(13, 297);
+            this.btnCashier.Location = new System.Drawing.Point(12, 261);
             this.btnCashier.Name = "btnCashier";
             this.btnCashier.Size = new System.Drawing.Size(188, 41);
             this.btnCashier.TabIndex = 5;
@@ -360,7 +379,7 @@
             this.btnPurchasing.ForeColor = System.Drawing.Color.White;
             this.btnPurchasing.Image = ((System.Drawing.Image)(resources.GetObject("btnPurchasing.Image")));
             this.btnPurchasing.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPurchasing.Location = new System.Drawing.Point(13, 246);
+            this.btnPurchasing.Location = new System.Drawing.Point(12, 214);
             this.btnPurchasing.Name = "btnPurchasing";
             this.btnPurchasing.Size = new System.Drawing.Size(188, 41);
             this.btnPurchasing.TabIndex = 4;
@@ -379,7 +398,7 @@
             this.btnSales.ForeColor = System.Drawing.Color.White;
             this.btnSales.Image = ((System.Drawing.Image)(resources.GetObject("btnSales.Image")));
             this.btnSales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSales.Location = new System.Drawing.Point(13, 194);
+            this.btnSales.Location = new System.Drawing.Point(12, 167);
             this.btnSales.Name = "btnSales";
             this.btnSales.Size = new System.Drawing.Size(188, 41);
             this.btnSales.TabIndex = 3;
@@ -398,7 +417,7 @@
             this.btnInventory.ForeColor = System.Drawing.Color.White;
             this.btnInventory.Image = ((System.Drawing.Image)(resources.GetObject("btnInventory.Image")));
             this.btnInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventory.Location = new System.Drawing.Point(13, 143);
+            this.btnInventory.Location = new System.Drawing.Point(12, 120);
             this.btnInventory.Name = "btnInventory";
             this.btnInventory.Size = new System.Drawing.Size(188, 41);
             this.btnInventory.TabIndex = 2;
@@ -417,9 +436,9 @@
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
             this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(13, 82);
+            this.btnDashboard.Location = new System.Drawing.Point(12, 73);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(188, 51);
+            this.btnDashboard.Size = new System.Drawing.Size(188, 41);
             this.btnDashboard.TabIndex = 1;
             this.btnDashboard.Text = "        Dashboard";
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -499,25 +518,6 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // btnMyStore
-            // 
-            this.btnMyStore.BackColor = System.Drawing.Color.Transparent;
-            this.btnMyStore.FlatAppearance.BorderSize = 0;
-            this.btnMyStore.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.btnMyStore.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnMyStore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMyStore.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMyStore.ForeColor = System.Drawing.Color.White;
-            this.btnMyStore.Image = ((System.Drawing.Image)(resources.GetObject("btnMyStore.Image")));
-            this.btnMyStore.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMyStore.Location = new System.Drawing.Point(13, 56);
-            this.btnMyStore.Name = "btnMyStore";
-            this.btnMyStore.Size = new System.Drawing.Size(188, 41);
-            this.btnMyStore.TabIndex = 13;
-            this.btnMyStore.Text = "        My Store";
-            this.btnMyStore.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMyStore.UseVisualStyleBackColor = false;
             // 
             // MainView
             // 

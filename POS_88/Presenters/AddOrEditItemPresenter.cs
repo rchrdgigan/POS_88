@@ -20,6 +20,7 @@ namespace POS_88.Presenters
             private readonly string itemCode;
             private readonly string saveType;
             private readonly Action afterSave;
+            private readonly bool isNotFound;
             private string imagePath;
             private decimal defaultWholesaleMarkup;
             private decimal defaultRetailMarkup;
@@ -28,7 +29,8 @@ namespace POS_88.Presenters
                 IAddOrEditItemView view,
                 string userName,
                 string itemCode,
-                Action afterSave)
+                Action afterSave,
+                bool isNotFound = false)
             {
                 if (view == null)
                     throw new ArgumentNullException("view");
@@ -39,7 +41,7 @@ namespace POS_88.Presenters
                 this.saveType = string.IsNullOrWhiteSpace(itemCode) ? "INSERT" : "UPDATE";
                 this.afterSave = afterSave;
                 this.posImplementation = new POSImplementation();
-
+                this.isNotFound = isNotFound;
                 this.view.SaveEvent += SaveItem;
                 this.view.ClearEvent += ClearFields;
                 this.view.BrowseImageEvent += BrowseImage;
@@ -194,9 +196,11 @@ namespace POS_88.Presenters
                 MessageBox.Show("Item has been saved successfully.", "Item", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (afterSave != null)
                     afterSave();
-
                 if (saveType == "INSERT")
-                    ResetFields();
+                    if (this.isNotFound == true) // if Item not found in cashier add item and close.
+                        view.Close();
+                    else
+                        ResetFields();
                 else
                     view.Close();
             }

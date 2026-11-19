@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Speech.Synthesis;
+using POS_88.Presenters;
 
 namespace POS_88.Views
 {
@@ -23,6 +24,12 @@ namespace POS_88.Views
         public ItemNotFoundView(string itemcode)
         {
             this.InitializeComponent();
+
+            FormBorderStyle = FormBorderStyle.None;
+            BackColor = Color.Fuchsia;
+            TransparencyKey = Color.Fuchsia;
+            StartPosition = FormStartPosition.CenterParent;
+
             this._itemcode = itemcode;
         }
 
@@ -33,10 +40,35 @@ namespace POS_88.Views
             if (keyData == Keys.Return)
             {
                 this.Close();
-                //int num = (int)new frmAddItem("", "INSERT", "NOTFOUND", "").ShowDialog();
+                Form modalOwner = this.MdiParent ?? this;
+                using (Form backdrop = new Form())
+                {
+                    backdrop.FormBorderStyle = FormBorderStyle.None;
+                    backdrop.StartPosition = FormStartPosition.Manual;
+                    backdrop.ShowInTaskbar = false;
+                    backdrop.BackColor = Color.Black;
+                    backdrop.Opacity = 0.45;
+                    backdrop.Bounds = modalOwner.Bounds;
+                    backdrop.Show(modalOwner);
+                    backdrop.BringToFront();
+
+                    using (AddOrEditItemView addItemView = new AddOrEditItemView())
+                    {
+                        new AddOrEditItemPresenter(
+                            addItemView,
+                            null,
+                            null,
+                            () => SearchEvent?.Invoke(this, EventArgs.Empty),
+                            true);
+                        addItemView.StartPosition = FormStartPosition.CenterParent;
+                        POSTheme.ShowSmoothFadeDialog(addItemView, modalOwner);
+                    }
+                }
             }
             return base.ProcessCmdKey(ref msg, keyData);
         }
+
+        public event EventHandler SearchEvent;
 
         private void ItemNotFoundView_Load(object sender, EventArgs e)
         {
@@ -51,7 +83,29 @@ namespace POS_88.Views
         private void iconButton1_Click(object sender, EventArgs e)
         {
             this.Close();
-            //int num = (int)new frmAddItem("", "INSERT", "NOTFOUND", "").ShowDialog();
+            Form modalOwner = this.MdiParent ?? this;
+            using (Form backdrop = new Form())
+            {
+                backdrop.FormBorderStyle = FormBorderStyle.None;
+                backdrop.StartPosition = FormStartPosition.Manual;
+                backdrop.ShowInTaskbar = false;
+                backdrop.BackColor = Color.Black;
+                backdrop.Opacity = 0.45;
+                backdrop.Bounds = modalOwner.Bounds;
+                backdrop.Show(modalOwner);
+                backdrop.BringToFront();
+
+                using (AddOrEditItemView addItemView = new AddOrEditItemView())
+                {
+                    new AddOrEditItemPresenter(
+                        addItemView,
+                        null,
+                        null,
+                        () => SearchEvent?.Invoke(this, EventArgs.Empty));
+                    addItemView.StartPosition = FormStartPosition.CenterParent;
+                    POSTheme.ShowSmoothFadeDialog(addItemView, modalOwner);
+                }
+            }
         }
 
 

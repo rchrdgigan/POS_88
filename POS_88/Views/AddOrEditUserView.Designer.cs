@@ -70,16 +70,16 @@
             // bunifuCards1
             // 
             this.bunifuCards1.BackColor = System.Drawing.Color.White;
-            this.bunifuCards1.BorderRadius = 50;
+            this.bunifuCards1.BorderRadius = 20;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.White;
             this.bunifuCards1.Controls.Add(this.panel3);
             this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(9, 54);
+            this.bunifuCards1.Location = new System.Drawing.Point(5, 47);
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(482, 481);
+            this.bunifuCards1.Size = new System.Drawing.Size(360, 443);
             this.bunifuCards1.TabIndex = 24;
             // 
             // panel3
@@ -103,29 +103,29 @@
             this.panel3.Controls.Add(this.bunifuCards2);
             this.panel3.Controls.Add(this.bunifuCards3);
             this.panel3.Controls.Add(this.bunifuMaterialTextbox1);
-            this.panel3.Location = new System.Drawing.Point(34, 21);
+            this.panel3.Location = new System.Drawing.Point(16, 14);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(446, 442);
+            this.panel3.Size = new System.Drawing.Size(344, 422);
             this.panel3.TabIndex = 22;
             // 
             // cBoxUserType
             // 
             this.cBoxUserType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cBoxUserType.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cBoxUserType.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cBoxUserType.FormattingEnabled = true;
             this.cBoxUserType.Items.AddRange(new object[] {
             "ADMIN",
             "CASHIER"});
-            this.cBoxUserType.Location = new System.Drawing.Point(266, 217);
+            this.cBoxUserType.Location = new System.Drawing.Point(203, 200);
             this.cBoxUserType.Name = "cBoxUserType";
-            this.cBoxUserType.Size = new System.Drawing.Size(143, 29);
+            this.cBoxUserType.Size = new System.Drawing.Size(120, 25);
             this.cBoxUserType.TabIndex = 36;
             // 
             // bunifuTxtName
             // 
             this.bunifuTxtName.BackColor = System.Drawing.Color.White;
             this.bunifuTxtName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTxtName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuTxtName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuTxtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuTxtName.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuTxtName.HintText = "Enter name";
@@ -133,11 +133,10 @@
             this.bunifuTxtName.LineFocusedColor = System.Drawing.Color.Blue;
             this.bunifuTxtName.LineIdleColor = System.Drawing.Color.Gray;
             this.bunifuTxtName.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuTxtName.LineThickness = 4;
-            this.bunifuTxtName.Location = new System.Drawing.Point(5, 112);
-            this.bunifuTxtName.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuTxtName.LineThickness = 3;
+            this.bunifuTxtName.Location = new System.Drawing.Point(5, 107);
             this.bunifuTxtName.Name = "bunifuTxtName";
-            this.bunifuTxtName.Size = new System.Drawing.Size(404, 43);
+            this.bunifuTxtName.Size = new System.Drawing.Size(320, 35);
             this.bunifuTxtName.TabIndex = 35;
             this.bunifuTxtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -146,7 +145,7 @@
             this.lblConfirmPassReq.AutoSize = true;
             this.lblConfirmPassReq.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmPassReq.ForeColor = System.Drawing.Color.Red;
-            this.lblConfirmPassReq.Location = new System.Drawing.Point(249, 353);
+            this.lblConfirmPassReq.Location = new System.Drawing.Point(165, 332);
             this.lblConfirmPassReq.Name = "lblConfirmPassReq";
             this.lblConfirmPassReq.Size = new System.Drawing.Size(160, 16);
             this.lblConfirmPassReq.TabIndex = 34;
@@ -157,7 +156,7 @@
             // 
             this.bunifuTxtConfirmPass.BackColor = System.Drawing.Color.White;
             this.bunifuTxtConfirmPass.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTxtConfirmPass.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuTxtConfirmPass.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuTxtConfirmPass.ForeColor = System.Drawing.Color.Black;
             this.bunifuTxtConfirmPass.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuTxtConfirmPass.HintText = "";
@@ -165,21 +164,20 @@
             this.bunifuTxtConfirmPass.LineFocusedColor = System.Drawing.Color.Blue;
             this.bunifuTxtConfirmPass.LineIdleColor = System.Drawing.Color.Gray;
             this.bunifuTxtConfirmPass.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuTxtConfirmPass.LineThickness = 4;
-            this.bunifuTxtConfirmPass.Location = new System.Drawing.Point(5, 305);
-            this.bunifuTxtConfirmPass.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuTxtConfirmPass.LineThickness = 3;
+            this.bunifuTxtConfirmPass.Location = new System.Drawing.Point(5, 292);
             this.bunifuTxtConfirmPass.Name = "bunifuTxtConfirmPass";
-            this.bunifuTxtConfirmPass.Size = new System.Drawing.Size(404, 43);
+            this.bunifuTxtConfirmPass.Size = new System.Drawing.Size(320, 35);
             this.bunifuTxtConfirmPass.TabIndex = 32;
             this.bunifuTxtConfirmPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(-3, 283);
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(-3, 270);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(125, 17);
+            this.label8.Size = new System.Drawing.Size(123, 16);
             this.label8.TabIndex = 33;
             this.label8.Text = "Confirm Password";
             // 
@@ -188,7 +186,7 @@
             this.lblPassReq.AutoSize = true;
             this.lblPassReq.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassReq.ForeColor = System.Drawing.Color.Red;
-            this.lblPassReq.Location = new System.Drawing.Point(123, 256);
+            this.lblPassReq.Location = new System.Drawing.Point(59, 240);
             this.lblPassReq.Name = "lblPassReq";
             this.lblPassReq.Size = new System.Drawing.Size(116, 16);
             this.lblPassReq.TabIndex = 31;
@@ -199,7 +197,7 @@
             // 
             this.bunifuTxtPass.BackColor = System.Drawing.Color.White;
             this.bunifuTxtPass.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTxtPass.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuTxtPass.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuTxtPass.ForeColor = System.Drawing.Color.Black;
             this.bunifuTxtPass.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuTxtPass.HintText = "";
@@ -207,21 +205,20 @@
             this.bunifuTxtPass.LineFocusedColor = System.Drawing.Color.Blue;
             this.bunifuTxtPass.LineIdleColor = System.Drawing.Color.Gray;
             this.bunifuTxtPass.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuTxtPass.LineThickness = 4;
-            this.bunifuTxtPass.Location = new System.Drawing.Point(5, 208);
-            this.bunifuTxtPass.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuTxtPass.LineThickness = 3;
+            this.bunifuTxtPass.Location = new System.Drawing.Point(5, 200);
             this.bunifuTxtPass.Name = "bunifuTxtPass";
-            this.bunifuTxtPass.Size = new System.Drawing.Size(234, 43);
+            this.bunifuTxtPass.Size = new System.Drawing.Size(170, 35);
             this.bunifuTxtPass.TabIndex = 29;
             this.bunifuTxtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(2, 186);
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(2, 178);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 17);
+            this.label6.Size = new System.Drawing.Size(68, 16);
             this.label6.TabIndex = 30;
             this.label6.Text = "Password";
             // 
@@ -230,7 +227,7 @@
             this.lblUserTypeReq.AutoSize = true;
             this.lblUserTypeReq.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserTypeReq.ForeColor = System.Drawing.Color.Red;
-            this.lblUserTypeReq.Location = new System.Drawing.Point(293, 254);
+            this.lblUserTypeReq.Location = new System.Drawing.Point(207, 239);
             this.lblUserTypeReq.Name = "lblUserTypeReq";
             this.lblUserTypeReq.Size = new System.Drawing.Size(116, 16);
             this.lblUserTypeReq.TabIndex = 28;
@@ -241,7 +238,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(263, 186);
+            this.label4.Location = new System.Drawing.Point(200, 178);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 17);
             this.label4.TabIndex = 27;
@@ -250,10 +247,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(-3, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 17);
+            this.label1.Size = new System.Drawing.Size(72, 16);
             this.label1.TabIndex = 6;
             this.label1.Text = "Username";
             // 
@@ -261,7 +258,7 @@
             // 
             this.bunifuTxtUsername.BackColor = System.Drawing.Color.White;
             this.bunifuTxtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTxtUsername.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuTxtUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuTxtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuTxtUsername.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuTxtUsername.HintText = "Enter username";
@@ -269,11 +266,10 @@
             this.bunifuTxtUsername.LineFocusedColor = System.Drawing.Color.Blue;
             this.bunifuTxtUsername.LineIdleColor = System.Drawing.Color.Gray;
             this.bunifuTxtUsername.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuTxtUsername.LineThickness = 4;
+            this.bunifuTxtUsername.LineThickness = 3;
             this.bunifuTxtUsername.Location = new System.Drawing.Point(5, 27);
-            this.bunifuTxtUsername.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuTxtUsername.Name = "bunifuTxtUsername";
-            this.bunifuTxtUsername.Size = new System.Drawing.Size(404, 43);
+            this.bunifuTxtUsername.Size = new System.Drawing.Size(320, 35);
             this.bunifuTxtUsername.TabIndex = 4;
             this.bunifuTxtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -282,7 +278,7 @@
             this.lblNameReq.AutoSize = true;
             this.lblNameReq.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameReq.ForeColor = System.Drawing.Color.Red;
-            this.lblNameReq.Location = new System.Drawing.Point(311, 160);
+            this.lblNameReq.Location = new System.Drawing.Point(227, 147);
             this.lblNameReq.Name = "lblNameReq";
             this.lblNameReq.Size = new System.Drawing.Size(98, 16);
             this.lblNameReq.TabIndex = 9;
@@ -294,7 +290,7 @@
             this.lblUsernameReq.AutoSize = true;
             this.lblUsernameReq.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsernameReq.ForeColor = System.Drawing.Color.Red;
-            this.lblUsernameReq.Location = new System.Drawing.Point(290, 75);
+            this.lblUsernameReq.Location = new System.Drawing.Point(206, 67);
             this.lblUsernameReq.Name = "lblUsernameReq";
             this.lblUsernameReq.Size = new System.Drawing.Size(119, 16);
             this.lblUsernameReq.TabIndex = 8;
@@ -304,10 +300,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(-3, 90);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(-3, 85);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 17);
+            this.label2.Size = new System.Drawing.Size(47, 16);
             this.label2.TabIndex = 7;
             this.label2.Text = "Name";
             // 
@@ -319,7 +315,7 @@
             this.bunifuCards2.color = System.Drawing.SystemColors.ActiveCaptionText;
             this.bunifuCards2.Controls.Add(this.btnClear);
             this.bunifuCards2.LeftSahddow = false;
-            this.bunifuCards2.Location = new System.Drawing.Point(5, 391);
+            this.bunifuCards2.Location = new System.Drawing.Point(5, 370);
             this.bunifuCards2.Name = "bunifuCards2";
             this.bunifuCards2.RightSahddow = true;
             this.bunifuCards2.ShadowDepth = 20;
@@ -354,7 +350,7 @@
             this.bunifuCards3.color = System.Drawing.Color.SeaGreen;
             this.bunifuCards3.Controls.Add(this.btnSave);
             this.bunifuCards3.LeftSahddow = false;
-            this.bunifuCards3.Location = new System.Drawing.Point(269, 391);
+            this.bunifuCards3.Location = new System.Drawing.Point(185, 370);
             this.bunifuCards3.Name = "bunifuCards3";
             this.bunifuCards3.RightSahddow = true;
             this.bunifuCards3.ShadowDepth = 20;
@@ -394,10 +390,10 @@
             this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.Gray;
             this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.bunifuMaterialTextbox1.LineThickness = 4;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(266, 208);
+            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(203, 191);
             this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(143, 43);
+            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(120, 43);
             this.bunifuMaterialTextbox1.TabIndex = 37;
             this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -412,14 +408,14 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(499, 50);
+            this.panel1.Size = new System.Drawing.Size(369, 40);
             this.panel1.TabIndex = 25;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -430,11 +426,11 @@
             // 
             this.lblModalTitle.AutoSize = true;
             this.lblModalTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblModalTitle.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModalTitle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModalTitle.ForeColor = System.Drawing.Color.White;
-            this.lblModalTitle.Location = new System.Drawing.Point(44, 16);
+            this.lblModalTitle.Location = new System.Drawing.Point(48, 11);
             this.lblModalTitle.Name = "lblModalTitle";
-            this.lblModalTitle.Size = new System.Drawing.Size(164, 23);
+            this.lblModalTitle.Size = new System.Drawing.Size(134, 19);
             this.lblModalTitle.TabIndex = 5;
             this.lblModalTitle.Text = "Add or Edit Users";
             // 
@@ -446,10 +442,10 @@
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimize.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnMinimize.Location = new System.Drawing.Point(399, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(269, 0);
             this.btnMinimize.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(50, 50);
+            this.btnMinimize.Size = new System.Drawing.Size(50, 40);
             this.btnMinimize.TabIndex = 4;
             this.btnMinimize.Text = "_";
             this.btnMinimize.UseVisualStyleBackColor = false;
@@ -462,10 +458,10 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(449, 0);
+            this.btnClose.Location = new System.Drawing.Point(319, 0);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(50, 50);
+            this.btnClose.Size = new System.Drawing.Size(50, 40);
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -479,7 +475,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(227)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(499, 540);
+            this.ClientSize = new System.Drawing.Size(369, 494);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bunifuCards1);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

@@ -79,7 +79,7 @@
             this.lblModalTitle.AutoSize = true;
             this.lblModalTitle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModalTitle.ForeColor = System.Drawing.Color.White;
-            this.lblModalTitle.Location = new System.Drawing.Point(27, 19);
+            this.lblModalTitle.Location = new System.Drawing.Point(14, 11);
             this.lblModalTitle.Name = "lblModalTitle";
             this.lblModalTitle.Size = new System.Drawing.Size(167, 19);
             this.lblModalTitle.TabIndex = 5;
@@ -95,7 +95,7 @@
             this.btnMinimize.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnMinimize.Location = new System.Drawing.Point(636, 0);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(51, 50);
+            this.btnMinimize.Size = new System.Drawing.Size(51, 40);
             this.btnMinimize.TabIndex = 4;
             this.btnMinimize.Text = "_";
             this.btnMinimize.UseVisualStyleBackColor = false;
@@ -110,7 +110,7 @@
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Location = new System.Drawing.Point(687, 0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(51, 50);
+            this.btnClose.Size = new System.Drawing.Size(51, 40);
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -124,7 +124,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(738, 50);
+            this.panel1.Size = new System.Drawing.Size(738, 40);
             this.panel1.TabIndex = 34;
             // 
             // bunifuCards1
@@ -153,7 +153,7 @@
             this.bunifuCards1.Controls.Add(this.txtOrderNo);
             this.bunifuCards1.Controls.Add(this.pictureBox1);
             this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(0, 214);
+            this.bunifuCards1.Location = new System.Drawing.Point(0, 195);
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
@@ -407,9 +407,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtAddress);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 58);
+            this.groupBox1.Location = new System.Drawing.Point(8, 47);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(714, 266);
+            this.groupBox1.Size = new System.Drawing.Size(723, 266);
             this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Supplier Details";
@@ -515,7 +515,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(227)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(738, 724);
+            this.ClientSize = new System.Drawing.Size(738, 704);
             this.Controls.Add(this.bunifuCards1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);

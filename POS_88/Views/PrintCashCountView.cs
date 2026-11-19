@@ -53,7 +53,9 @@ namespace POS_88.Views
 
         private bool HasPhysicalPrinter(PrintDocument doc)
         {
-            return doc != null && !IsVirtualPrinter(doc.PrinterSettings.PrinterName);
+            return doc != null
+                && doc.PrinterSettings.IsValid
+                && !IsVirtualPrinter(doc.PrinterSettings.PrinterName);
         }
 
         private static bool IsVirtualPrinter(string name)
@@ -63,23 +65,82 @@ namespace POS_88.Views
                     name.IndexOf("xps", StringComparison.OrdinalIgnoreCase) >= 0 ||
                     name.IndexOf("onenote", StringComparison.OrdinalIgnoreCase) >= 0);
         }
-      
+
+        // Saved printer -> Windows default -> first non-virtual installed printer
+        private static string ResolvePrinterName(string savedName)
+        {
+            var installed = PrinterSettings.InstalledPrinters.Cast<string>().ToList();
+
+            if (!string.IsNullOrWhiteSpace(savedName) && installed.Contains(savedName))
+                return savedName;
+
+            string def = new PrinterSettings().PrinterName;
+            if (!string.IsNullOrWhiteSpace(def) && installed.Contains(def) && !IsVirtualPrinter(def))
+                return def;
+
+            return installed.FirstOrDefault(n => !IsVirtualPrinter(n));
+        }
+
 
         public void PrintReceiptForTransaction()
         {
+            //this.recordDoc.DocumentName = "Z-Reading";
+            //this.recordDoc.PrintPage += new PrintPageEventHandler(this.PrintReceiptPageRGM);
+            //PrinterSettings printerSettings = new PrinterSettings();
+            //setting setting = this._unitOfWork.Setting.Find(xy => xy.settingsid == 1).FirstOrDefault<setting>();
+            //this._storename = setting.storename;
+            //this._address = setting.address;
+            //this._contactno = setting.contactno;
+            //this._tinno = setting.tinno;
+            //this._iswithLogo = setting.withLogo.GetValueOrDefault();
+            //printerSettings.PrinterName = setting.printername;
+            //this.recordDoc.PrinterSettings = printerSettings;
+
+            //if (ppc != null)
+            //{
+            //    ppc.Document = recordDoc;
+            //    ppc.AutoZoom = false;
+            //    ppc.UseAntiAlias = true;
+            //    ppc.Zoom = 1.5;
+            //    ppc.StartPage = 0;
+            //    ppc.InvalidatePreview();
+            //    ppc.Refresh();
+            //}
+
             this.recordDoc.DocumentName = "Z-Reading";
-            this.recordDoc.PrintPage += new PrintPageEventHandler(this.PrintReceiptPageRGM);
-            PrinterSettings printerSettings = new PrinterSettings();
+            this.recordDoc.PrintPage -= this.PrintReceiptPageRGM;   // avoid double subscription
+            this.recordDoc.PrintPage += this.PrintReceiptPageRGM;
+
             setting setting = this._unitOfWork.Setting.Find(xy => xy.settingsid == 1).FirstOrDefault<setting>();
+            if (setting == null)
+            {
+                MessageBox.Show("Store settings were not found.", "Print Cash Count",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             this._storename = setting.storename;
             this._address = setting.address;
             this._contactno = setting.contactno;
             this._tinno = setting.tinno;
             this._iswithLogo = setting.withLogo.GetValueOrDefault();
-            printerSettings.PrinterName = setting.printername;
-            this.recordDoc.PrinterSettings = printerSettings;
-       
-            if (ppc != null)
+
+            string printerName = ResolvePrinterName(setting.printername);
+            if (!string.IsNullOrEmpty(printerName))
+            {
+                var ps = new PrinterSettings { PrinterName = printerName };
+                if (ps.IsValid)
+                    this.recordDoc.PrinterSettings = ps;
+            }
+
+            // No valid printer: skip the preview, it can't lay out pages without one
+            if (ppc == null || !this.recordDoc.PrinterSettings.IsValid)
+            {
+                if (ppc != null) ppc.Document = null;
+                return;
+            }
+
+            try
             {
                 ppc.Document = recordDoc;
                 ppc.AutoZoom = false;
@@ -87,7 +148,10 @@ namespace POS_88.Views
                 ppc.Zoom = 1.5;
                 ppc.StartPage = 0;
                 ppc.InvalidatePreview();
-                ppc.Refresh();
+            }
+            catch (InvalidPrinterException)
+            {
+                ppc.Document = null;
             }
         }
 
@@ -330,14 +394,11 @@ namespace POS_88.Views
 
         private void PrintCashCountView_FormClosed(object sender, FormClosedEventArgs e)
         {
-            ppc.Document = null;
-            if (recordDoc != null)
-                recordDoc.Dispose();
-            if (recordDoc != null)
-                recordDoc.Dispose();
+            if (ppc != null) ppc.Document = null;
+            if (recordDoc != null) recordDoc.Dispose();
             _unitOfWork.Dispose();
         }
 
-       
+
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaymentView));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lblPaidOrUnpaid = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -62,17 +63,20 @@
             this.txtReceiptNo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.bunifuCards3 = new Bunifu.Framework.UI.BunifuCards();
             this.btnSave = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.bunifuCards3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
+            this.groupBox3.Controls.Add(this.panel2);
             this.groupBox3.Controls.Add(this.lblPaidOrUnpaid);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.txtNewBalance);
@@ -87,9 +91,9 @@
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.txtPayment);
             this.groupBox3.Controls.Add(this.cBoxPaymentType);
-            this.groupBox3.Location = new System.Drawing.Point(12, 309);
+            this.groupBox3.Location = new System.Drawing.Point(9, 297);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(488, 270);
+            this.groupBox3.Size = new System.Drawing.Size(488, 328);
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Payment";
@@ -227,7 +231,7 @@
             this.groupBox2.Controls.Add(this.txtAmountDue);
             this.groupBox2.Controls.Add(this.txtPaid);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(12, 185);
+            this.groupBox2.Location = new System.Drawing.Point(9, 173);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(488, 118);
             this.groupBox2.TabIndex = 12;
@@ -294,7 +298,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(514, 50);
+            this.panel1.Size = new System.Drawing.Size(506, 40);
             this.panel1.TabIndex = 10;
             // 
             // lblModalTitle
@@ -302,7 +306,7 @@
             this.lblModalTitle.AutoSize = true;
             this.lblModalTitle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModalTitle.ForeColor = System.Drawing.Color.White;
-            this.lblModalTitle.Location = new System.Drawing.Point(27, 19);
+            this.lblModalTitle.Location = new System.Drawing.Point(15, 11);
             this.lblModalTitle.Name = "lblModalTitle";
             this.lblModalTitle.Size = new System.Drawing.Size(78, 19);
             this.lblModalTitle.TabIndex = 5;
@@ -316,9 +320,9 @@
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimize.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnMinimize.Location = new System.Drawing.Point(412, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(404, 0);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(51, 50);
+            this.btnMinimize.Size = new System.Drawing.Size(51, 40);
             this.btnMinimize.TabIndex = 4;
             this.btnMinimize.Text = "_";
             this.btnMinimize.UseVisualStyleBackColor = false;
@@ -331,9 +335,9 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(463, 0);
+            this.btnClose.Location = new System.Drawing.Point(455, 0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(51, 50);
+            this.btnClose.Size = new System.Drawing.Size(51, 40);
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -347,7 +351,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtReceiptNo);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(12, 58);
+            this.groupBox1.Location = new System.Drawing.Point(9, 46);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(488, 121);
             this.groupBox1.TabIndex = 11;
@@ -407,25 +411,45 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnSave);
-            this.panel2.Location = new System.Drawing.Point(12, 585);
+            this.panel2.Controls.Add(this.bunifuCards3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(3, 265);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(488, 45);
+            this.panel2.Size = new System.Drawing.Size(482, 60);
             this.panel2.TabIndex = 24;
+            // 
+            // bunifuCards3
+            // 
+            this.bunifuCards3.BackColor = System.Drawing.Color.SeaGreen;
+            this.bunifuCards3.BorderRadius = 20;
+            this.bunifuCards3.BottomSahddow = true;
+            this.bunifuCards3.color = System.Drawing.Color.SeaGreen;
+            this.bunifuCards3.Controls.Add(this.btnSave);
+            this.bunifuCards3.LeftSahddow = false;
+            this.bunifuCards3.Location = new System.Drawing.Point(337, 7);
+            this.bunifuCards3.Name = "bunifuCards3";
+            this.bunifuCards3.RightSahddow = true;
+            this.bunifuCards3.ShadowDepth = 20;
+            this.bunifuCards3.Size = new System.Drawing.Size(140, 45);
+            this.bunifuCards3.TabIndex = 26;
             // 
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.BackColor = System.Drawing.Color.SeaGreen;
             this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SeaGreen;
+            this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(375, 3);
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.Location = new System.Drawing.Point(-7, -5);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(110, 35);
-            this.btnSave.TabIndex = 22;
+            this.btnSave.Size = new System.Drawing.Size(152, 53);
+            this.btnSave.TabIndex = 21;
             this.btnSave.Text = "Save";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = false;
             // 
@@ -433,8 +457,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 642);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(506, 632);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel1);
@@ -454,6 +477,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.bunifuCards3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -493,6 +517,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtRemarks;
         private System.Windows.Forms.Panel panel2;
+        private Bunifu.Framework.UI.BunifuCards bunifuCards3;
         private System.Windows.Forms.Button btnSave;
     }
 }

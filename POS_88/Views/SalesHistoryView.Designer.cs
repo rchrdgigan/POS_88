@@ -70,9 +70,9 @@
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
             this.groupBox3.Controls.Add(this.panel2);
-            this.groupBox3.Location = new System.Drawing.Point(12, 495);
+            this.groupBox3.Location = new System.Drawing.Point(12, 465);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(898, 46);
+            this.groupBox3.Size = new System.Drawing.Size(859, 46);
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Grand Total";
@@ -86,7 +86,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(3, 21);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(892, 22);
+            this.panel2.Size = new System.Drawing.Size(853, 22);
             this.panel2.TabIndex = 41;
             // 
             // lblTotalRevenue
@@ -94,7 +94,7 @@
             this.lblTotalRevenue.AutoSize = true;
             this.lblTotalRevenue.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblTotalRevenue.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalRevenue.Location = new System.Drawing.Point(363, 0);
+            this.lblTotalRevenue.Location = new System.Drawing.Point(324, 0);
             this.lblTotalRevenue.Name = "lblTotalRevenue";
             this.lblTotalRevenue.Padding = new System.Windows.Forms.Padding(100, 0, 0, 0);
             this.lblTotalRevenue.Size = new System.Drawing.Size(196, 19);
@@ -106,7 +106,7 @@
             this.lblAmountPaid.AutoSize = true;
             this.lblAmountPaid.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblAmountPaid.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAmountPaid.Location = new System.Drawing.Point(559, 0);
+            this.lblAmountPaid.Location = new System.Drawing.Point(520, 0);
             this.lblAmountPaid.Name = "lblAmountPaid";
             this.lblAmountPaid.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.lblAmountPaid.Size = new System.Drawing.Size(124, 19);
@@ -118,7 +118,7 @@
             this.lblBalance.AutoSize = true;
             this.lblBalance.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblBalance.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBalance.Location = new System.Drawing.Point(683, 0);
+            this.lblBalance.Location = new System.Drawing.Point(644, 0);
             this.lblBalance.Name = "lblBalance";
             this.lblBalance.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.lblBalance.Size = new System.Drawing.Size(92, 19);
@@ -131,7 +131,7 @@
             this.lblGrossProfit.AutoSize = true;
             this.lblGrossProfit.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblGrossProfit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGrossProfit.Location = new System.Drawing.Point(775, 0);
+            this.lblGrossProfit.Location = new System.Drawing.Point(736, 0);
             this.lblGrossProfit.Name = "lblGrossProfit";
             this.lblGrossProfit.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.lblGrossProfit.Size = new System.Drawing.Size(117, 19);
@@ -164,7 +164,7 @@
             this.dataGridViewX1.ReadOnly = true;
             this.dataGridViewX1.RowHeadersVisible = false;
             this.dataGridViewX1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewX1.Size = new System.Drawing.Size(861, 206);
+            this.dataGridViewX1.Size = new System.Drawing.Size(821, 206);
             this.dataGridViewX1.TabIndex = 42;
             // 
             // groupBox2
@@ -177,9 +177,9 @@
             this.groupBox2.Controls.Add(this.dtpFrom);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.dataGridViewX1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 215);
+            this.groupBox2.Location = new System.Drawing.Point(12, 185);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(898, 274);
+            this.groupBox2.Size = new System.Drawing.Size(859, 274);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Sales History";
@@ -247,7 +247,7 @@
             // txtCustomerID
             // 
             this.txtCustomerID.BackColor = System.Drawing.Color.White;
-            this.txtCustomerID.Location = new System.Drawing.Point(132, 38);
+            this.txtCustomerID.Location = new System.Drawing.Point(134, 34);
             this.txtCustomerID.Name = "txtCustomerID";
             this.txtCustomerID.ReadOnly = true;
             this.txtCustomerID.Size = new System.Drawing.Size(490, 22);
@@ -256,7 +256,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(40, 41);
+            this.label3.Location = new System.Drawing.Point(42, 37);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 17);
             this.label3.TabIndex = 1;
@@ -271,7 +271,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(922, 50);
+            this.panel1.Size = new System.Drawing.Size(882, 40);
             this.panel1.TabIndex = 10;
             // 
             // lblModalTitle
@@ -279,7 +279,7 @@
             this.lblModalTitle.AutoSize = true;
             this.lblModalTitle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModalTitle.ForeColor = System.Drawing.Color.White;
-            this.lblModalTitle.Location = new System.Drawing.Point(27, 19);
+            this.lblModalTitle.Location = new System.Drawing.Point(12, 11);
             this.lblModalTitle.Name = "lblModalTitle";
             this.lblModalTitle.Size = new System.Drawing.Size(101, 19);
             this.lblModalTitle.TabIndex = 5;
@@ -293,9 +293,9 @@
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimize.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnMinimize.Location = new System.Drawing.Point(820, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(780, 0);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(51, 50);
+            this.btnMinimize.Size = new System.Drawing.Size(51, 40);
             this.btnMinimize.TabIndex = 4;
             this.btnMinimize.Text = "_";
             this.btnMinimize.UseVisualStyleBackColor = false;
@@ -308,9 +308,9 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(871, 0);
+            this.btnClose.Location = new System.Drawing.Point(831, 0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(51, 50);
+            this.btnClose.Size = new System.Drawing.Size(51, 40);
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -318,7 +318,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 69);
+            this.label4.Location = new System.Drawing.Point(18, 65);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 17);
             this.label4.TabIndex = 3;
@@ -327,7 +327,7 @@
             // txtCustomerName
             // 
             this.txtCustomerName.BackColor = System.Drawing.Color.White;
-            this.txtCustomerName.Location = new System.Drawing.Point(132, 66);
+            this.txtCustomerName.Location = new System.Drawing.Point(134, 62);
             this.txtCustomerName.Name = "txtCustomerName";
             this.txtCustomerName.ReadOnly = true;
             this.txtCustomerName.Size = new System.Drawing.Size(674, 22);
@@ -336,7 +336,7 @@
             // txtContact
             // 
             this.txtContact.BackColor = System.Drawing.Color.White;
-            this.txtContact.Location = new System.Drawing.Point(132, 94);
+            this.txtContact.Location = new System.Drawing.Point(134, 90);
             this.txtContact.Name = "txtContact";
             this.txtContact.ReadOnly = true;
             this.txtContact.Size = new System.Drawing.Size(597, 22);
@@ -351,9 +351,9 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtCustomerID);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(12, 63);
+            this.groupBox1.Location = new System.Drawing.Point(12, 46);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(898, 146);
+            this.groupBox1.Size = new System.Drawing.Size(859, 133);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Customer Details";
@@ -361,7 +361,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 97);
+            this.label5.Location = new System.Drawing.Point(14, 93);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(114, 17);
             this.label5.TabIndex = 5;
@@ -376,7 +376,7 @@
             this.btnExportExcel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExportExcel.ForeColor = System.Drawing.Color.White;
             this.btnExportExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExportExcel.Image")));
-            this.btnExportExcel.Location = new System.Drawing.Point(803, 547);
+            this.btnExportExcel.Location = new System.Drawing.Point(763, 514);
             this.btnExportExcel.Name = "btnExportExcel";
             this.btnExportExcel.Size = new System.Drawing.Size(107, 60);
             this.btnExportExcel.TabIndex = 14;
@@ -394,7 +394,7 @@
             this.btnReprint.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReprint.ForeColor = System.Drawing.Color.White;
             this.btnReprint.Image = ((System.Drawing.Image)(resources.GetObject("btnReprint.Image")));
-            this.btnReprint.Location = new System.Drawing.Point(689, 547);
+            this.btnReprint.Location = new System.Drawing.Point(649, 514);
             this.btnReprint.Name = "btnReprint";
             this.btnReprint.Size = new System.Drawing.Size(108, 60);
             this.btnReprint.TabIndex = 15;
@@ -412,7 +412,7 @@
             this.btnPurchaseItem.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPurchaseItem.ForeColor = System.Drawing.Color.White;
             this.btnPurchaseItem.Image = ((System.Drawing.Image)(resources.GetObject("btnPurchaseItem.Image")));
-            this.btnPurchaseItem.Location = new System.Drawing.Point(584, 547);
+            this.btnPurchaseItem.Location = new System.Drawing.Point(544, 514);
             this.btnPurchaseItem.Name = "btnPurchaseItem";
             this.btnPurchaseItem.Size = new System.Drawing.Size(99, 60);
             this.btnPurchaseItem.TabIndex = 16;
@@ -426,7 +426,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(227)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(922, 614);
+            this.ClientSize = new System.Drawing.Size(882, 581);
             this.Controls.Add(this.btnPurchaseItem);
             this.Controls.Add(this.btnReprint);
             this.Controls.Add(this.btnExportExcel);

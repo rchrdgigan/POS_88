@@ -46,6 +46,60 @@ namespace POS_88.Views
 
             ConfigureTables();
             AuthenticatedName = null;
+
+            pictureBox4.Click += PanelCriticalItems_Click;
+            label8.Click += PanelCriticalItems_Click;
+            lblCriticalStocks.Click += PanelCriticalItems_Click;
+            panelCriticalItems.Click += PanelCriticalItems_Click;
+
+            pictureBox4.MouseHover += PanelCriticalItems_MouseHover;
+            label8.MouseHover += PanelCriticalItems_MouseHover;
+            lblCriticalStocks.MouseHover += PanelCriticalItems_MouseHover;
+            panelCriticalItems.MouseHover += PanelCriticalItems_MouseHover;
+
+            pictureBox4.MouseLeave += PanelCriticalItems_MouseLeave;
+            label8.MouseLeave += PanelCriticalItems_MouseLeave;
+            lblCriticalStocks.MouseLeave += PanelCriticalItems_MouseLeave;
+            panelCriticalItems.MouseLeave += PanelCriticalItems_MouseLeave;
+        }
+
+        private void PanelCriticalItems_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox4.BackColor = Color.FromArgb(255, 255, 128);
+            label8.BackColor = Color.FromArgb(255, 255, 128);
+            lblCriticalStocks.BackColor = Color.FromArgb(255, 255, 128);
+            panelCriticalItems.BackColor = Color.FromArgb(255, 255, 128);
+        }
+
+        private void PanelCriticalItems_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox4.BackColor = Color.FromArgb(255, 255, 220);
+            label8.BackColor = Color.FromArgb(255, 255, 220);
+            lblCriticalStocks.BackColor = Color.FromArgb(255, 255, 220);
+            panelCriticalItems.BackColor = Color.FromArgb(255, 255, 220);
+        }
+
+        private void PanelCriticalItems_Click(object sender, EventArgs e)
+        {
+            
+            Form modalOwner = this.MdiParent ?? this;
+            using (Form backdrop = new Form())
+            {
+                backdrop.FormBorderStyle = FormBorderStyle.None;
+                backdrop.StartPosition = FormStartPosition.Manual;
+                backdrop.ShowInTaskbar = false;
+                backdrop.BackColor = Color.Black;
+                backdrop.Opacity = 0.45;
+                backdrop.Bounds = modalOwner.Bounds;
+                backdrop.Show(modalOwner);
+                backdrop.BringToFront();
+
+                using (CriticalStocksView view = new CriticalStocksView())
+                {
+                    int num = (int)view.ShowDialog();
+                }
+            }
+            //MessageBox.Show("Show Critical Items");
         }
 
 

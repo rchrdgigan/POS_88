@@ -69,7 +69,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1200, 86);
+            this.panel1.Size = new System.Drawing.Size(1200, 78);
             this.panel1.TabIndex = 14;
             // 
             // pictureBox1
@@ -181,7 +181,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(358, 17);
             this.label7.TabIndex = 9;
-            this.label7.Text = "Manage expenses in one place.";
+            this.label7.Text = "All your business spending, managed in one location.";
             // 
             // label6
             // 
@@ -201,7 +201,7 @@
             this.btnClearFilter.FlatAppearance.BorderSize = 0;
             this.btnClearFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearFilter.Image = ((System.Drawing.Image)(resources.GetObject("btnClearFilter.Image")));
-            this.btnClearFilter.Location = new System.Drawing.Point(1137, 95);
+            this.btnClearFilter.Location = new System.Drawing.Point(1137, 84);
             this.btnClearFilter.Name = "btnClearFilter";
             this.btnClearFilter.Size = new System.Drawing.Size(49, 45);
             this.btnClearFilter.TabIndex = 18;
@@ -214,7 +214,7 @@
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(1082, 95);
+            this.btnSearch.Location = new System.Drawing.Point(1082, 84);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(49, 45);
             this.btnSearch.TabIndex = 17;
@@ -224,7 +224,7 @@
             // 
             this.txtSearchParam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearchParam.Location = new System.Drawing.Point(382, 115);
+            this.txtSearchParam.Location = new System.Drawing.Point(382, 104);
             this.txtSearchParam.Multiline = true;
             this.txtSearchParam.Name = "txtSearchParam";
             this.txtSearchParam.Size = new System.Drawing.Size(694, 25);
@@ -234,7 +234,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(382, 96);
+            this.label5.Location = new System.Drawing.Point(382, 85);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(178, 16);
             this.label5.TabIndex = 15;
@@ -243,7 +243,7 @@
             // dtpTo
             // 
             this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTo.Location = new System.Drawing.Point(194, 118);
+            this.dtpTo.Location = new System.Drawing.Point(194, 107);
             this.dtpTo.Name = "dtpTo";
             this.dtpTo.Size = new System.Drawing.Size(182, 22);
             this.dtpTo.TabIndex = 22;
@@ -251,7 +251,7 @@
             // dtpFrom
             // 
             this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFrom.Location = new System.Drawing.Point(15, 118);
+            this.dtpFrom.Location = new System.Drawing.Point(15, 107);
             this.dtpFrom.Name = "dtpFrom";
             this.dtpFrom.Size = new System.Drawing.Size(173, 22);
             this.dtpFrom.TabIndex = 21;
@@ -260,7 +260,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(191, 92);
+            this.label4.Location = new System.Drawing.Point(191, 81);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(131, 16);
             this.label4.TabIndex = 20;
@@ -270,7 +270,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 93);
+            this.label3.Location = new System.Drawing.Point(12, 82);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(146, 16);
             this.label3.TabIndex = 19;
@@ -296,13 +296,13 @@
             this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dataGridViewX1.HighlightSelectedColumnHeaders = false;
-            this.dataGridViewX1.Location = new System.Drawing.Point(15, 156);
+            this.dataGridViewX1.Location = new System.Drawing.Point(15, 135);
             this.dataGridViewX1.MultiSelect = false;
             this.dataGridViewX1.Name = "dataGridViewX1";
             this.dataGridViewX1.ReadOnly = true;
             this.dataGridViewX1.RowHeadersVisible = false;
             this.dataGridViewX1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewX1.Size = new System.Drawing.Size(1171, 580);
+            this.dataGridViewX1.Size = new System.Drawing.Size(1171, 601);
             this.dataGridViewX1.TabIndex = 23;
             // 
             // panel3

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PurchaseItemView));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblCustomerReceiptNo = new System.Windows.Forms.Label();
@@ -84,7 +84,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(748, 50);
+            this.panel1.Size = new System.Drawing.Size(748, 40);
             this.panel1.TabIndex = 1;
             // 
             // lblCustomerReceiptNo
@@ -92,7 +92,7 @@
             this.lblCustomerReceiptNo.AutoSize = true;
             this.lblCustomerReceiptNo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCustomerReceiptNo.ForeColor = System.Drawing.Color.White;
-            this.lblCustomerReceiptNo.Location = new System.Drawing.Point(157, 19);
+            this.lblCustomerReceiptNo.Location = new System.Drawing.Point(138, 11);
             this.lblCustomerReceiptNo.Name = "lblCustomerReceiptNo";
             this.lblCustomerReceiptNo.Size = new System.Drawing.Size(139, 19);
             this.lblCustomerReceiptNo.TabIndex = 6;
@@ -103,7 +103,7 @@
             this.lblModalTitle.AutoSize = true;
             this.lblModalTitle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModalTitle.ForeColor = System.Drawing.Color.White;
-            this.lblModalTitle.Location = new System.Drawing.Point(27, 19);
+            this.lblModalTitle.Location = new System.Drawing.Point(12, 11);
             this.lblModalTitle.Name = "lblModalTitle";
             this.lblModalTitle.Size = new System.Drawing.Size(124, 19);
             this.lblModalTitle.TabIndex = 5;
@@ -119,7 +119,7 @@
             this.btnMinimize.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnMinimize.Location = new System.Drawing.Point(646, 0);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(51, 50);
+            this.btnMinimize.Size = new System.Drawing.Size(51, 40);
             this.btnMinimize.TabIndex = 4;
             this.btnMinimize.Text = "_";
             this.btnMinimize.UseVisualStyleBackColor = false;
@@ -134,7 +134,7 @@
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Location = new System.Drawing.Point(697, 0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(51, 50);
+            this.btnClose.Size = new System.Drawing.Size(51, 40);
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -149,7 +149,7 @@
             this.groupBox1.Controls.Add(this.txtReceiptNo);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.lblPaidOrUnpaid);
-            this.groupBox1.Location = new System.Drawing.Point(12, 59);
+            this.groupBox1.Location = new System.Drawing.Point(12, 46);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(724, 125);
             this.groupBox1.TabIndex = 2;
@@ -219,7 +219,7 @@
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
             this.groupBox2.Controls.Add(this.dataGridViewX1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 190);
+            this.groupBox2.Location = new System.Drawing.Point(12, 177);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(724, 227);
             this.groupBox2.TabIndex = 7;
@@ -236,14 +236,14 @@
             this.dataGridViewX1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridViewX1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dataGridViewX1.HighlightSelectedColumnHeaders = false;
             this.dataGridViewX1.Location = new System.Drawing.Point(19, 21);
@@ -278,7 +278,7 @@
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Location = new System.Drawing.Point(12, 423);
+            this.groupBox3.Location = new System.Drawing.Point(12, 410);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(724, 123);
             this.groupBox3.TabIndex = 8;
@@ -478,7 +478,7 @@
             this.btnPrint.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.ForeColor = System.Drawing.Color.White;
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.Location = new System.Drawing.Point(334, 551);
+            this.btnPrint.Location = new System.Drawing.Point(334, 538);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(78, 65);
             this.btnPrint.TabIndex = 9;
@@ -492,7 +492,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(227)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(748, 621);
+            this.ClientSize = new System.Drawing.Size(748, 610);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
